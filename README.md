@@ -1,23 +1,26 @@
 # The Vice City Sinner
 
-**SoFlo's Kink Konnexion**
+**South Florida kink, culture & nightlife.**
 
-An independent digital publication covering South Florida's kink, alternative, and after-dark communities.
+An independent digital publication covering South Florida’s kink, alternative, and after-dark communities.
 
-## Issue 001 — August 2026
+## Issue 001 — September 2026
 
-- Your First Kink Party Without Losing Your Mind
-- Look Expensive. Spend Almost Nothing.
-- Curious Doesn't Mean Committed.
-- Scene Watch: Return of the Anything Goes Play Party
-- The Konnexion: Sarita Bon Bon
+- The Beginner’s Guide to Not Being That Person
+- Dress to Express Without Going Broke
+- Curious Doesn’t Mean Committed
+- What Do I Call Myself?
+- Green Flags & Red Flags
+- Why Kink Korps Exists
+- Last Call: You Are Not Too Much
 
 ## Publication files
 
-- `index.html` — Issue 001 landing page
-- `styles.css` — newspaper design system
-- `articles/` — complete editorial features
-- `features/` — community spotlights
+- `index.html` — Issue 001 homepage
+- `styles.css` — responsive editorial design system
+- `articles/` — guides and reported features
+- `features/` — community stories
+- `columns/` — recurring opinion columns
 - `mailer/issue-001.html` — email-safe edition
 
 ## Publishing
