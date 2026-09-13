@@ -1,0 +1,12 @@
+title: The Vice City Sinner
+tagline: Alt culture. Kink undertones. Zero apologies.
+description: Independent alt-culture editorial blog by Satanica Lux.
+author: Satanica Lux
+url: ""
+baseurl: ""
+permalink: /:categories/:title/
+markdown: kramdown
+future: true
+exclude:
+  - README.md
+  - _offline
