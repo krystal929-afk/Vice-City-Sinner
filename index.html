@@ -5,79 +5,35 @@ description: The Vice City Sinner by Satanica Lux. Alt culture, style, identity,
 ---
 <section class="hero shell">
   <div class="hero-copy">
-    <div class="eyebrow">Featured story · Editorial</div>
-    <h1>Out of the Foxhole<br><span>and Into Real Life</span></h1>
-    <p class="hero-dek">A personal essay about accountability, survival mode, and learning to live after the danger is gone.</p>
+    <div class="eyebrow">Featured Story</div>
+    <h1>Out of the Foxhole<br>and <span>Into Real Life</span></h1>
+    <p class="hero-dek">What happens when the scene saves you, but the real world is still waiting?</p>
     <a class="button" href="#latest">Read the full story <span>→</span></a>
-    <div class="hero-note">Same sinner. Different day.</div>
+    <div class="hero-note">Same sinner.<br>Different day.</div>
   </div>
-  <div class="hero-art" aria-label="Satanica Lux feature artwork slot">
-    <div class="hero-art__halo"></div>
-    <div class="hero-art__portrait">SATANICA<br>LUX</div>
-    <div class="hero-art__scribble">Good girls<br>read here too ♡</div>
+  <div class="hero-art">
+    <img src="{{ '/assets/generated/vcs-hero.webp' | relative_url }}" alt="Satanica Lux feature illustration">
   </div>
 </section>
 
 <section id="latest" class="section shell">
   <div class="section-heading">
     <h2>Latest &amp; Featured</h2>
-    <span>More stories →</span>
+    <span>— More stories →</span>
   </div>
-
   <div class="story-grid">
-    <article class="story-card">
-      <div class="story-image story-image--editorial"><span>EDITORIAL</span></div>
-      <div class="story-kicker">Editorial</div>
-      <h3>Out of the Foxhole and Into Real Life</h3>
-      <p>A personal essay about accountability, survival mode, and learning to live after the danger is gone.</p>
-      <a href="#">Read more →</a>
-    </article>
-
-    <article class="story-card">
-      <div class="story-image story-image--style"><span>STYLE</span></div>
-      <div class="story-kicker">Style</div>
-      <h3>I’m Bringing Back Hair Metal Fashion. Sorry Not Sorry.</h3>
-      <p>Keep the black. Add leather, jewelry, drama, hair, and enough personality to wake the whole room up.</p>
-      <a href="#">Read more →</a>
-    </article>
-
-    <article class="story-card">
-      <div class="story-image story-image--culture"><span>IDENTITY</span></div>
-      <div class="story-kicker">Culture</div>
-      <h3>Wait, What’s Your Real Name?</h3>
-      <p>Scene names, reinvention, privacy, religious programming, and why a chosen name can become the one that fits.</p>
-      <a href="#">Read more →</a>
-    </article>
-
-    <article class="story-card">
-      <div class="story-image story-image--history"><span>KINK HISTORY</span></div>
-      <div class="story-kicker">Kink History</div>
-      <h3>Who Invented the Dungeon?</h3>
-      <p>A researched look at how leather communities, clubs, craftspeople, and educators shaped the modern play space.</p>
-      <a href="#">Read more →</a>
-    </article>
+    <article class="story-card"><img class="story-image" src="{{ '/assets/generated/vcs-card-foxhole.webp' | relative_url }}" alt="Editorial artwork"><h3>Out of the Foxhole<br>and Into Real Life</h3><p>What happens when the scene saves you, but the real world is still waiting?</p><a href="#">Read more →</a></article>
+    <article class="story-card"><img class="story-image" src="{{ '/assets/generated/vcs-card-hair-metal.webp' | relative_url }}" alt="Style artwork"><h3>I’m Bringing Back<br>Hair Metal Fashion.<br>Sorry Not Sorry.</h3><p>Big hair. Bigger attitude. Why hair metal never really died and how to wear it now.</p><a href="#">Read more →</a></article>
+    <article class="story-card"><img class="story-image" src="{{ '/assets/generated/vcs-card-name.webp' | relative_url }}" alt="Identity artwork"><h3>Wait, What’s<br>Your Real Name?</h3><p>Scene names, reinvention, privacy, and the strange moment a chosen name becomes the one that fits.</p><a href="#">Read more →</a></article>
+    <article class="story-card"><img class="story-image" src="{{ '/assets/generated/vcs-card-dungeon.webp' | relative_url }}" alt="Kink history artwork"><h3>Who Invented<br>the Dungeon?</h3><p>A look at the real history behind dungeons, from leather culture to modern play spaces.</p><a href="#">Read more →</a></article>
   </div>
 </section>
 
-<section class="manifesto shell">
-  <div class="manifesto-copy">
-    <div class="eyebrow">South Florida roots · Global reach</div>
-    <h2>A kinkier, kinder, brighter underground.</h2>
-    <p>Music. People. Places. Ideas. Real life. Alt culture with kink undertones and zero apologies.</p>
-  </div>
-  <div class="manifesto-sign">SINNERS<br>BELONG<br>HERE</div>
-</section>
-
-<section class="newsletter shell">
-  <div>
-    <div class="eyebrow">Get new posts</div>
-    <h2>Satanica in your inbox.</h2>
-    <p>New stories, style, history, culture, and Satanica’s thoughts whenever there is something worth sending.</p>
-  </div>
-  <form class="newsletter-form" onsubmit="return false;">
-    <label class="sr-only" for="email">Email address</label>
-    <input id="email" type="email" placeholder="Your email here…" disabled>
-    <button type="submit" disabled>Subscribe →</button>
-    <small>Signup gets wired in after the visual build is locked.</small>
-  </form>
+<section class="lower shell">
+  <div class="manifesto-art"><img src="{{ '/assets/generated/vcs-manifesto.webp' | relative_url }}" alt="A kinkier kinder brighter underground"></div>
+  <aside class="newsletter">
+    <div class="newsletter-star">✦</div><h2>Get New Posts</h2>
+    <p>New stories, style, history, and Satanica’s unfiltered thoughts straight to your inbox.</p>
+    <form class="newsletter-form" action="#" method="post"><label class="sr-only" for="email">Email</label><input id="email" name="email" type="email" placeholder="Your email here..."><button type="submit">Subscribe →</button><small>No spam. Just sin.</small></form>
+  </aside>
 </section>
