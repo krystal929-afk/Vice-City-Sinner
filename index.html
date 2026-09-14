@@ -5,6 +5,7 @@
 <title>The Vice City Sinner · Satanica Lux</title>
 <meta name="description" content="The Vice City Sinner by Satanica Lux. Alt culture, style, identity, kink history, and independent editorial.">
 <link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="homepage.css">
 </head>
 <body>
 <header class="site-header">
@@ -17,18 +18,22 @@
 </header>
 
 <main>
-<section class="hero shell">
-  <div class="hero-copy">
-    <div class="kicker">Featured Story</div>
-    <h1>Out of the Foxhole<br>and <span class="green">Into Real Life</span></h1>
+<section class="home-hero shell">
+  <div class="home-hero-copy">
+    <div class="kicker">Featured Story · Editorial</div>
+    <h1>Out of the Foxhole<br><span>and Into Real Life</span></h1>
     <p class="hero-dek">A personal essay about accountability, survival mode, and learning to live after the danger is gone.</p>
     <a class="button" href="foxhole.html">Read the full story <span>→</span></a>
-    <div class="hero-note">Same sinner.<br>Different day.</div>
+    <div class="home-hero-stamp"><span>By Satanica Lux</span><span>Same sinner. Different day.</span></div>
   </div>
-  <div class="hero-art"><img src="assets/hero-satanica.avif" width="690" height="388" alt="Satanica Lux" fetchpriority="high"></div>
+  <a class="home-hero-art" href="foxhole.html" aria-label="Read Out of the Foxhole and Into Real Life">
+    <div class="home-hero-label">Issue 001 / Featured Essay</div>
+    <div class="home-hero-photo"><img src="assets/hero-satanica.avif" width="690" height="388" alt="Satanica Lux" fetchpriority="high"></div>
+    <div class="home-hero-art-footer"><span>Satanica Lux / Vice City Sinner</span><span>Read →</span></div>
+  </a>
 </section>
 
-<section class="section shell" id="latest" aria-labelledby="latest-heading">
+<section class="home-stories shell" id="latest" aria-labelledby="latest-heading">
   <div class="section-heading">
     <div>
       <div class="section-kicker">Fresh from the Sinner</div>
@@ -38,13 +43,36 @@
     <div class="section-note">Style · Culture · Kink history</div>
   </div>
 
-  <div class="story-layout">
-    <article class="story-card story-card--lead">
-      <a class="story-media story-media--style" href="hair-metal.html" aria-label="Read I’m Bringing Back Hair Metal Fashion. Sorry Not Sorry.">
-        <img src="assets/story-style-illustration.jpeg" width="864" height="1536" alt="Satanica Lux illustrated in the established neon gothic style" loading="lazy">
-        <span class="story-number" aria-hidden="true">01</span>
+  <div class="home-story-grid">
+    <article class="home-story-card home-story-card--lead">
+      <a class="home-story-cover" href="hair-metal.html" aria-label="Read I’m Bringing Back Hair Metal Fashion. Sorry Not Sorry.">
+        <div class="cover-shell cover-style">
+          <div class="cover-eyebrow">Style / The Quick Guide</div>
+          <div class="cover-head">
+            <div class="cover-number">01</div>
+            <div>
+              <div class="cover-title">Nine No-Brainer<br>Hair Metal Revival<br>Combos</div>
+              <div class="cover-dek">Wake up an all-black wardrobe without buying an entirely new personality.</div>
+            </div>
+          </div>
+          <div class="cover-style-layout">
+            <div class="cover-style-photo"><img src="assets/story-style-illustration.jpeg" alt="Satanica Lux illustrated in the established Vice City Sinner style" loading="lazy"></div>
+            <div class="combo-grid" aria-hidden="true">
+              <div class="combo"><b>1</b><span>The Satanica Default</span></div>
+              <div class="combo"><b>2</b><span>Band Tee, But Make It Hot</span></div>
+              <div class="combo"><b>3</b><span>Leather Does the Heavy Lifting</span></div>
+              <div class="combo"><b>4</b><span>One Violent Color</span></div>
+              <div class="combo"><b>5</b><span>Hair Is the Outfit</span></div>
+              <div class="combo"><b>6</b><span>Lace and Damage</span></div>
+              <div class="combo"><b>7</b><span>Maximum Jewelry, Minimum Effort</span></div>
+              <div class="combo"><b>8</b><span>Five-Minute Full Volume</span></div>
+              <div class="combo"><b>9</b><span>Feeling Kinky?</span></div>
+            </div>
+          </div>
+          <div class="cover-rule">Black base · drama · texture · jewelry · big hair</div>
+        </div>
       </a>
-      <div class="story-copy">
+      <div class="home-story-copy">
         <div class="tag">Style</div>
         <h3><a href="hair-metal.html">I’m Bringing Back Hair Metal Fashion. Sorry Not Sorry.</a></h3>
         <p>Keep the black. Add leather, jewelry, dramatic hair, and more personality per square inch.</p>
@@ -52,33 +80,63 @@
       </div>
     </article>
 
-    <div class="story-stack">
-      <article class="story-card story-card--row">
-        <a class="story-media story-media--identity" href="real-name.html" aria-label="Read Wait, What’s Your Real Name?">
-          <img src="assets/story-identity-illustration.jpeg" width="864" height="1536" alt="Satanica Lux illustrated signature artwork" loading="lazy">
-          <span class="story-number" aria-hidden="true">02</span>
-        </a>
-        <div class="story-copy">
-          <div class="tag">Identity</div>
-          <h3><a href="real-name.html">Wait, What’s Your Real Name?</a></h3>
-          <p>Scene names, privacy, self-authorship, and why the name you choose can become the one that fits.</p>
-          <a class="readmore" href="real-name.html">Read story <span aria-hidden="true">→</span></a>
+    <article class="home-story-card">
+      <a class="home-story-cover" href="real-name.html" aria-label="Read Wait, What’s Your Real Name?">
+        <div class="cover-shell cover-identity">
+          <div class="cover-eyebrow">Identity / Scene Names</div>
+          <div class="cover-head">
+            <div class="cover-number">02</div>
+            <div>
+              <div class="cover-title">Wait, What’s<br>Your Real Name?</div>
+              <div class="cover-dek">Privacy, self-authorship, and the names that actually fit.</div>
+            </div>
+          </div>
+          <div class="cover-identity-layout">
+            <div class="name-stack" aria-hidden="true">
+              <div class="name-ticket name-ticket--redact"><small>Legal name</small><strong>Redacted</strong></div>
+              <div class="name-ticket"><small>Scene name</small><strong>Satanica Lux</strong></div>
+              <div class="name-ticket"><small>Chosen name</small><strong>You decide</strong></div>
+            </div>
+            <div class="identity-portrait"><img src="assets/story-identity-illustration.jpeg" alt="Satanica Lux illustrated signature artwork" loading="lazy"></div>
+          </div>
         </div>
-      </article>
+      </a>
+      <div class="home-story-copy">
+        <div class="tag">Identity</div>
+        <h3><a href="real-name.html">Wait, What’s Your Real Name?</a></h3>
+        <p>Scene names, privacy, self-authorship, and why the name you choose can become the one that fits.</p>
+        <a class="readmore" href="real-name.html">Read story <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
 
-      <article class="story-card story-card--row">
-        <a class="story-media story-media--dungeon" href="dungeon.html" aria-label="Read Who the Fuck Invented the Dungeon?">
-          <img src="assets/story-editorial-illustration.jpeg" width="864" height="1536" alt="Satanica Lux illustrated in the established neon gothic style" loading="lazy">
-          <span class="story-number" aria-hidden="true">03</span>
-        </a>
-        <div class="story-copy">
-          <div class="tag">Kink History</div>
-          <h3><a href="dungeon.html">Who the Fuck Invented the Dungeon?</a></h3>
-          <p>How leather communities, private clubs, DIY furniture, activism, and the internet built the modern play space.</p>
-          <a class="readmore" href="dungeon.html">Read story <span aria-hidden="true">→</span></a>
+    <article class="home-story-card">
+      <a class="home-story-cover" href="dungeon.html" aria-label="Read Who the Fuck Invented the Dungeon?">
+        <div class="cover-shell cover-dungeon">
+          <div class="cover-eyebrow">Kink History / Origins</div>
+          <div class="cover-head">
+            <div class="cover-number">03</div>
+            <div>
+              <div class="cover-title">Who Built<br>the Dungeon?</div>
+              <div class="cover-dek">The modern play space was built by communities, not one inventor.</div>
+            </div>
+          </div>
+          <div class="dungeon-map" aria-hidden="true">
+            <div class="dungeon-node"><b>Private clubs</b><span>Community first</span></div>
+            <div class="dungeon-node"><b>DIY furniture</b><span>Built to purpose</span></div>
+            <div class="dungeon-node"><b>Leather bars</b><span>Culture + code</span></div>
+            <div class="dungeon-node"><b>Activism</b><span>Space to survive</span></div>
+            <div class="dungeon-node dungeon-node--wide"><b>The internet</b><span>From private to findable</span></div>
+          </div>
+          <div class="dungeon-watermark"><img src="assets/story-editorial-illustration.jpeg" alt="" loading="lazy"></div>
         </div>
-      </article>
-    </div>
+      </a>
+      <div class="home-story-copy">
+        <div class="tag">Kink History</div>
+        <h3><a href="dungeon.html">Who the Fuck Invented the Dungeon?</a></h3>
+        <p>How leather communities, private clubs, DIY furniture, activism, and the internet built the modern play space.</p>
+        <a class="readmore" href="dungeon.html">Read story <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
   </div>
 </section>
 
