@@ -122,3 +122,55 @@ img{display:block;max-width:100%}
 }
 
 .newsletter{background:radial-gradient(circle at 20% 50%,rgba(223,35,255,.20),transparent 38%),radial-gradient(circle at 82% 50%,rgba(64,120,255,.15),transparent 38%),#08040b;}
+
+/* VCS image repair: source photos/locked character art, no repeated hero */
+.hero-art img{
+  content:url('assets/hero-satanica.avif');
+  object-fit:cover;
+  object-position:34% 50%;
+}
+.story-card:nth-child(1) .story-thumb img{
+  content:url('assets/editorial-satanica.avif');
+  object-fit:cover;
+  object-position:50% 18%;
+}
+.story-card:nth-child(2) .story-thumb img{
+  content:url('assets/style-satanica.avif');
+  object-fit:cover;
+  object-position:50% 16%;
+}
+.story-card:nth-child(3) .story-thumb img{
+  content:url('assets/identity-satanica.avif');
+  object-fit:cover;
+  object-position:50% 50%;
+}
+.story-card:nth-child(4) .story-thumb img{
+  content:url('assets/dungeon-satanica.avif');
+  object-fit:cover;
+  object-position:50% 50%;
+}
+.article-hero-image img[alt="Out of the Foxhole and Into Real Life"]{
+  content:url('assets/editorial-satanica.avif');
+  object-fit:cover;
+  object-position:50% 18%;
+}
+.article-hero-image img[alt="I’m Bringing Back Hair Metal Fashion. Sorry Not Sorry."]{
+  content:url('assets/style-satanica.avif');
+  object-fit:cover;
+  object-position:50% 16%;
+}
+.article-hero-image img[alt="Wait, What’s Your Real Name?"]{
+  content:url('assets/identity-satanica.avif');
+  object-fit:cover;
+  object-position:50% 50%;
+}
+.article-hero-image img[alt="Who the Fuck Invented the Dungeon?"]{
+  content:url('assets/dungeon-satanica.avif');
+  object-fit:cover;
+  object-position:50% 50%;
+}
+@media(max-width:900px){
+  .hero-art img{object-position:35% 50%;}
+  .story-card:nth-child(1) .story-thumb img,
+  .story-card:nth-child(2) .story-thumb img{object-position:50% 20%;}
+}
