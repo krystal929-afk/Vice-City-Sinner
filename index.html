@@ -63,8 +63,15 @@
   <div class="newsletter-copy">
     <h2>Get New Posts</h2>
     <p>New stories, style, history, and Satanica’s unfiltered thoughts straight to your inbox.</p>
-    <form class="newsletter-form"><label class="sr-only" for="email">Email</label><input id="email" type="email" placeholder="Your email here..."><button type="submit">Subscribe →</button></form>
-    <div class="form-note">No spam. Just sin.</div>
+    <form class="newsletter-form" action="__VCS_NEWSLETTER_ENDPOINT__" method="post" target="newsletter-sink">
+      <label class="sr-only" for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="Your email here..." required>
+      <input type="hidden" name="source" value="Vice City Sinner website">
+      <label style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <button type="submit">Subscribe →</button>
+    </form>
+    <iframe id="newsletter-sink" name="newsletter-sink" title="Newsletter signup response" hidden></iframe>
+    <div class="form-note" aria-live="polite">No spam. Just sin.</div>
   </div>
   <div class="newsletter-sign">Vice City<br>Sinners<br>Never Sleep</div>
 </section>
@@ -72,6 +79,22 @@
 
 <footer class="site-footer"><div class="shell footer-main"><a class="footer-logo" href="index.html"><img src="assets/logo.svg" alt="The Vice City Sinner"></a><div class="footer-nav"><a href="index.html">Home</a><a href="foxhole.html">Editorial</a><a href="hair-metal.html">Style</a><a href="real-name.html">Culture</a><a href="dungeon.html">Kink History</a><a href="about.html">About</a></div><div class="footer-mantra">People<br>Pleasure<br>Perspective<br>Progress</div></div><div class="shell footer-bottom"><span>© 2026 The Vice City Sinner. All sinners welcome.</span><span>South Florida. Worldwide.</span></div></footer>
 <script>
-const form=document.querySelector('.newsletter-form');form.addEventListener('submit',e=>{e.preventDefault();document.querySelector('.form-note').textContent='Newsletter signup is being wired next. No fake success message here.';});
+const form=document.querySelector('.newsletter-form');
+const note=document.querySelector('.form-note');
+const button=form.querySelector('button');
+const sink=document.getElementById('newsletter-sink');
+let submitted=false;
+form.addEventListener('submit',()=>{
+  submitted=true;
+  button.disabled=true;
+  note.textContent='Sending...';
+});
+sink.addEventListener('load',()=>{
+  if(!submitted) return;
+  submitted=false;
+  button.disabled=false;
+  form.reset();
+  note.textContent='You’re in. Welcome to Vice City.';
+});
 </script>
 </body></html>
