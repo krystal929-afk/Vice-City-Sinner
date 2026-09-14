@@ -1,0 +1,32 @@
+/* Vice City Sinner locked visual correction layer */
+
+/* Do not surface About until approved copy exists. */
+.nav-inner a[href="about.html"],
+.footer-nav a[href="about.html"],
+.article-end a[href="about.html"]{display:none!important}
+
+/* Replace rejected/cropped portrait posters with intentional story graphics. */
+.article-hero{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)}
+.article-hero-image{min-height:0!important;aspect-ratio:3/2;background:#050505 center/contain no-repeat;border-left:1px solid rgba(239,53,255,.55)}
+.article-hero-image img{display:none!important}
+.article-hero-image:has(.article-art--editorial){background-image:url('assets/art-foxhole.svg')}
+.article-hero-image:has(.article-art--style){background-image:url('assets/art-hair-metal.svg')}
+.article-hero-image:has(.article-art--identity){background-image:url('assets/art-real-name.svg')}
+.article-hero-image:has(.article-art--dungeon){background-image:url('assets/art-dungeon.svg')}
+
+/* Style-guide fidelity. */
+.article-hero,.home-story-card,.newsletter{box-shadow:none!important}
+.article-hero h1,.home-story-copy h3,.section-heading h2{font-family:Georgia,'Times New Roman',serif}
+.kicker,.tag,.section-kicker,.article-meta,.nav-inner a{font-family:'Arial Narrow',Arial,sans-serif;font-weight:900;letter-spacing:.15em}
+
+@media(max-width:900px){
+ .article-hero{grid-template-columns:1fr}
+ .article-hero-image{order:-1;border-left:0;border-bottom:1px solid rgba(239,53,255,.55);aspect-ratio:3/2}
+}
+@media(max-width:580px){
+ .article-shell{width:min(100% - 20px,980px)}
+ .article-hero{margin-top:10px}
+ .article-hero-copy{padding:24px 20px 30px}
+ .article-hero h1{font-size:clamp(2.35rem,12vw,3.65rem)}
+ .article-hero-image{aspect-ratio:3/2}
+}
