@@ -1,0 +1,21 @@
+/* Homepage corrections locked to the approved VCS phone-proof guide. */
+.home-hero{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);min-height:0}
+.home-hero-art{min-height:0;padding:22px;gap:12px}
+.home-hero-photo{width:100%;padding:0;border:1px solid rgba(239,53,255,.76);box-shadow:none;background:#050505}
+.home-hero-photo img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}
+.home-story-grid--art{align-items:start}
+.home-story-cover--art{background:#050505;padding:0;overflow:hidden}
+.home-story-cover--art img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:#050505}
+.home-story-card--lead .home-story-cover--art{border-right:1px solid rgba(239,53,255,.4)}
+.home-story-card:not(.home-story-card--lead) .home-story-cover--art{border-bottom:1px solid rgba(239,53,255,.4)}
+.home-story-copy{background:#080708}
+
+@media(max-width:900px){
+ .home-hero{grid-template-columns:1fr}.home-hero-art{order:1}.home-hero-copy{order:2}
+ .home-story-card--lead{display:flex;grid-column:auto}.home-story-card--lead .home-story-cover--art{border-right:0;border-bottom:1px solid rgba(239,53,255,.4)}
+}
+@media(max-width:580px){
+ .home-hero-art{padding:10px}.home-hero-label,.home-hero-art-footer{font-size:.58rem;letter-spacing:.11em}
+ .home-story-cover--art img{aspect-ratio:3/2}
+ .home-story-copy{padding:20px}
+}
