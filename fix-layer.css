@@ -59,7 +59,7 @@
 .article-hero h1,.home-story-copy h3,.section-heading h2{font-family:Georgia,'Times New Roman',serif}
 .kicker,.tag,.section-kicker,.article-meta,.nav-inner a{font-family:'Arial Narrow',Arial,sans-serif;font-weight:900;letter-spacing:.15em}
 
-/* Hair Metal quick guide: this is the actual on-page style guide, not a poster download. */
+/* Hair Metal quick guide: exact phone proofs live in the article as article content. */
 .hair-guide{
   margin:34px 0 42px;
   padding:clamp(18px,3vw,28px);
@@ -83,6 +83,11 @@
   text-transform:uppercase!important;
 }
 .hair-guide-head p{margin:0!important;color:#cfc5d1!important;font:400 1rem/1.4 var(--serif)!important;max-width:670px}
+.hair-guide-pages{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;align-items:start}
+.hair-guide-page{margin:0;display:flex;justify-content:center}
+.hair-guide-page img{display:block;width:100%;max-width:360px;height:auto;border:1px solid rgba(239,53,255,.7);background:#050505}
+.hair-guide-continuation{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.22)}
+.hair-guide-continuation-label{margin:0 0 12px;color:#cfc5d1;font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
 .hair-guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .hair-guide-card{
   min-width:0;
@@ -114,7 +119,7 @@
  .article-hero{grid-template-columns:1fr}
  .article-hero-image{order:-1;border-left:0;border-bottom:1px solid rgba(239,53,255,.55)}
  .article-hero-image img{max-height:none!important}
- .hair-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .hair-guide-grid{grid-template-columns:1fr}
 }
 @media(max-width:580px){
  .article-shell{width:min(100% - 20px,980px)}
@@ -123,7 +128,10 @@
  .article-hero h1{font-size:clamp(2.35rem,12vw,3.65rem)}
  .article-hero-image{padding:12px}
  .article-hero-image img{width:min(100%,430px)!important;height:auto!important}
- .hair-guide{margin:26px -2px 34px;padding:14px 12px}
+ .hair-guide{margin:26px -2px 34px;padding:14px 10px}
+ .hair-guide-pages{grid-template-columns:1fr;gap:14px}
+ .hair-guide-page img{max-width:100%}
+ .hair-guide-continuation{margin-top:16px;padding-top:16px}
  .hair-guide-grid{grid-template-columns:1fr;gap:10px}
  .hair-guide-card{grid-template-columns:48px 1fr;padding:12px 11px}
  .hair-guide-number{font-size:2.75rem}
