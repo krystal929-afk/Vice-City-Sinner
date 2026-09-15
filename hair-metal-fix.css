@@ -1,0 +1,12 @@
+/* Hair Metal article-specific approved artwork and guide asset refresh. */
+.article-art--style{
+  content:url('assets/hair-metal-header-satanica.webp')!important;
+}
+
+/* Refresh the approved guide proof filenames so Pages/browser caches do not keep stale failed responses. */
+.hair-guide-page:nth-child(1) img{
+  content:url('assets/hair-metal-guide-1-3-v2.webp')!important;
+}
+.hair-guide-page:nth-child(2) img{
+  content:url('assets/hair-metal-guide-4-6-v2.webp')!important;
+}
