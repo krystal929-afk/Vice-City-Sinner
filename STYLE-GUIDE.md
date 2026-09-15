@@ -2,6 +2,8 @@
 
 This guide separates **site identity** from **story-specific editorial artwork**. A story image can have its own visual concept without redefining the entire Vice City Sinner site.
 
+Editorial personality and subject breadth are defined separately in [`EDITORIAL-GUIDE.md`](EDITORIAL-GUIDE.md). That guide is the source of truth for what VCS *is about*; this file is the source of truth for how the site and story art are visually handled.
+
 ## 1. Site identity — locked
 
 ![The Vice City Sinner masthead](assets/logo.svg)
@@ -9,6 +11,8 @@ This guide separates **site identity** from **story-specific editorial artwork**
 The overall publication keeps the established Vice City Sinner system: black foundation, purple/magenta neon framing, acid-green highlights, large editorial serif headlines, compact uppercase utility text, and the existing masthead/navigation language.
 
 The original homepage and newsletter mockups supplied by Satanica Lux remain the source of truth for the publication-level look. Do **not** replace that identity with the visual theme of one article.
+
+Important: goth and kink are subjects within the publication, not the publication's entire visual or editorial identity. Avoid defaulting every image toward dungeons, fetish hardware, gothic fantasy, or generic "alternative" imagery simply because those elements appear elsewhere in the project.
 
 ## 2. Story art — assigned by article
 
@@ -53,6 +57,7 @@ Role: primary kink-history artwork.
 - Cropping an image so aggressively that the artwork or embedded text becomes unreadable.
 - Treating the Hair Metal guide as a site-wide redesign brief.
 - Publishing About copy without explicit approval.
+- Treating kink, goth, fetish, trauma, or "edginess" as a default visual shorthand for Satanica Lux or VCS.
 
 ## 5. Layout rules
 
@@ -60,6 +65,7 @@ Role: primary kink-history artwork.
 - Mobile presentation is the first validation target.
 - Never upscale a tiny source into a giant hero and call the result finished.
 - Site navigation, masthead, and publication identity stay visually consistent even when individual story art changes.
+- If the art direction does not make sense for the specific story without knowing Satanica is goth or kinky, rethink the concept.
 
 ## 6. Internal visual guide
 
