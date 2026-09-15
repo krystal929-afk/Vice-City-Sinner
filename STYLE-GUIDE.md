@@ -38,9 +38,13 @@ The homepage hero uses the approved green Satanica imagery: Satanica emerging fr
 
 ### Style — I’m Bringing Back Hair Metal Fashion. Sorry Not Sorry.
 
-![Hair metal style artwork](assets/card-style.svg)
+**Article header — approved / locked:** `assets/hair-metal-header-satanica.webp`
 
-Role: story artwork. The approved **Nine No-Brainer Hair Metal Revival Combos** phone proofs are the source of truth for the outfit guide itself. The live article should present that guide clearly on-page, not bury it as a poster asset or use it as the theme of the whole website.
+The Hair Metal article header uses the established green Satanica character system in a backstage/dressing-room scene: lime-green skin, blue-black hair, forehead star, black leather, fishnets, stacked jewelry, platform boots, purple/magenta lighting, and South Florida atmosphere. This is the approved article-header image. Do not replace it with a generic model, poster graphic, or non-Satanica fashion image.
+
+`assets/card-style.svg` remains the compact Hair Metal story artwork where a card-sized asset is needed.
+
+The approved **Nine No-Brainer Hair Metal Revival Combos** phone proofs are the source of truth for the outfit guide itself. The refreshed live asset paths are `assets/hair-metal-guide-1-3-v2.webp` and `assets/hair-metal-guide-4-6-v2.webp`. The live article should present that guide clearly on-page, not bury it as a poster asset or use it as the theme of the whole website.
 
 ### Culture / Identity — Wait, What’s Your Real Name?
 
