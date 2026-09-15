@@ -30,7 +30,11 @@ Story art must be intentional, crisp, and relevant to the article. These assignm
 
 ![Foxhole editorial artwork](assets/editorial-satanica.avif)
 
-Role: current compact Foxhole artwork. It may be shown at a sensible size, but should not be stretched into a giant blurry hero. The current homepage hero uses `assets/hero.svg` until a replacement hero is explicitly approved.
+Role: compact Foxhole article artwork.
+
+**Homepage hero — approved / locked:** `assets/homepage-hero-satanica.webp`
+
+The homepage hero uses the approved green Satanica imagery: Satanica emerging from a dark trench/foxhole toward bright South Florida light. Use this exact approved hero for the homepage feature. Show the composition cleanly and do not replace it with an unapproved portrait, generic goth imagery, a poster treatment, or a stretched low-resolution source.
 
 ### Style — I’m Bringing Back Hair Metal Fashion. Sorry Not Sorry.
 
