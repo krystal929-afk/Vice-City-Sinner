@@ -5,12 +5,37 @@
 .footer-nav a[href="about.html"],
 .article-end a[href="about.html"]{display:none!important}
 
+/* Broaden the publication language everywhere without forcing long article-file rewrites. */
+.topline-copy:first-child{font-size:0}
+.topline-copy:first-child::after{
+  content:"Culture.\A Curiosity.\A No performance required.";
+  white-space:pre;
+  font:700 .72rem/1.45 var(--sans);
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#c9bed1;
+}
+.topline-copy.right{font-size:0}
+.topline-copy.right::after{
+  content:"South Florida.\A Worldwide.\A Room for you.";
+  white-space:pre;
+  font:700 .72rem/1.45 var(--sans);
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#c9bed1;
+}
+.nav-inner a[href="dungeon.html"]{font-size:0}
+.nav-inner a[href="dungeon.html"]::after{content:"History";font-size:.82rem}
+.footer-nav a[href="dungeon.html"]{font-size:0}
+.footer-nav a[href="dungeon.html"]::after{content:"History";font-size:.68rem}
+
 /* Article hero artwork: show the assigned image in full instead of cropping a poster. */
 .article-hero{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)}
 .article-hero-image{min-height:0!important;background:#050505;border-left:1px solid rgba(239,53,255,.55);display:flex;align-items:center;justify-content:center}
 .article-hero-image img{display:block!important;width:100%!important;height:auto!important;max-height:680px!important;object-fit:contain!important;object-position:center!important;min-height:0!important;background:#050505}
-.article-art--editorial{content:url('assets/editorial-satanica.avif')}
-.article-art--identity{content:url('assets/identity-satanica.avif')}
+/* Use the full-resolution article sources instead of the tiny AVIF derivatives. */
+.article-art--editorial{content:url('assets/story-editorial-illustration.jpeg')}
+.article-art--identity{content:url('assets/story-identity-illustration.jpeg')}
 .article-art--dungeon{content:url('assets/dungeon-satanica.avif')}
 /* Hair Metal keeps its dedicated full-resolution style illustration rather than the rejected infographic. */
 .article-art--style{content:url('assets/story-style-illustration.jpeg')}
