@@ -1,20 +1,20 @@
-/* Vice City Sinner locked visual correction layer */
+/* Vice City Sinner corrective layer: site identity stays VCS; story art is story-specific. */
 
-/* Do not surface About until approved copy exists. */
+/* About remains unpublished until copy is explicitly approved. */
 .nav-inner a[href="about.html"],
 .footer-nav a[href="about.html"],
 .article-end a[href="about.html"]{display:none!important}
 
-/* Replace rejected/cropped portrait posters with intentional story graphics. */
+/* Article hero artwork: show the assigned image in full instead of cropping a poster. */
 .article-hero{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)}
-.article-hero-image{min-height:0!important;background:#050505;border-left:1px solid rgba(239,53,255,.55)}
-.article-hero-image img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:3/2;object-fit:contain!important;object-position:center!important;min-height:0!important;max-height:none!important;background:#050505}
-.article-art--editorial{content:url('assets/art-foxhole.svg')}
-.article-art--style{content:url('assets/art-hair-metal.svg')}
-.article-art--identity{content:url('assets/art-real-name.svg')}
-.article-art--dungeon{content:url('assets/art-dungeon.svg')}
+.article-hero-image{min-height:0!important;background:#050505;border-left:1px solid rgba(239,53,255,.55);display:flex;align-items:center;justify-content:center}
+.article-hero-image img{display:block!important;width:100%!important;height:auto!important;max-height:680px!important;object-fit:contain!important;object-position:center!important;min-height:0!important;background:#050505}
+.article-art--editorial{content:url('assets/editorial-satanica.avif')}
+.article-art--identity{content:url('assets/identity-satanica.avif')}
+.article-art--dungeon{content:url('assets/dungeon-satanica.avif')}
+/* Hair Metal keeps its dedicated full-resolution style illustration rather than the rejected infographic. */
+.article-art--style{content:url('assets/story-style-illustration.jpeg')}
 
-/* Style-guide fidelity. */
 .article-hero,.home-story-card,.newsletter{box-shadow:none!important}
 .article-hero h1,.home-story-copy h3,.section-heading h2{font-family:Georgia,'Times New Roman',serif}
 .kicker,.tag,.section-kicker,.article-meta,.nav-inner a{font-family:'Arial Narrow',Arial,sans-serif;font-weight:900;letter-spacing:.15em}
@@ -22,10 +22,12 @@
 @media(max-width:900px){
  .article-hero{grid-template-columns:1fr}
  .article-hero-image{order:-1;border-left:0;border-bottom:1px solid rgba(239,53,255,.55)}
+ .article-hero-image img{max-height:none!important}
 }
 @media(max-width:580px){
  .article-shell{width:min(100% - 20px,980px)}
  .article-hero{margin-top:10px}
  .article-hero-copy{padding:24px 20px 30px}
  .article-hero h1{font-size:clamp(2.35rem,12vw,3.65rem)}
+ .article-hero-image img{width:100%!important;height:auto!important}
 }
