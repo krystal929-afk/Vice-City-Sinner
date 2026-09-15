@@ -1,19 +1,66 @@
 # The Vice City Sinner — Visual Source of Truth
 
-This file records the locked visual system supplied by Satanica Lux for the current Vice City Sinner build.
+This guide separates **site identity** from **story-specific editorial artwork**. A story image can have its own visual concept without redefining the entire Vice City Sinner site.
 
-- Black editorial base.
-- Thin magenta framing and rules.
-- Acid-green utility labels and accents.
-- Oversized hot-pink numbering/details.
-- White high-contrast serif display headlines.
-- Compact sans-serif supporting copy.
-- Intentional editorial graphics/collage systems for each story rather than generic portraits or cropped posters.
-- Article art must be crisp, legible, and composed for mobile. No stretched low-resolution photos.
-- Do not use unapproved photographs of Satanica Lux.
-- The homepage featured story must not use the previously rejected Satanica hero photo.
-- Story art should share one publication language while remaining conceptually distinct by article.
-- Hair Metal visual reference: the approved “Nine No-Brainer Hair Metal Revival Combos” phone-proof card system.
-- About copy requires explicit approval before publication.
+## 1. Site identity — locked
 
-Source reference in project conversation: the three approved phone-proof guide panels supplied September 14, 2026.
+![The Vice City Sinner masthead](assets/logo.svg)
+
+The overall publication keeps the established Vice City Sinner system: black foundation, purple/magenta neon framing, acid-green highlights, large editorial serif headlines, compact uppercase utility text, and the existing masthead/navigation language.
+
+The original homepage and newsletter mockups supplied by Satanica Lux remain the source of truth for the publication-level look. Do **not** replace that identity with the visual theme of one article.
+
+## 2. Story art — assigned by article
+
+Story art must be intentional, crisp, and relevant to the article. These assignments are locked until Satanica Lux changes them.
+
+### Editorial — Out of the Foxhole and Into Real Life
+
+![Foxhole editorial artwork](assets/editorial-satanica.avif)
+
+Role: primary artwork for the Foxhole story. The previously rejected Satanica photo is not to be used as the homepage hero.
+
+### Style — I’m Bringing Back Hair Metal Fashion. Sorry Not Sorry.
+
+![Hair metal style artwork](assets/card-style.svg)
+
+Role: style-story artwork. The approved **Nine No-Brainer Hair Metal Revival Combos** guide is a story-specific editorial reference and supporting asset. It does **not** dictate the theme of the whole website.
+
+### Culture / Identity — Wait, What’s Your Real Name?
+
+![Real Name identity artwork](assets/identity-satanica.avif)
+
+Role: primary identity-story artwork.
+
+### Kink History — Who the Fuck Invented the Dungeon?
+
+![Dungeon story artwork](assets/dungeon-satanica.avif)
+
+Role: primary kink-history artwork.
+
+## 3. Approval states
+
+- **Approved / Live:** may be used on the site in its assigned role.
+- **Working / Needs approval:** may be explored, but must not be published or silently reassigned.
+- **Rejected / Do not use:** must not return later because it happens to be available in the repository.
+
+## 4. Rejected / do not use
+
+- The rejected Satanica homepage hero photo.
+- The text-heavy infographic SVGs previously created as replacements for article artwork: `art-foxhole.svg`, `art-hair-metal.svg`, `art-real-name.svg`, and `art-dungeon.svg`.
+- Unapproved photographs of Satanica Lux.
+- Generic portrait substitution when a story has assigned artwork.
+- Cropping an image so aggressively that the artwork or embedded text becomes unreadable.
+- Treating the Hair Metal guide as a site-wide redesign brief.
+- Publishing About copy without explicit approval.
+
+## 5. Layout rules
+
+- Artwork should be shown in full whenever it contains text or intentional composition.
+- Mobile presentation is the first validation target.
+- Never upscale a tiny source into a giant hero and call the result finished.
+- Site navigation, masthead, and publication identity stay visually consistent even when individual story art changes.
+
+## 6. Internal visual guide
+
+For a browser-rendered version with the live assets, open [`STYLE-GUIDE.html`](STYLE-GUIDE.html).
