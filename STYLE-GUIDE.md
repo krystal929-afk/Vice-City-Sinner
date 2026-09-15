@@ -20,9 +20,9 @@ Story art must be intentional, crisp, and relevant to the article. These assignm
 
 ### Editorial — Out of the Foxhole and Into Real Life
 
-![Foxhole editorial artwork](assets/editorial-satanica.avif)
+![Foxhole editorial artwork](assets/story-editorial-illustration.jpeg)
 
-Role: primary artwork for the Foxhole story. The previously rejected Satanica photo is not to be used as the homepage hero.
+Role: primary full-resolution artwork for the Foxhole story. `assets/editorial-satanica.avif` is a small derivative and should not be stretched into a large hero when the full-resolution source is available. The previously rejected Satanica photo is not to be used as the homepage hero.
 
 ### Style — I’m Bringing Back Hair Metal Fashion. Sorry Not Sorry.
 
@@ -32,15 +32,15 @@ Role: style-story artwork. The approved **Nine No-Brainer Hair Metal Revival Com
 
 ### Culture / Identity — Wait, What’s Your Real Name?
 
-![Real Name identity artwork](assets/identity-satanica.avif)
+![Real Name identity artwork](assets/story-identity-illustration.jpeg)
 
-Role: primary identity-story artwork.
+Role: primary full-resolution identity-story artwork. `assets/identity-satanica.avif` is a small derivative and should not be stretched into a large presentation when the full-resolution source is available.
 
-### Kink History — Who the Fuck Invented the Dungeon?
+### History — Who the Fuck Invented the Dungeon?
 
 ![Dungeon story artwork](assets/dungeon-satanica.avif)
 
-Role: primary kink-history artwork.
+Role: current assigned history artwork. If it does not hold up at display size, the correct fix is a higher-resolution approved source, not aggressive upscaling or an unrelated replacement.
 
 ## 3. Approval states
 
