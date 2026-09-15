@@ -29,30 +29,104 @@
 .footer-nav a[href="dungeon.html"]{font-size:0}
 .footer-nav a[href="dungeon.html"]::after{content:"History";font-size:.68rem}
 
-/* Article hero artwork: show the assigned image in full instead of cropping a poster. */
-.article-hero{grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)}
-.article-hero-image{min-height:0!important;background:#050505;border-left:1px solid rgba(239,53,255,.55);display:flex;align-items:center;justify-content:center}
-.article-hero-image img{display:block!important;width:100%!important;height:auto!important;max-height:680px!important;object-fit:contain!important;object-position:center!important;min-height:0!important;background:#050505}
-/* Use the full-resolution article sources instead of the tiny AVIF derivatives. */
-.article-art--editorial{content:url('assets/story-editorial-illustration.jpeg')}
-.article-art--identity{content:url('assets/story-identity-illustration.jpeg')}
+/* Poster rule: embedded-text poster art is supporting material only, never default story/hero art. */
+.article-hero{grid-template-columns:minmax(0,.94fr) minmax(320px,.86fr)}
+.article-hero-image{
+  min-height:0!important;
+  background:#050505;
+  border-left:1px solid rgba(239,53,255,.55);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:22px;
+}
+.article-hero-image img{
+  display:block!important;
+  width:min(100%,560px)!important;
+  height:auto!important;
+  max-height:600px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  min-height:0!important;
+  background:#050505;
+}
+.article-art--editorial{content:url('assets/editorial-satanica.avif')}
+.article-art--identity{content:url('assets/identity-satanica.avif')}
 .article-art--dungeon{content:url('assets/dungeon-satanica.avif')}
-/* Hair Metal keeps its dedicated full-resolution style illustration rather than the rejected infographic. */
-.article-art--style{content:url('assets/story-style-illustration.jpeg')}
+.article-art--style{content:url('assets/card-style.svg')}
 
 .article-hero,.home-story-card,.newsletter{box-shadow:none!important}
 .article-hero h1,.home-story-copy h3,.section-heading h2{font-family:Georgia,'Times New Roman',serif}
 .kicker,.tag,.section-kicker,.article-meta,.nav-inner a{font-family:'Arial Narrow',Arial,sans-serif;font-weight:900;letter-spacing:.15em}
 
+/* Hair Metal quick guide: this is the actual on-page style guide, not a poster download. */
+.hair-guide{
+  margin:34px 0 42px;
+  padding:clamp(18px,3vw,28px);
+  border:1px solid rgba(239,53,255,.62);
+  background:
+    linear-gradient(rgba(239,53,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(239,53,255,.035) 1px,transparent 1px),
+    #070708;
+  background-size:26px 26px;
+  font-family:var(--sans);
+}
+.hair-guide-head{padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.34);margin-bottom:18px}
+.hair-guide-kicker{color:var(--green);font-size:.64rem;font-weight:900;letter-spacing:.17em;text-transform:uppercase;margin-bottom:7px}
+.hair-guide h2{
+  margin:0 0 8px!important;
+  padding:0!important;
+  border:0!important;
+  color:var(--ink)!important;
+  font:700 clamp(2rem,4.4vw,3.7rem)/.92 var(--serif)!important;
+  letter-spacing:-.025em!important;
+  text-transform:uppercase!important;
+}
+.hair-guide-head p{margin:0!important;color:#cfc5d1!important;font:400 1rem/1.4 var(--serif)!important;max-width:670px}
+.hair-guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.hair-guide-card{
+  min-width:0;
+  border:1px solid #756d79;
+  background:#0b0b0c;
+  padding:14px 14px 15px;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:12px;
+  align-items:start;
+}
+.hair-guide-number{color:#ff18f0;font:700 clamp(2.7rem,5vw,4.2rem)/.8 var(--serif);letter-spacing:-.06em}
+.hair-guide-card h3{margin:0 0 5px;color:#f7f2f7;font:700 1.08rem/1.02 var(--serif)}
+.hair-guide-card p{margin:0!important;color:#cfc7d1!important;font:400 .82rem/1.32 var(--sans)!important}
+.hair-guide-card--kinky{border-color:rgba(134,255,45,.58)}
+.hair-guide-card--kinky p + p{margin-top:6px!important;color:#bfeaa1!important}
+.hair-guide-rule{
+  margin-top:16px;
+  padding:14px 16px;
+  border-left:3px solid var(--green);
+  background:linear-gradient(90deg,rgba(134,255,45,.07),rgba(134,255,45,.015));
+  color:#efe8f0;
+  font:400 .96rem/1.45 var(--serif);
+}
+.hair-guide-rule strong{color:var(--pink);text-transform:uppercase;letter-spacing:.08em}
+.hair-guide-jump{margin-top:18px}
+
 @media(max-width:900px){
  .article-hero{grid-template-columns:1fr}
  .article-hero-image{order:-1;border-left:0;border-bottom:1px solid rgba(239,53,255,.55)}
  .article-hero-image img{max-height:none!important}
+ .hair-guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:580px){
  .article-shell{width:min(100% - 20px,980px)}
  .article-hero{margin-top:10px}
  .article-hero-copy{padding:24px 20px 30px}
  .article-hero h1{font-size:clamp(2.35rem,12vw,3.65rem)}
- .article-hero-image img{width:100%!important;height:auto!important}
+ .article-hero-image{padding:12px}
+ .article-hero-image img{width:min(100%,430px)!important;height:auto!important}
+ .hair-guide{margin:26px -2px 34px;padding:14px 12px}
+ .hair-guide-grid{grid-template-columns:1fr;gap:10px}
+ .hair-guide-card{grid-template-columns:48px 1fr;padding:12px 11px}
+ .hair-guide-number{font-size:2.75rem}
+ .hair-guide-card h3{font-size:1.12rem}
+ .hair-guide-card p{font-size:.82rem!important}
 }
