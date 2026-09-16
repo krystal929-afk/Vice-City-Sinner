@@ -44,7 +44,9 @@ The Hair Metal article header uses the established green Satanica character syst
 
 `assets/card-style.svg` remains the compact Hair Metal story artwork where a card-sized asset is needed.
 
-The approved **Nine No-Brainer Hair Metal Revival Combos** copy is rendered natively as nine responsive HTML cards in the live article. This deliberately removes the broken binary proof-image dependency while preserving the approved guide content. The original phone proofs remain visual reference material and may replace the native cards later only when intact source files are available.
+**Hair Metal outfit guide — approved / live:** `assets/hair-metal-guide-1-3.webp`, `assets/hair-metal-guide-4-6.webp`, and `assets/hair-metal-guide-7-9.webp`.
+
+The approved **Nine No-Brainer Hair Metal Revival Combos** guide uses the three Green Satanica editorial pages for combos 1–3, 4–6, and 7–9. These exact visual pages are the live guide. The underlying HTML combo copy remains in the article for accessibility, but it is not the visible design.
 
 ### Culture / Identity — Wait, What’s Your Real Name?
 
