@@ -60,7 +60,9 @@ Use this exact 1448×1086 Green Satanica editorial artwork for the story and its
 
 ![Dungeon story artwork](assets/dungeon-satanica.avif)
 
-Role: current assigned history artwork. If it does not hold up at display size, the correct fix is a higher-resolution approved source, not aggressive upscaling or an unrelated replacement.
+**Article/homepage artwork — approved / locked:** `assets/dungeon-satanica.avif`
+
+Use the approved 1448×1086 Green Satanica history scene: Satanica studies an old illustrated archive book in a dense, candlelit room surrounded by period-feeling dungeon objects, restraints, leather, archival prints, books, and workshop/play-space details. The image should read as curious historical investigation rather than generic fetish glamour. Use this exact approved asset for the Dungeon article hero and homepage story card. Do not replace it with the earlier doorway graphic, poster treatment, unrelated dungeon imagery, or an unapproved Satanica variation.
 
 ## 4. Approval states
 
