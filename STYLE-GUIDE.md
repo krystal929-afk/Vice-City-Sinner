@@ -32,9 +32,9 @@ Story art must be intentional, crisp, and relevant to the article. These assignm
 
 Role: compact Foxhole article artwork.
 
-**Homepage hero — approved / locked:** `assets/homepage-hero-satanica.avif`
+**Homepage hero — approved / locked:** `assets/homepage-hero-satanica.png`
 
-The homepage hero uses the approved green Satanica imagery: Satanica emerging from a dark trench/foxhole toward bright South Florida light. Use this exact approved hero for the homepage feature. Show the composition cleanly and do not replace it with an unapproved portrait, generic goth imagery, a poster treatment, or a stretched low-resolution source.
+The homepage hero uses the approved green Satanica imagery: Satanica climbing clearly out of a dark underground passage/foxhole into bright South Florida daylight. Her hands and raised knee are visibly braced on the opening so the action reads immediately rather than looking like she is crawling in dirt. Use this exact approved 1448×1086 hero for the homepage feature. Show the full 4:3 composition cleanly and do not replace it with an unapproved portrait, generic goth imagery, a poster treatment, or a stretched low-resolution source.
 
 ### Style — I’m Bringing Back Hair Metal Fashion. Sorry Not Sorry.
 
