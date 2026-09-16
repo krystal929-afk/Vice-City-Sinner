@@ -1,23 +1,26 @@
-/* Hair Metal approved visual guide. The original text cards remain in the markup for accessibility, but the approved artwork is the visible guide. */
-.hair-guide-grid{
-  display:block!important;
-  position:relative;
+/* Hair Metal guide: full approved pages, never cropped or stretched. */
+.hair-guide-pages{
+  display:grid;
+  gap:22px;
   width:100%;
-  aspect-ratio:480 / 2559;
+  max-width:941px;
   margin:24px auto 30px;
-  border:1px solid rgba(239,53,255,.58);
-  background-color:#050505;
-  background-image:
-    url('assets/hair-metal-guide-1-3-v3.avif'),
-    url('assets/hair-metal-guide-4-6-v3.avif'),
-    url('assets/hair-metal-guide-7-9-v3.avif');
-  background-repeat:no-repeat,no-repeat,no-repeat;
-  background-size:100% 33.3334%,100% 33.3334%,100% 33.3334%;
-  background-position:top center,center center,bottom center;
-  box-shadow:0 0 28px rgba(239,53,255,.08);
-  overflow:hidden;
 }
-.hair-guide-card{
+.hair-guide-page{
+  margin:0;
+  border:1px solid rgba(239,53,255,.58);
+  background:#050505;
+  box-shadow:0 0 28px rgba(239,53,255,.08);
+  overflow:visible;
+}
+.hair-guide-page img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:100%;
+  object-fit:contain;
+}
+.hair-guide-grid{
   position:absolute!important;
   width:1px!important;
   height:1px!important;
@@ -28,6 +31,11 @@
   white-space:nowrap!important;
   border:0!important;
 }
-@media (max-width:580px){
-  .hair-guide-grid{margin-inline:-6px;width:calc(100% + 12px);}
+@media(max-width:580px){
+  .hair-guide-pages{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    gap:16px;
+  }
 }
