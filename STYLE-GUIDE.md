@@ -52,7 +52,9 @@ The approved **Nine No-Brainer Hair Metal Revival Combos** guide uses the three 
 
 ![Real Name identity artwork](assets/identity-satanica.avif)
 
-Role: current compact identity-story artwork. Do not substitute the **More Than a Name** promotional poster for it.
+**Approved / locked:** `assets/identity-satanica.avif`
+
+Use this exact 1448×1086 Green Satanica editorial artwork for the story and its homepage card. Satanica is seated at a neon-lit vanity holding an ornate mask; the scene represents chosen identity and self-authorship without requiring readable prop text. Character appearance follows the Satanica Look Bible v1.0: acid-green skin, blue-black electric-cobalt hair, symmetrical purple horns, magenta eyes, black-plum lips, centered four-point forehead star, curvy soft build, smaller chest, and dense arm/hand tattoos. Do not substitute the **More Than a Name** promotional poster, a generic model, or a regenerated variant.
 
 ### History — Who the Fuck Invented the Dungeon?
 
