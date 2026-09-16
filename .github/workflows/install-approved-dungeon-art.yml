@@ -1,0 +1,56 @@
+name: Install approved Dungeon art
+
+on:
+  push:
+    paths:
+      - '.github/workflows/install-approved-dungeon-art.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install approved artwork
+        env:
+          ASSET_URL: "https://sdmntprcentralus.oaiusercontent.com/files/00000000-2af4-81f5-8d2e-1825ef911f26/raw?se=2026-09-16T19%3A24%3A01Z&sp=r&sv=2026-02-06&sr=b&scid=a0bbfc5d-c008-5987-a1c8-b14330b4e73e&skoid=77636ecc-ad8d-44df-baa7-163b524a0261&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T13%3A32%3A11Z&ske=2026-09-17T13%3A32%3A11Z&sks=b&skv=2026-02-06&sig=9L2h%2B/J%2B9RkPhyO6IRkWnHvpE7eSUvPk8xMXk3HT8fA%3D"
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 "$ASSET_URL" -o assets/dungeon-satanica.avif
+          echo "a390dc9021e2a8680f30988242c6faa57e2d47aa93b60e80dfce5f737894e374  assets/dungeon-satanica.avif" | sha256sum -c -
+          test "$(stat -c%s assets/dungeon-satanica.avif)" -eq 304450
+
+      - name: Lock artwork in style guide
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('STYLE-GUIDE.md')
+          s = p.read_text()
+          old = '''### History — Who the Fuck Invented the Dungeon?\n\n![Dungeon story artwork](assets/dungeon-satanica.avif)\n\nRole: current assigned history artwork. If it does not hold up at display size, the correct fix is a higher-resolution approved source, not aggressive upscaling or an unrelated replacement.'''
+          new = '''### History — Who the Fuck Invented the Dungeon?\n\n![Dungeon story artwork](assets/dungeon-satanica.avif)\n\n**Article/homepage artwork — approved / locked:** `assets/dungeon-satanica.avif`\n\nUse the approved 1448×1086 Green Satanica history scene: Satanica studies an old illustrated archive book in a dense, candlelit room surrounded by period-feeling dungeon objects, restraints, leather, archival prints, books, and workshop/play-space details. The image should read as curious historical investigation rather than generic fetish glamour. Use this exact approved asset for the Dungeon article hero and homepage story card. Do not replace it with the earlier doorway graphic, poster treatment, unrelated dungeon imagery, or an unapproved Satanica variation.'''
+          if old not in s:
+              raise SystemExit('Expected Dungeon style-guide block not found; refusing broad rewrite')
+          p.write_text(s.replace(old, new))
+          PY
+
+      - name: Validate implementation
+        run: |
+          set -euo pipefail
+          grep -q "content:url('assets/dungeon-satanica.avif')" fix-layer.css
+          grep -q 'src="assets/dungeon-satanica.avif"' index.html
+          grep -q 'approved / locked' STYLE-GUIDE.md
+
+      - name: Commit approved art and remove installer
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/install-approved-dungeon-art.yml
+          git add assets/dungeon-satanica.avif STYLE-GUIDE.md
+          git commit -m "Lock and install Dungeon story artwork"
+          git push origin HEAD:main
