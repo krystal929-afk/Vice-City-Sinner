@@ -1,0 +1,51 @@
+name: Install approved Real Name art
+on:
+  push:
+    paths:
+      - '.github/workflows/install-approved-real-name-art.yml'
+permissions:
+  contents: write
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Install approved artwork
+        env:
+          ASSET_URL: "https://sdmntprcentralus.oaiusercontent.com/files/00000000-cafc-81f5-b2d4-820dda59ee87/raw?se=2026-09-16T18%3A22%3A43Z&sp=r&sv=2026-02-06&sr=b&scid=966e1ef8-548e-5436-89e1-8ab15d91b74a&skoid=77636ecc-ad8d-44df-baa7-163b524a0261&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T12%3A38%3A46Z&ske=2026-09-17T12%3A38%3A46Z&sks=b&skv=2026-02-06&sig=OOHoBi%2B2iEernpkkTzpZDR/B8gkN74xGXa2hbRjUA3M%3D"
+        run: |
+          curl -fL "$ASSET_URL" -o assets/identity-satanica.avif
+          echo '4cb19d6d26984b8740c5cacb513d33134fdc0dab7083d27df2af149fbc964f88  assets/identity-satanica.avif' | sha256sum -c -
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('real-name.html')
+          s = p.read_text()
+          old = '<img class="article-art article-art--identity" src="assets/story-identity-illustration.jpeg" width="864" height="1536" alt="Satanica Lux illustrated signature artwork">'
+          new = '<img class="article-art article-art--identity" src="assets/identity-satanica.avif" width="1448" height="1086" alt="Satanica Lux at a neon-lit vanity holding an ornate mask for Wait, What’s Your Real Name?">'
+          if old not in s:
+              raise SystemExit('Expected Real Name hero markup not found')
+          p.write_text(s.replace(old, new, 1))
+
+          p = Path('STYLE-GUIDE.md')
+          s = p.read_text()
+          old = '''### Culture / Identity — Wait, What’s Your Real Name?\n\n![Real Name identity artwork](assets/identity-satanica.avif)\n\nRole: current compact identity-story artwork. Do not substitute the **More Than a Name** promotional poster for it.\n'''
+          new = '''### Culture / Identity — Wait, What’s Your Real Name?\n\n![Real Name identity artwork](assets/identity-satanica.avif)\n\n**Approved / locked:** `assets/identity-satanica.avif`\n\nUse this exact 1448×1086 Green Satanica editorial artwork for the story and its homepage card. Satanica is seated at a neon-lit vanity holding an ornate mask; the scene represents chosen identity and self-authorship without requiring readable prop text. Character appearance follows the Satanica Look Bible v1.0: acid-green skin, blue-black electric-cobalt hair, symmetrical purple horns, magenta eyes, black-plum lips, centered four-point forehead star, curvy soft build, smaller chest, and dense arm/hand tattoos. Do not substitute the **More Than a Name** promotional poster, a generic model, or a regenerated variant.\n'''
+          if old not in s:
+              raise SystemExit('Expected Style Guide Real Name section not found')
+          p.write_text(s.replace(old, new, 1))
+          PY
+      - name: Validate implementation
+        run: |
+          test -s assets/identity-satanica.avif
+          grep -q 'width="1448" height="1086"' real-name.html
+          grep -q 'Approved / locked.*identity-satanica.avif' STYLE-GUIDE.md
+      - name: Commit approved art
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/identity-satanica.avif real-name.html STYLE-GUIDE.md
+          git rm .github/workflows/install-approved-real-name-art.yml
+          git commit -m 'Lock and install Real Name story artwork'
+          git push origin main
