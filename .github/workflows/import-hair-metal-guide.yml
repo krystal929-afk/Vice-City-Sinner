@@ -1,0 +1,39 @@
+name: Import Hair Metal guide originals
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/import-hair-metal-guide.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  import-guide:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Download approved full-resolution guide pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -L --fail --retry 3 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-7dec-81f5-9ba3-916efcbfebeb/raw?se=2026-09-16T11%3A21%3A16Z&sp=r&sv=2026-02-06&sr=b&scid=c5079669-d8fd-5ff3-9759-7f84f50220d0&skoid=77636ecc-ad8d-44df-baa7-163b524a0261&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-15T19%3A20%3A02Z&ske=2026-09-16T19%3A20%3A02Z&sks=b&skv=2026-02-06&sig=BB9MlOMSq4rJpEO%2Br1LZxdyYF6rJm5tMKKfxH3001wY%3D' -o assets/hair-metal-guide-1-3-full.png
+          curl -L --fail --retry 3 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-384c-81f5-8f19-c8132d7ab1bc/raw?se=2026-09-16T11%3A21%3A21Z&sp=r&sv=2026-02-06&sr=b&scid=df29abfe-a086-59bd-bc79-709090b38638&skoid=77636ecc-ad8d-44df-baa7-163b524a0261&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-15T15%3A36%3A32Z&ske=2026-09-16T15%3A36%3A32Z&sks=b&skv=2026-02-06&sig=EXVD%2Bf6OcBrZ/0JWmggHrMSw41S8yDJKgdBF/o9/Ecg%3D' -o assets/hair-metal-guide-4-6-full.png
+          curl -L --fail --retry 3 'https://sdmntprcentralus.oaiusercontent.com/files/00000000-7044-81f5-8c02-1df1d991200b/raw?se=2026-09-16T11%3A21%3A26Z&sp=r&sv=2026-02-06&sr=b&scid=7f0cfb77-9161-54f3-bed9-29f3ca1ebe58&skoid=77636ecc-ad8d-44df-baa7-163b524a0261&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T07%3A34%3A15Z&ske=2026-09-17T07%3A34%3A15Z&sks=b&skv=2026-02-06&sig=buOMQZ/yPYqAWwhcMNyiVX71TztWBYj3W%2BFxGUSLNu4%3D' -o assets/hair-metal-guide-7-9-full.png
+          file assets/hair-metal-guide-1-3-full.png | grep -q '941 x 1672'
+          file assets/hair-metal-guide-4-6-full.png | grep -q '941 x 1672'
+          file assets/hair-metal-guide-7-9-full.png | grep -q '941 x 1672'
+          test $(stat -c%s assets/hair-metal-guide-1-3-full.png) -gt 2000000
+          test $(stat -c%s assets/hair-metal-guide-4-6-full.png) -gt 2000000
+          test $(stat -c%s assets/hair-metal-guide-7-9-full.png) -gt 2000000
+      - name: Commit approved guide originals
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/hair-metal-guide-1-3-full.png assets/hair-metal-guide-4-6-full.png assets/hair-metal-guide-7-9-full.png
+          git commit -m 'Add full-resolution Hair Metal guide pages'
+          git push origin main
