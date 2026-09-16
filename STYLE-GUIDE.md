@@ -32,19 +32,19 @@ Story art must be intentional, crisp, and relevant to the article. These assignm
 
 Role: compact Foxhole article artwork.
 
-**Homepage hero — approved / locked:** `assets/homepage-hero-satanica.webp`
+**Homepage hero — approved / locked:** `assets/homepage-hero-satanica.avif`
 
 The homepage hero uses the approved green Satanica imagery: Satanica emerging from a dark trench/foxhole toward bright South Florida light. Use this exact approved hero for the homepage feature. Show the composition cleanly and do not replace it with an unapproved portrait, generic goth imagery, a poster treatment, or a stretched low-resolution source.
 
 ### Style — I’m Bringing Back Hair Metal Fashion. Sorry Not Sorry.
 
-**Article header — approved / locked:** `assets/hair-metal-header-satanica.webp`
+**Article header — approved / locked:** `assets/hair-metal-header-satanica.avif`
 
 The Hair Metal article header uses the established green Satanica character system in a backstage/dressing-room scene: lime-green skin, blue-black hair, forehead star, black leather, fishnets, stacked jewelry, platform boots, purple/magenta lighting, and South Florida atmosphere. This is the approved article-header image. Do not replace it with a generic model, poster graphic, or non-Satanica fashion image.
 
 `assets/card-style.svg` remains the compact Hair Metal story artwork where a card-sized asset is needed.
 
-The approved **Nine No-Brainer Hair Metal Revival Combos** phone proofs are the source of truth for the outfit guide itself. The refreshed live asset paths are `assets/hair-metal-guide-1-3-v2.webp` and `assets/hair-metal-guide-4-6-v2.webp`. The live article should present that guide clearly on-page, not bury it as a poster asset or use it as the theme of the whole website.
+The approved **Nine No-Brainer Hair Metal Revival Combos** copy is rendered natively as nine responsive HTML cards in the live article. This deliberately removes the broken binary proof-image dependency while preserving the approved guide content. The original phone proofs remain visual reference material and may replace the native cards later only when intact source files are available.
 
 ### Culture / Identity — Wait, What’s Your Real Name?
 
