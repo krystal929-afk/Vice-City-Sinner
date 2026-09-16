@@ -1,0 +1,114 @@
+name: Fix Hair Metal guide layout
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-hair-metal-guide-layout.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix-layout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Replace cropped guide implementation
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          html_path = Path('hair-metal.html')
+          html = html_path.read_text()
+          marker = '  <div class="hair-guide-grid">'
+          pages = '''  <div class="hair-guide-pages" aria-label="Hair Metal outfit guide pages">
+            <figure class="hair-guide-page">
+              <img src="assets/hair-metal-guide-1-3-full.png" alt="Hair Metal Revival Combos guide page showing combos 1 through 3" width="941" height="1672" loading="eager" decoding="async">
+            </figure>
+            <figure class="hair-guide-page">
+              <img src="assets/hair-metal-guide-4-6-full.png" alt="Hair Metal Revival Combos guide page showing combos 4 through 6" width="941" height="1672" loading="lazy" decoding="async">
+            </figure>
+            <figure class="hair-guide-page">
+              <img src="assets/hair-metal-guide-7-9-full.png" alt="Hair Metal Revival Combos guide page showing combos 7 through 9" width="941" height="1672" loading="lazy" decoding="async">
+            </figure>
+          </div>
+
+'''
+          if 'class="hair-guide-pages"' not in html:
+              if marker not in html:
+                  raise SystemExit('Hair Metal guide marker not found')
+              html = html.replace(marker, pages + marker, 1)
+          html_path.write_text(html)
+
+          css = '''/* Hair Metal guide — full approved pages, never cropped or stretched. */
+          .hair-guide-pages{
+            display:grid;
+            gap:22px;
+            width:100%;
+            max-width:941px;
+            margin:24px auto 30px;
+          }
+          .hair-guide-page{
+            margin:0;
+            border:1px solid rgba(239,53,255,.58);
+            background:#050505;
+            box-shadow:0 0 28px rgba(239,53,255,.08);
+            overflow:visible;
+          }
+          .hair-guide-page img{
+            display:block;
+            width:100%;
+            height:auto;
+            max-width:100%;
+            object-fit:contain;
+          }
+          .hair-guide-grid{
+            position:absolute!important;
+            width:1px!important;
+            height:1px!important;
+            padding:0!important;
+            margin:-1px!important;
+            overflow:hidden!important;
+            clip:rect(0,0,0,0)!important;
+            white-space:nowrap!important;
+            border:0!important;
+          }
+          @media(max-width:580px){
+            .hair-guide-pages{
+              width:100%;
+              margin-left:auto;
+              margin-right:auto;
+              gap:16px;
+            }
+          }
+          '''
+          Path('hair-metal-fix.css').write_text(css)
+
+          guide_path = Path('STYLE-GUIDE.md')
+          guide = guide_path.read_text()
+          guide = guide.replace('`assets/hair-metal-guide-1-3-v3.avif`, `assets/hair-metal-guide-4-6-v3.avif`, and `assets/hair-metal-guide-7-9-v3.avif`', '`assets/hair-metal-guide-1-3-full.png`, `assets/hair-metal-guide-4-6-full.png`, and `assets/hair-metal-guide-7-9-full.png`')
+          guide = guide.replace('The underlying HTML combo copy remains in the article for accessibility, but it is not the visible design.', 'The three approved 941×1672 PNG pages are displayed as normal responsive images at their natural aspect ratio with no cropping or background-image slicing. The underlying HTML combo copy remains in the article for accessibility, but it is not the visible design.')
+          guide_path.write_text(guide)
+          PY
+      - name: Validate guide markup
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q 'hair-metal-guide-1-3-full.png' hair-metal.html
+          grep -q 'hair-metal-guide-4-6-full.png' hair-metal.html
+          grep -q 'hair-metal-guide-7-9-full.png' hair-metal.html
+          grep -q 'height:auto' hair-metal-fix.css
+          ! grep -q 'background-image' hair-metal-fix.css
+          ! grep -q 'aspect-ratio' hair-metal-fix.css
+      - name: Commit corrected Hair Metal guide
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add hair-metal.html hair-metal-fix.css STYLE-GUIDE.md
+          git commit -m 'Fix Hair Metal guide quality and cropping'
+          git push origin main
