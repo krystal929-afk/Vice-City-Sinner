@@ -37,14 +37,14 @@ jobs:
             </figure>
           </div>
 
-'''
+          '''
           if 'class="hair-guide-pages"' not in html:
               if marker not in html:
                   raise SystemExit('Hair Metal guide marker not found')
               html = html.replace(marker, pages + marker, 1)
           html_path.write_text(html)
 
-          css = '''/* Hair Metal guide — full approved pages, never cropped or stretched. */
+          css = '''/* Hair Metal guide: full approved pages, never cropped or stretched. */
           .hair-guide-pages{
             display:grid;
             gap:22px;
