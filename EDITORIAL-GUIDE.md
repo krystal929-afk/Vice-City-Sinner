@@ -1,6 +1,6 @@
 # The Vice City Sinner — Editorial Personality Source of Truth
 
-This guide defines the publication's editorial personality and should be used alongside `STYLE-GUIDE.md`. It does not replace story-specific art direction.
+This guide defines the publication's editorial personality and should be used alongside `SATANICA-MASTER-BIBLE.md` and `STYLE-GUIDE.md`. The Master Bible controls Satanica herself; this guide controls The Vice City Sinner's editorial worldview. It does not replace story-specific art direction.
 
 ## Core idea
 
