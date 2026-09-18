@@ -2,7 +2,7 @@
 
 This guide separates **site identity** from **story-specific editorial artwork**. A story image can have its own visual concept without redefining the entire Vice City Sinner site.
 
-Editorial personality and subject breadth are defined separately in [`EDITORIAL-GUIDE.md`](EDITORIAL-GUIDE.md). That guide is the source of truth for what VCS *is about*; this file is the source of truth for how the site and story art are visually handled.
+Satanica's character identity is defined in [`SATANICA-MASTER-BIBLE.md`](SATANICA-MASTER-BIBLE.md). Editorial personality and subject breadth are defined in [`EDITORIAL-GUIDE.md`](EDITORIAL-GUIDE.md). The Master Bible controls Satanica herself; the editorial guide controls what VCS is about; this file controls how the site and story art are visually handled.
 
 ## 1. Site identity — locked
 
