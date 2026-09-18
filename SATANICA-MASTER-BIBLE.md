@@ -153,6 +153,16 @@ Do not substitute:
 - generic goth boots
 - any boot that loses the approved rounded toe, block heel, lace/strap/hardware language, or ankle-boot silhouette
 
+
+## 6A. Brand typography — locked
+
+For Satanica's own brand system, the approved typography pairing is:
+
+- **Palmieri** — expressive display / signature-facing typography
+- **Basis Grotesque** — body, utility, supporting copy
+
+Do not replace this pairing with generic goth fonts, blackletter by default, or interchangeable trendy AI-brand typography. Project-specific publications may use their own editorial typography systems, but that does not redefine Satanica's personal brand.
+
 ## 7. What may vary
 
 Without changing Satanica's identity, these may vary:
