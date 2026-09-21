@@ -28,11 +28,11 @@ Story art must be intentional, crisp, and relevant to the article. These assignm
 
 ### Editorial — Out of the Foxhole and Into Real Life
 
-![Foxhole article artwork](assets/foxhole-satanica.webp)
+![Foxhole article artwork](assets/foxhole-satanica.png)
 
-**Article hero — approved / locked:** `assets/foxhole-satanica.webp`
+**Article hero — approved / locked:** `assets/foxhole-satanica.png`
 
-Use the approved Green Satanica scene for the Foxhole article hero: Satanica stepping out of darkness into bright South Florida daylight, with the locked Look Bible appearance and approved acid-lime skin tone. The image should read as emergence into real life, not combat, dirt, or literal war imagery. Use this exact uploaded WebP for the article hero. Do not substitute the earlier real-photo placeholder, the tiny `editorial-satanica.avif`, or a regenerated Satanica variation.
+Use the approved Image Lab portrait for the Foxhole article hero: Satanica standing confidently beside a gothic throne in a purple-lit chamber, with the locked Look Bible appearance and approved acid-lime skin tone. Use this exact uploaded PNG for the article hero and display the full portrait without cropping. Do not substitute the earlier doorway image, the tiny `editorial-satanica.avif`, or a regenerated Satanica variation.
 
 **Homepage hero — approved / locked:** `assets/homepage-hero-satanica.png`
 
