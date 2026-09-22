@@ -212,6 +212,8 @@ footer small { grid-column: 1 / -1; padding-top: 26px; border-top: 1px solid #34
 .article-figure { max-width: 1120px; margin: 0 auto; padding: 0 clamp(22px, 5vw, 60px); background: linear-gradient(var(--black) 50%, var(--paper) 50%); }
 .article-figure img { max-height: 620px; object-fit: cover; filter: grayscale(1) contrast(1.1); }
 .article-figure figcaption { padding: 8px 0; color: var(--muted); font: .72rem/1.5 'Libre Franklin', sans-serif; }
+.article-figure--context { padding-top: 24px; background: var(--black); }
+.article-figure--context figcaption { padding: 0 0 24px; color: var(--paper); font-size: .86rem; }
 .article { max-width: 800px; margin: 0 auto; padding: 58px 28px 90px; }
 .article > p:first-child:not(.kicker)::first-letter { float: left; padding: 8px 9px 0 0; color: var(--oxblood); font: 700 4.8rem/.7 'Bodoni Moda', Georgia, serif; }
 .article p, .article li { font: 400 1.06rem/1.78 Georgia, serif; }
