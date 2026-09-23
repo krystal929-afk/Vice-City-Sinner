@@ -1,31 +1,28 @@
 # Vice City Sinner — Art Asset Status
 
-## Approved / Live
-- `assets/hero.svg` — current homepage hero artwork until a new hero is explicitly approved
-- `assets/editorial-satanica.avif` — Foxhole / Editorial compact story artwork; do not blow it up beyond a sensible display size
-- `assets/card-style.svg` — Hair Metal story/homepage artwork
-- `assets/identity-satanica.avif` — Real Name / Culture compact story artwork; do not blow it up beyond a sensible display size
-- `assets/dungeon-satanica.avif` — Dungeon / History current assigned artwork
-- `assets/logo.svg` — VCS masthead
+Updated 2026-09-23 after the Grok remake pass. Look Manual + lock plate remain visual authority.
 
-## Hair Metal quick guide — approved content
-The approved **Nine No-Brainer Hair Metal Revival Combos** phone proofs (Cards 1–3, 4–6, and 7–9) are the source of truth for the outfit guide. The live article now presents that guide as an on-page, responsive section rather than treating it as a poster download.
+## Approved / Live — heroes (2026-09-23)
 
-## Working / Needs approval
-- Any new article art not listed above.
-- A higher-resolution Foxhole / Identity / Dungeon image source that preserves the approved concepts without embedded poster typography.
-- Supporting Satanica mood pieces not explicitly assigned to a story.
+- `assets/homepage-hero-satanica.png` — Ocean Drive / South Beach. Homepage feature only.
+- `assets/foxhole-satanica.png` — doorway into daylight. Foxhole article hero. Show full image, no face crop.
+- `assets/hair-metal-header-satanica-hq.png` — dressing room, leather jacket + tank.
+- `assets/identity-satanica.png` — vanity + mask, no poster type.
+- `assets/dungeon-satanica.png` — archive table.
+- `assets/logo.svg` — VCS masthead.
+- `assets/card-style.svg` — compact Hair Metal homepage card only.
+
+## Hair Metal outfit guide — still the previous live pages
+
+- `assets/hair-metal-guide-1-3-full.png`
+- `assets/hair-metal-guide-4-6-full.png`
+- `assets/hair-metal-guide-7-9-full.png`
+
+These have not been remade from the lock plate yet.
 
 ## Rejected / Do not use as site hero or story art
-- `assets/story-editorial-illustration.jpeg` — poster-style output; do not use as homepage or Foxhole hero
-- `assets/story-identity-illustration.jpeg` — poster-style output; do not use as Real Name hero/card
-- Poster graphics with embedded slogans/headlines such as the previously supplied **More Than a Name**, **Same Bitch Brighter Now**, and similar promotional poster treatments
-- `art-foxhole.svg`
-- `art-hair-metal.svg`
-- `art-real-name.svg`
-- `art-dungeon.svg`
-- Rejected Satanica homepage hero photo
-- Unapproved About copy
 
-## Rule
-A promotional poster is not automatically article art. Do not reuse an image simply because it is available in the repository. Story cards and heroes should use intentionally assigned artwork without embedded poster copy unless Satanica Lux explicitly approves the poster for that role.
+- Sewer / manhole / underpass homepage concepts
+- Gothic-throne Foxhole assignment
+- Poster graphics with embedded slogans
+- From-scratch text-to-image Satanica

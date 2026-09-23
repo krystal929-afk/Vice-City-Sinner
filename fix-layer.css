@@ -51,8 +51,8 @@
   background:#050505;
 }
 .article-art--editorial{content:url('assets/foxhole-satanica.png')}
-.article-art--identity{content:url('assets/identity-satanica.avif')}
-.article-art--dungeon{content:url('assets/dungeon-satanica.avif')}
+.article-art--identity{content:url('assets/identity-satanica.png')}
+.article-art--dungeon{content:url('assets/dungeon-satanica.png')}
 .article-art--style{content:url('assets/card-style.svg')}
 
 .article-hero,.home-story-card,.newsletter{box-shadow:none!important}
