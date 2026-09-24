@@ -1,24 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&family=Qwitcher+Grypen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Kaushan+Script&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap");
 
-/* Print pass: ink on paper, not neon club chrome. */
 :root{
-  --bg:#0b0a09;
-  --panel:#12100f;
-  --ink:#f3eee6;
-  --muted:#b7aea4;
-  --pink:#c4236e;
-  --purple:#8a2f55;
-  --green:#c6de4a;
-  --blue:#6a8aa0;
-  --line:rgba(196,35,110,.38);
-  --soft:rgba(243,238,230,.1);
+  --bg:#08060a;
+  --panel:#120e14;
+  --ink:#f6f0f6;
+  --muted:#c5b8ca;
+  --pink:#e832f0;
+  --purple:#982cff;
+  --green:#86ff2d;
+  --blue:#16a5ff;
+  --line:rgba(232,50,240,.55);
+  --soft:rgba(255,255,255,.12);
   --serif:"Newsreader",Georgia,"Times New Roman",serif;
   --sans:"Archivo Narrow",Arial,sans-serif;
-  --script:"Qwitcher Grypen",Georgia,cursive;
+  --script:"Kaushan Script",Georgia,cursive;
 }
 
 body{background:var(--bg);color:var(--ink)}
-.site-header,.main-nav{background:#0b0a09;border-color:var(--line)}
+.site-header,.main-nav{background:#08060a;border-color:var(--line)}
 
 .logo-wrap,
 .footer-logo{
@@ -41,85 +40,52 @@ body{background:var(--bg);color:var(--ink)}
 .logo-wrap::before{
   content:"The Vice City Sinner";
   font-family:var(--script);
-  font-weight:700;
-  font-size:clamp(2.4rem,5.4vw,3.8rem);
-  line-height:.82;
-  letter-spacing:.01em;
-  color:#f3eee6;
+  font-weight:400;
+  font-size:clamp(1.85rem,4.2vw,2.85rem);
+  line-height:.95;
+  letter-spacing:-.01em;
+  color:#f6f0f6;
 }
 .logo-wrap::after{
   content:"by Satanica Lux";
   font-family:var(--sans);
-  font-weight:600;
-  font-size:.62rem;
-  letter-spacing:.18em;
+  font-weight:700;
+  font-size:.58rem;
+  letter-spacing:.2em;
   text-transform:uppercase;
-  color:#b7aea4;
-  margin-top:.35rem;
+  color:var(--pink);
+  margin-top:.3rem;
 }
 .footer-logo::before{
   content:"The Vice City Sinner";
   font-family:var(--script);
-  font-weight:700;
-  font-size:1.85rem;
-  line-height:.85;
-  color:#f3eee6;
-}
-.footer-logo img{filter:none}
-
-.kicker,.tag,.section-kicker,.nav-inner a,.article-meta,.readmore,.button{
-  letter-spacing:.12em;
+  font-size:1.55rem;
+  line-height:.95;
+  color:#f6f0f6;
 }
 
-.nav-inner a:hover,
-.nav-inner a.active{
-  color:var(--ink);
-  border-bottom-color:var(--pink);
-}
-
-.hero h1 .green,
-.home-hero h1 span,
- h1 span{
-  color:var(--ink);
+.kicker,.tag{color:var(--pink)}
+.section-kicker,.nav-inner a.active{color:var(--green)}
+.nav-inner a:hover{
+  color:var(--green);
+  border-bottom-color:var(--green);
 }
 
 .button{
-  border-color:var(--ink);
-  color:var(--ink);
-  background:transparent;
+  border-color:var(--pink);
+  color:var(--pink);
 }
-.button:hover{background:rgba(243,238,230,.06);color:var(--ink)}
+.button:hover{background:rgba(232,50,240,.08);color:var(--pink)}
 
-.home-hero-photo,
-.article-hero,
-.home-story-card,
-.newsletter,
-.story-card{
-  border-color:rgba(243,238,230,.16)!important;
-  box-shadow:none!important;
-}
+.readmore{color:var(--pink)}
+.readmore:hover{color:var(--green)}
 
-.home-hero-photo img,
-.home-story-cover--art img,
-.article-hero-image img{
-  background:#0b0a09;
-}
+.article-body h2{color:var(--pink)}
+.article-body strong{color:var(--green)}
+.article-pull{border-left-color:var(--green)}
 
-.article-body{color:#e7e0d6}
-.article-body h2{
-  color:var(--ink);
-  border-bottom-color:rgba(243,238,230,.18);
-  font-family:var(--sans);
-}
-
-.article-body strong{color:var(--ink)}
-.article-pull{border-left-color:var(--pink);color:var(--ink)}
-
-.mantra,.newsletter-copy h2,.newsletter-sign,.footer-mantra{
-  color:#d9c4b0;
-}
-
+.mantra,.newsletter-copy h2,.newsletter-sign,.footer-mantra{color:var(--pink)}
 .newsletter-form button{
-  border-color:var(--ink);
-  color:var(--ink);
+  border-color:var(--green);
+  color:var(--green);
 }
