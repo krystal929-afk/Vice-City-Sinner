@@ -1,36 +1,41 @@
-/* VCS design lock — one system.
-   Art leads. Type serves. Color is pulled from the print heroes. */
+/* VCS design lock. Palette from velvet thicket + Filmora pink.
+   Witchroot ground, nightbloom panels, hot pink kick, teal mark. */
 
 :root{
-  --bg:#07050a;
-  --panel:#0e0b10;
-  --ink:#f4eee8;
-  --muted:#b9aeb8;
-  --pink:#e23cff;
-  --green:#c8e14a;
-  --line:rgba(226,60,255,.35);
+  --bg:#260029;
+  --panel:#3a0b3e;
+  --ink:#f7eef6;
+  --muted:#c9b3c8;
+  --pink:#ff3fa4;
+  --purple:#640d62;
+  --green:#1c817a;
+  --teal:#2de2e6;
+  --plum:#9e055e;
+  --line:rgba(255,63,164,.42);
   --serif:"Newsreader",Georgia,"Times New Roman",serif;
   --sans:"Archivo Narrow",Arial,sans-serif;
   --script:"Kaushan Script",Georgia,cursive;
 }
 
 body{background:var(--bg);color:var(--ink)}
+.site-header,.main-nav{background:#1a001d;border-color:var(--line)}
 
 .logo-wrap::before{
   font-size:clamp(1.55rem,3.4vw,2.25rem);
   line-height:.92;
+  color:#fff4fb;
 }
 .logo-wrap::after{color:var(--pink);font-size:.55rem}
-.footer-logo::before{font-size:1.35rem}
+.footer-logo::before{font-size:1.35rem;color:#fff4fb}
 
 .topline{padding:10px 0 8px}
 .topline-copy{color:var(--muted)}
 
-.nav-inner a{color:#ddd4dc;border-bottom-width:2px}
+.nav-inner a{color:#ead7e8;border-bottom-width:2px}
 .nav-inner a.active,
 .nav-inner a:hover{
-  color:var(--green);
-  border-bottom-color:var(--green);
+  color:var(--teal);
+  border-bottom-color:var(--teal);
 }
 
 .home-hero h1,
@@ -44,17 +49,17 @@ body{background:var(--bg);color:var(--ink)}
   font-family:var(--serif);
   color:var(--ink);
 }
-.home-hero h1 span{color:var(--ink)}
+.home-hero h1 span{color:var(--pink)}
 
 .kicker{color:var(--pink);font-family:var(--sans)}
-.tag,.section-kicker{color:var(--green);font-family:var(--sans)}
+.tag,.section-kicker{color:var(--teal);font-family:var(--sans)}
 
 .hero-dek,
 .home-hero .hero-dek,
 .home-story-copy p,
 .article-body{
   font-family:var(--serif);
-  color:#e4dbd3;
+  color:#f0dcec;
 }
 
 .home-hero,
@@ -73,23 +78,23 @@ body{background:var(--bg);color:var(--ink)}
   color:var(--pink);
   font-family:var(--sans);
 }
-.button:hover{background:rgba(226,60,255,.08)}
+.button:hover{background:rgba(255,63,164,.12)}
 
 .readmore{color:var(--pink);font-family:var(--sans)}
-.readmore:hover{color:var(--green)}
+.readmore:hover{color:var(--teal)}
 
 .home-hero{
   align-items:stretch;
   background:var(--bg);
 }
 .home-hero-copy{
-  background:var(--bg);
+  background:linear-gradient(180deg,#2d0033 0%,#260029 100%);
   padding:clamp(28px,4vw,56px) clamp(24px,3vw,48px);
 }
 .home-hero-art,
 .home-hero-photo,
 .home-hero-photo img{
-  background:#050308;
+  background:#140016;
 }
 
 .home-hero-stamp{
@@ -98,23 +103,35 @@ body{background:var(--bg);color:var(--ink)}
 }
 
 .home-story-card,
-.story-card{
+.story-card,
+.home-story-copy{
   background:var(--panel);
 }
-.home-story-copy{background:var(--panel)}
 
 .article-body h2{
   font-family:var(--sans);
   color:var(--pink);
   border-bottom:1px solid var(--line);
 }
-.article-body strong{color:var(--green)}
+.article-body strong{color:var(--teal)}
 .article-pull{
-  border-left:3px solid var(--green);
+  border-left:3px solid var(--teal);
   color:var(--ink);
 }
 
+.newsletter{
+  background:
+    radial-gradient(circle at 18% 50%,rgba(28,129,122,.35),transparent 42%),
+    radial-gradient(circle at 82% 50%,rgba(255,63,164,.22),transparent 40%),
+    #1a001d !important;
+}
 .mantra,
 .newsletter-copy h2,
 .newsletter-sign,
 .footer-mantra{color:var(--pink)}
+.newsletter-form button{
+  border-color:var(--teal);
+  color:var(--teal);
+}
+
+.site-footer{background:#1a001d;border-color:var(--line)}
