@@ -1,7 +1,6 @@
 /* LOCKED 2026-09-25
-   Masthead plate: assets/vcs-lock-banner.png
-   Dusk magenta gothic + poison-green script. Palms / moon / water.
-   Ground almost black. No extra wordmark type. */
+   Masthead is assets/vcs-lock-banner.png — purple gothic + green script,
+   palms, moon, water. Page chrome sits under that plate. */
 
 :root{
   --bg:#07040c;
@@ -11,7 +10,7 @@
   --pink:#e14dff;
   --green:#b8ff2d;
   --purple:#7b1fa2;
-  --line:rgba(225,77,255,.4);
+  --line:rgba(225,77,255,.42);
   --serif:"Newsreader",Georgia,"Times New Roman",serif;
   --sans:"Archivo Narrow",Arial,sans-serif;
 }
@@ -24,27 +23,32 @@ body{background:var(--bg);color:var(--ink)}
 .footer-logo::before,
 .footer-logo::after{content:none!important}
 
+.topline{
+  display:block;
+  padding:10px 0 4px;
+}
+.topline-copy{display:none!important}
+
+.logo-wrap,
+.footer-logo{
+  display:flex;
+  justify-content:center;
+  width:100%;
+}
 .logo-wrap img,
 .footer-logo img{
   position:static!important;
-  width:min(560px,78vw)!important;
+  width:min(1040px,100%)!important;
   height:auto!important;
   max-height:none!important;
   clip:auto!important;
   overflow:visible!important;
   display:block;
   object-fit:contain;
-  content:url("assets/vcs-lock-banner.png");
+  filter:none!important;
+  margin-inline:auto;
 }
-.footer-logo img{width:min(280px,70vw)!important}
-
-.logo-wrap,.footer-logo{
-  display:flex;
-  justify-content:center;
-}
-
-.topline{padding:10px 0 8px}
-.topline-copy{color:var(--muted)}
+.footer-logo img{width:min(460px,88vw)!important}
 
 .nav-inner a{color:#ead9ee;border-bottom-width:2px}
 .nav-inner a.active,
@@ -53,6 +57,8 @@ body{background:var(--bg);color:var(--ink)}
   border-bottom-color:var(--green);
 }
 
+.home-hero,
+.home-hero-copy{background:var(--bg)!important}
 .home-hero h1,
 .hero h1,
 .article-hero h1,
@@ -63,7 +69,7 @@ body{background:var(--bg);color:var(--ink)}
   color:var(--ink);
 }
 .home-hero h1 span,
-.hero h1 .green{color:var(--green)}
+.hero h1 .green{color:var(--green)!important}
 
 .kicker{color:var(--pink);font-family:var(--sans)}
 .tag,.section-kicker{color:var(--green);font-family:var(--sans)}
@@ -94,11 +100,8 @@ body{background:var(--bg);color:var(--ink)}
 .readmore{color:var(--pink);font-family:var(--sans)}
 .readmore:hover{color:var(--green)}
 
-.home-hero{align-items:stretch;background:var(--bg)}
-.home-hero-copy{
-  background:var(--bg);
-  padding:clamp(28px,4vw,56px) clamp(24px,3vw,48px);
-}
+.home-hero{align-items:stretch}
+.home-hero-copy{padding:clamp(28px,4vw,56px) clamp(24px,3vw,48px)}
 .home-hero-art,
 .home-hero-photo,
 .home-hero-photo img{background:#050208}
