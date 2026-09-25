@@ -130,3 +130,26 @@ body{background:var(--bg);color:var(--ink)}
 .newsletter-sign,
 .footer-mantra{color:var(--pink)}
 .newsletter-form button{border-color:var(--green);color:var(--green)}
+
+/* Article tops stay a strip, not a poster. Portrait plates were filling the phone. */
+.article-hero{align-items:stretch}
+.article-hero-image{
+  max-height:240px!important;
+  min-height:0!important;
+  overflow:hidden;
+}
+.article-hero-image img{
+  width:100%!important;
+  height:240px!important;
+  max-height:240px!important;
+  min-height:0!important;
+  object-fit:cover!important;
+  object-position:center 30%!important;
+}
+@media(min-width:900px){
+  .article-hero-image,
+  .article-hero-image img{
+    height:280px!important;
+    max-height:280px!important;
+  }
+}
