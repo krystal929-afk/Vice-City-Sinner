@@ -1,48 +1,52 @@
-/* LOCKED 2026-09-24
-   Ground: almost black.
-   Accents: hot pink + poison green.
-   Masthead: large handwritten script.
-   Headlines: Newsreader. Metal blackletter is not site chrome. */
+/* LOCKED 2026-09-25
+   Masthead plate: assets/vcs-lock-banner.png
+   Dusk magenta gothic + poison-green script. Palms / moon / water.
+   Ground almost black. No extra wordmark type. */
 
 :root{
-  --bg:#070409;
-  --panel:#100812;
-  --ink:#f6f0f4;
-  --muted:#c4b6c0;
-  --pink:#ff3fa4;
-  --green:#9dff2a;
-  --purple:#2a0820;
-  --line:rgba(255,63,164,.38);
+  --bg:#07040c;
+  --panel:#120816;
+  --ink:#f4eef6;
+  --muted:#c4b4c8;
+  --pink:#e14dff;
+  --green:#b8ff2d;
+  --purple:#7b1fa2;
+  --line:rgba(225,77,255,.4);
   --serif:"Newsreader",Georgia,"Times New Roman",serif;
   --sans:"Archivo Narrow",Arial,sans-serif;
-  --script:"Kaushan Script",Georgia,cursive;
 }
 
 body{background:var(--bg);color:var(--ink)}
-.site-header,.main-nav,.site-footer{background:#050308;border-color:var(--line)}
+.site-header,.main-nav,.site-footer{background:#050208;border-color:var(--line)}
 
-.logo-wrap::before{
-  font-family:var(--script);
-  font-size:clamp(2.4rem,6vw,4.1rem);
-  line-height:.86;
-  color:#fff7fb;
-  font-weight:400;
+.logo-wrap::before,
+.logo-wrap::after,
+.footer-logo::before,
+.footer-logo::after{content:none!important}
+
+.logo-wrap img,
+.footer-logo img{
+  position:static!important;
+  width:min(560px,78vw)!important;
+  height:auto!important;
+  max-height:none!important;
+  clip:auto!important;
+  overflow:visible!important;
+  display:block;
+  object-fit:contain;
+  content:url("assets/vcs-lock-banner.png");
 }
-.logo-wrap::after{
-  color:var(--pink);
-  font-size:.62rem;
-  letter-spacing:.2em;
-}
-.footer-logo::before{
-  font-family:var(--script);
-  font-size:2rem;
-  color:#fff7fb;
+.footer-logo img{width:min(280px,70vw)!important}
+
+.logo-wrap,.footer-logo{
+  display:flex;
+  justify-content:center;
 }
 
-.topline{padding:8px 0 6px}
+.topline{padding:10px 0 8px}
 .topline-copy{color:var(--muted)}
 
-.nav-inner a{color:#e7dbe3;border-bottom-width:2px}
+.nav-inner a{color:#ead9ee;border-bottom-width:2px}
 .nav-inner a.active,
 .nav-inner a:hover{
   color:var(--green);
@@ -59,9 +63,7 @@ body{background:var(--bg);color:var(--ink)}
   color:var(--ink);
 }
 .home-hero h1 span,
-.hero h1 .green{
-  color:var(--green);
-}
+.hero h1 .green{color:var(--green)}
 
 .kicker{color:var(--pink);font-family:var(--sans)}
 .tag,.section-kicker{color:var(--green);font-family:var(--sans)}
@@ -71,7 +73,7 @@ body{background:var(--bg);color:var(--ink)}
 .home-story-copy p,
 .article-body{
   font-family:var(--serif);
-  color:#eadfe6;
+  color:#eadfec;
 }
 
 .home-hero,
@@ -81,16 +83,14 @@ body{background:var(--bg);color:var(--ink)}
 .newsletter,
 .site-header,
 .main-nav,
-.site-footer{
-  border-color:var(--line)!important;
-}
+.site-footer{border-color:var(--line)!important}
 
 .button{
   border:1px solid var(--pink);
   color:var(--pink);
   font-family:var(--sans);
 }
-.button:hover{background:rgba(255,63,164,.1)}
+.button:hover{background:rgba(225,77,255,.1)}
 .readmore{color:var(--pink);font-family:var(--sans)}
 .readmore:hover{color:var(--green)}
 
@@ -101,7 +101,7 @@ body{background:var(--bg);color:var(--ink)}
 }
 .home-hero-art,
 .home-hero-photo,
-.home-hero-photo img{background:#050308}
+.home-hero-photo img{background:#050208}
 .home-hero-stamp{border-top:1px solid var(--line);color:var(--muted)}
 
 .home-story-card,
@@ -118,9 +118,9 @@ body{background:var(--bg);color:var(--ink)}
 
 .newsletter{
   background:
-    radial-gradient(circle at 18% 50%,rgba(157,255,42,.12),transparent 40%),
-    radial-gradient(circle at 84% 50%,rgba(255,63,164,.14),transparent 42%),
-    #050308 !important;
+    radial-gradient(circle at 18% 50%,rgba(184,255,45,.1),transparent 40%),
+    radial-gradient(circle at 84% 50%,rgba(225,77,255,.14),transparent 42%),
+    #050208 !important;
 }
 .mantra,
 .newsletter-copy h2,
