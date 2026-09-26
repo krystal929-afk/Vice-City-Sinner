@@ -92,7 +92,6 @@
       <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
       <input type="hidden" name="_subject" value="New Vice City Sinner subscriber">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://vicecitysinner.com/subscribed.html">
       <input type="hidden" name="_autoresponse" value="You're on the list. The Vice City Sinner emails when a new post goes up. No spam. No performance required. — Satanica Lux">
     </form>
@@ -103,40 +102,5 @@
 </main>
 
 <footer class="site-footer"><div class="shell footer-main"><a class="footer-logo" href="index.html"><img src="assets/vcs-lock-banner.png" alt="The Vice City Sinner"></a><div class="footer-nav"><a href="index.html">Home</a><a href="foxhole.html">Editorial</a><a href="hair-metal.html">Style</a><a href="real-name.html">Culture</a><a href="dungeon.html">History</a><a href="about.html">About</a></div><div class="footer-mantra">People<br>Pleasure<br>Perspective<br>Progress</div></div><div class="shell footer-bottom"><span>© 2026 The Vice City Sinner. All sinners welcome.</span><span>South Florida. Worldwide.</span></div></footer>
-<script>
-const form=document.querySelector('.newsletter-form');
-const note=document.querySelector('.form-note');
-form.addEventListener('submit',async e=>{
-  e.preventDefault();
-  if(form._honey && form._honey.value) return;
-  const email=form.email.value.trim();
-  const button=form.querySelector('button');
-  button.disabled=true;
-  note.textContent='Saving you…';
-  try{
-    const res=await fetch('https://formsubmit.co/ajax/satanica.lux@vicecitysinner.com',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({
-        email,
-        _subject:'New Vice City Sinner subscriber',
-        _template:'table',
-        _captcha:'false',
-        _autoresponse:"You're on the list. The Vice City Sinner emails when a new post goes up. No spam. No performance required. — Satanica Lux"
-      })
-    });
-    const data=await res.json().catch(()=>({}));
-    if(!res.ok || data.success==='false' || data.success===false){
-      throw new Error(data.message||'not accepted');
-    }
-    form.reset();
-    note.textContent="You're on the list. A short note is on its way.";
-  }catch(err){
-    note.textContent = /rate limit/i.test(err.message)
-      ? 'Not saved. The form service is blocking new signups for a bit. Nothing was emailed. Try again later.'
-      : 'Not saved, so no email was sent. ' + (err.message || 'Try again.');
-  }
-  button.disabled=false;
-});
-</script>
+
 </body></html>
