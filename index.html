@@ -132,7 +132,9 @@ form.addEventListener('submit',async e=>{
     form.reset();
     note.textContent="You're on the list. A short note is on its way.";
   }catch(err){
-    note.textContent='Not saved yet. If this is the first signup, open the activation email at satanica.lux@vicecitysinner.com, then try again.';
+    note.textContent = /rate limit/i.test(err.message)
+      ? 'Not saved. The form service is blocking new signups for a bit. Nothing was emailed. Try again later.'
+      : 'Not saved, so no email was sent. ' + (err.message || 'Try again.');
   }
   button.disabled=false;
 });
