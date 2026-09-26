@@ -85,7 +85,7 @@
   <div class="newsletter-copy">
     <h2>Get New Posts</h2>
     <p>Culture, style, people, history, strange ideas, and whatever else refuses to leave Satanica’s brain alone.</p>
-    <form class="newsletter-form" action="https://formsubmit.co/satanicalux@vicecitysinner.com" method="POST">
+    <form class="newsletter-form" action="https://formsubmit.co/satanica.lux@vicecitysinner.com" method="POST">
       <label class="sr-only" for="email">Email</label>
       <input id="email" name="email" type="email" placeholder="Your email here..." required autocomplete="email">
       <button type="submit">Subscribe →</button>
@@ -114,7 +114,7 @@ form.addEventListener('submit',async e=>{
   button.disabled=true;
   note.textContent='Saving you…';
   try{
-    const res=await fetch('https://formsubmit.co/ajax/satanicalux@vicecitysinner.com',{
+    const res=await fetch('https://formsubmit.co/ajax/satanica.lux@vicecitysinner.com',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify({
@@ -132,7 +132,7 @@ form.addEventListener('submit',async e=>{
     form.reset();
     note.textContent="You're on the list. A short note is on its way.";
   }catch(err){
-    note.textContent='Not saved yet. If this is the first signup, open the activation email at satanicalux@vicecitysinner.com, then try again.';
+    note.textContent='Not saved yet. If this is the first signup, open the activation email at satanica.lux@vicecitysinner.com, then try again.';
   }
   button.disabled=false;
 });

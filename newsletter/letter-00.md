@@ -3,7 +3,7 @@
 This is not a site issue. The essays already live on the homepage. This letter only announces the list.
 
 Subject: The list is open
-From: Satanica Lux <satanicalux@vicecitysinner.com>
+From: Satanica Lux <satanica.lux@vicecitysinner.com>
 When: after the first handful of real subscribers, or with the next new post. Not before.
 
 ---

@@ -2,17 +2,17 @@
 
 - Promise: a note when a new post goes up. Not a calendar. Not a drip.
 - From: Satanica Lux
-- List inbox: satanicalux@vicecitysinner.com
+- List inbox: satanica.lux@vicecitysinner.com
 - Live form: homepage “Get New Posts”
 - Collector: FormSubmit → that inbox, plus a one-line autoresponse
 - Thanks page: subscribed.html
 - Fine print on the form: No spam. No performance required.
 
-FormSubmit is the collector, not a broadcast tool. Addresses arrive as email. When it is time to mail the list as a group, export those addresses into Buttondown (free, fits an independent publication) and send from satanicalux@vicecitysinner.com.
+FormSubmit is the collector, not a broadcast tool. Addresses arrive as email. When it is time to mail the list as a group, export those addresses into Buttondown (free, fits an independent publication) and send from satanica.lux@vicecitysinner.com.
 
 ## One step before the first real subscriber
 
-Open the activation email FormSubmit sends to satanicalux@vicecitysinner.com and confirm the address. Until that click, signups are not saved.
+Open the activation email FormSubmit sends to satanica.lux@vicecitysinner.com and confirm the address. Until that click, signups are not saved.
 
 ## What not to do
 

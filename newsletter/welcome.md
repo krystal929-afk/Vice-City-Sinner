@@ -1,7 +1,7 @@
 # Welcome — autoresponse and the longer version
 
 Subject: You're on the list
-From: Satanica Lux <satanicalux@vicecitysinner.com>
+From: Satanica Lux <satanica.lux@vicecitysinner.com>
 
 ## What the site sends automatically
 
