@@ -357,3 +357,10 @@ body{background:var(--bg);color:var(--ink)}
     white-space:nowrap!important;
   }
 }
+
+/* About copy is published. Undo the old hide. */
+.nav-inner a[href="about.html"],
+.footer-nav a[href="about.html"],
+.article-end a[href="about.html"]{
+  display:inline!important;
+}
