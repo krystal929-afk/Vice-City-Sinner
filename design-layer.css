@@ -337,3 +337,23 @@ body{background:var(--bg);color:var(--ink)}
 .home-hero-copy,
 .home-story-copy{padding:16px 0 8px!important}
 .article-meta{margin-top:4px}
+
+/* Phone nav: show every link, including About. Do not hide the overflow. */
+@media (max-width: 700px){
+  .nav-inner,
+  .footer-nav{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    justify-content:center!important;
+    overflow:visible!important;
+    gap:2px 14px!important;
+    padding:6px 10px 4px!important;
+  }
+  .nav-inner a,
+  .footer-nav a{
+    font-size:.72rem!important;
+    letter-spacing:.08em!important;
+    padding:8px 0 6px!important;
+    white-space:nowrap!important;
+  }
+}
