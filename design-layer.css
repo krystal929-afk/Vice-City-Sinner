@@ -364,3 +364,27 @@ body{background:var(--bg);color:var(--ink)}
 .article-end a[href="about.html"]{
   display:inline!important;
 }
+
+/* Stop the old "History" label from printing a second time. */
+.nav-inner a[href="dungeon.html"]::after,
+.footer-nav a[href="dungeon.html"]::after{
+  content:none!important;
+}
+@media (max-width: 700px){
+  .nav-inner{
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    justify-items:center!important;
+    align-items:center!important;
+    gap:0!important;
+    padding:4px 8px 2px!important;
+  }
+  .nav-inner a{
+    display:block!important;
+    width:100%!important;
+    text-align:center!important;
+    font-size:.7rem!important;
+    letter-spacing:.1em!important;
+    padding:10px 2px 8px!important;
+  }
+}
