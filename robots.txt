@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Disallow: /*.md$
+Disallow: /README.md
+Disallow: /EDITORIAL-GUIDE.md
+Disallow: /STYLE-GUIDE.md
+Disallow: /SATANICA-MASTER-BIBLE.md
+Disallow: /ART-ASSET-STATUS.md
+Disallow: /FIX-NOTES.md
+Disallow: /EDITORIAL-QA-2026-09-22.md
+Disallow: /STYLE-GUIDE.html
+Disallow: /skills/
+Disallow: /mailer/
+Disallow: /newsletter/
+
+Sitemap: https://vicecitysinner.com/sitemap.xml
