@@ -24,10 +24,6 @@
   text-transform:uppercase;
   color:#c9bed1;
 }
-.nav-inner a[href="dungeon.html"]{font-size:0}
-.nav-inner a[href="dungeon.html"]::after{content:"History";font-size:.82rem}
-.footer-nav a[href="dungeon.html"]{font-size:0}
-.footer-nav a[href="dungeon.html"]::after{content:"History";font-size:.68rem}
 
 /* Poster rule: embedded-text poster art is supporting material only, never default story/hero art. */
 .article-hero{grid-template-columns:minmax(0,.94fr) minmax(320px,.86fr)}
@@ -50,9 +46,9 @@
   min-height:0!important;
   background:#050505;
 }
-.article-art--editorial{content:url('assets/foxhole-satanica.png')}
-.article-art--identity{content:url('assets/identity-satanica.png')}
-.article-art--dungeon{content:url('assets/dungeon-satanica.png')}
+.article-art--editorial{content:url('assets/foxhole-satanica-web.webp')}
+.article-art--identity{content:url('assets/identity-satanica-web.webp')}
+.article-art--dungeon{content:url('assets/dungeon-satanica-web.webp')}
 .article-art--style{content:url('assets/card-style.svg')}
 
 .article-hero,.home-story-card,.newsletter{box-shadow:none!important}
