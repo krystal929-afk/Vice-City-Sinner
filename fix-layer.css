@@ -24,10 +24,6 @@
   text-transform:uppercase;
   color:#c9bed1;
 }
-.nav-inner a[href="dungeon.html"]{font-size:0}
-.nav-inner a[href="dungeon.html"]::after{content:"History";font-size:.82rem}
-.footer-nav a[href="dungeon.html"]{font-size:0}
-.footer-nav a[href="dungeon.html"]::after{content:"History";font-size:.68rem}
 
 /* Poster rule: embedded-text poster art is supporting material only, never default story/hero art. */
 .article-hero{grid-template-columns:minmax(0,.94fr) minmax(320px,.86fr)}

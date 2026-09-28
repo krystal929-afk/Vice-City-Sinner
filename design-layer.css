@@ -365,11 +365,6 @@ body{background:var(--bg);color:var(--ink)}
   display:inline!important;
 }
 
-/* Stop the old "History" label from printing a second time. */
-.nav-inner a[href="dungeon.html"]::after,
-.footer-nav a[href="dungeon.html"]::after{
-  content:none!important;
-}
 @media (max-width: 700px){
   .nav-inner{
     display:grid!important;
