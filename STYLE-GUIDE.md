@@ -41,29 +41,39 @@ What the live pages load (2026-09-28). Each page uses the `-web.webp` copy; the 
 
 On the page, article heroes show as a 200px-high band across the column and homepage images as a 210px (feature) or 168px (cards) band, cropped with `object-fit: cover`.
 
+**Current art direction — approved by Satanica Lux, 2026-09-28: torn offset print / glitch static.** Every live hero is a real-feeling photograph of a place or object (South Beach streets, leather, a mask, an empty play space) with no person in it. Each one is broken up by horizontal print-static tears and a magenta smear, plus one thin acid-green scan line, and sits on black or on cracked, distressed paper. Satanica herself does not appear in the story art. The only illustrated Satanica on the site is in the Hair Metal outfit guide pages.
+
+**Retired:** the earlier green-Satanica character scenes (the Foxhole throne portrait, Satanica climbing out of the foxhole, the dressing-room, vanity and archive-book scenes). They are superseded and are not current art direction. Their old descriptions are kept below, marked retired, for the record only.
+
 ### Editorial — Out of the Foxhole and Into Real Life
 
-![Foxhole article artwork](assets/foxhole-satanica.png)
+![Foxhole article artwork](assets/foxhole-satanica-web.webp)
 
 **Article hero — approved / locked:** `assets/foxhole-satanica.png` (the page loads `assets/foxhole-satanica-web.webp`)
 
-Use the approved Image Lab portrait for the Foxhole article hero: Satanica standing confidently beside a gothic throne in a purple-lit chamber, with the locked Look Bible appearance and approved acid-lime skin tone. Use this exact uploaded PNG for the article hero and display the full portrait without cropping. Do not substitute the earlier doorway image, the tiny `editorial-satanica.avif`, or a regenerated Satanica variation.
+A tall black doorway-shaped block torn through a cracked, cream-grey concrete wall. Through the tear on its right edge, a rain-slick South Beach street at night: a hot-pink neon Deco building, palm trees, and wet pavement reflecting magenta. The edge of the black block shreds into horizontal glitch streaks, with a purple-magenta smear and one acid-green scan line across the middle. No person. Page alt text: “A black doorway torn through a cracked concrete wall, opening onto a rain-slick neon street with palm trees at night, in glitched offset print.” The page crops it to the 200px band, so the neon street strip carries the image. Do not substitute the retired throne portrait, the tiny `editorial-satanica.avif`, or a regenerated Satanica variation.
+
+> **Retired 2026-09-28, no longer current:** Use the approved Image Lab portrait for the Foxhole article hero: Satanica standing confidently beside a gothic throne in a purple-lit chamber, with the locked Look Bible appearance and approved acid-lime skin tone. Use this exact uploaded PNG for the article hero and display the full portrait without cropping. Do not substitute the earlier doorway image, the tiny `editorial-satanica.avif`, or a regenerated Satanica variation.
 
 **Homepage hero — approved / locked:** `assets/homepage-hero-satanica.png` (the page loads `assets/homepage-hero-satanica-web.webp`)
 
-The homepage hero uses the approved green Satanica imagery: Satanica climbing clearly out of a dark underground passage/foxhole into bright South Florida daylight. Her hands and raised knee are visibly braced on the opening so the action reads immediately rather than looking like she is crawling in dirt. Use this exact approved 1448×1086 hero for the homepage feature. Show the full 4:3 composition cleanly and do not replace it with an unapproved portrait, generic goth imagery, a poster treatment, or a stretched low-resolution source.
+Ocean Drive at night in torn offset print. A weathered “OCEAN DRIVE / MIAMI BEACH” street sign on the left, palm trees, an Art Deco hotel striped with pink neon on the right, and an empty rain-wet street reflecting magenta down the middle. The whole scene is framed by jagged shards of torn black paper, with a single acid-green strip on the left edge. Mostly black-and-white with magenta neon. No person. Page alt text: “Ocean Drive at night in torn offset print.” Portrait 1152×1712, cropped on the homepage to a 210px band. Do not replace it with an unapproved portrait, generic goth imagery, a poster treatment, the retired green-Satanica scene, or a stretched low-resolution source.
+
+> **Retired 2026-09-28, no longer current:** The homepage hero uses the approved green Satanica imagery: Satanica climbing clearly out of a dark underground passage/foxhole into bright South Florida daylight. Her hands and raised knee are visibly braced on the opening so the action reads immediately rather than looking like she is crawling in dirt. Use this exact approved 1448×1086 hero for the homepage feature. Show the full 4:3 composition cleanly and do not replace it with an unapproved portrait, generic goth imagery, a poster treatment, or a stretched low-resolution source.
 
 ### Style — I’m Bringing Back Hair Metal Fashion. Sorry Not Sorry.
 
 **Article header — approved / locked:** `assets/hair-metal-header-satanica-hq.png` (the article and its homepage card load `assets/hair-metal-header-satanica-web.webp`; the old 511×341 `assets/hair-metal-header-satanica.avif` is no longer used)
 
-The Hair Metal article header uses the established green Satanica character system in a backstage/dressing-room scene: lime-green skin, blue-black hair, forehead star, black leather, fishnets, stacked jewelry, platform boots, purple/magenta lighting, and South Florida atmosphere. This is the approved article-header image. Do not replace it with a generic model, poster graphic, or non-Satanica fashion image.
+A studded black leather moto jacket in close-up on the right: buckled collar strap, silver studs, heavy zipper. Warm amber dressing-room bulbs blur behind it at the top right. The left half dissolves into black print static, magenta pixel static tears across the jacket, and one acid-green scan line runs straight through. No person. Page alt text: “Studded leather jacket tearing through dressing-room static.” This is the approved article-header image and the homepage Hair Metal card. Do not replace it with a generic model, a poster graphic, or the retired dressing-room Satanica scene.
+
+> **Retired 2026-09-28, no longer current:** The Hair Metal article header uses the established green Satanica character system in a backstage/dressing-room scene: lime-green skin, blue-black hair, forehead star, black leather, fishnets, stacked jewelry, platform boots, purple/magenta lighting, and South Florida atmosphere. This is the approved article-header image. Do not replace it with a generic model, poster graphic, or non-Satanica fashion image.
 
 `assets/card-style.svg` remains the compact Hair Metal story artwork where a card-sized asset is needed. No live page uses it right now; the homepage card uses the header art.
 
 **Hair Metal outfit guide — approved / live:** `assets/guide-page-1.jpg`, `assets/guide-page-2.jpg`, and `assets/guide-page-3.jpg`. (The earlier `assets/hair-metal-guide-1-3-full.png`, `-4-6-full.png` and `-7-9-full.png` are no longer on the page.)
 
-The approved **Nine No-Brainer Hair Metal Revival Combos** guide uses the three Green Satanica editorial pages for combos 1–3, 4–6, and 7–9. These exact visual pages are the live guide. The three approved 1008×1792 JPEG pages are displayed as normal responsive images at their natural aspect ratio with no cropping or background-image slicing. The underlying HTML combo copy remains in the article for accessibility, but it is not the visible design.
+The approved **Nine No-Brainer Hair Metal Revival Combos** guide uses the three illustrated Satanica style-guide pages for combos 1–3, 4–6, and 7–9 (Satanica with blue-black hair and forehead star in black leather, lace and fishnets, beside labelled item swatches, with magenta numbered headings). These exact visual pages are the live guide. The three approved 1008×1792 JPEG pages are displayed as normal responsive images at their natural aspect ratio with no cropping or background-image slicing. The underlying HTML combo copy remains in the article for accessibility, but it is not the visible design.
 
 ### Culture / Identity — Wait, What’s Your Real Name?
 
@@ -71,7 +81,9 @@ The approved **Nine No-Brainer Hair Metal Revival Combos** guide uses the three 
 
 **Approved / locked:** `assets/identity-satanica.png` (the article and its homepage card load `assets/identity-satanica-web.webp`)
 
-Use this exact 1448×1086 Green Satanica editorial artwork for the story and its homepage card. Satanica is seated at a neon-lit vanity holding an ornate mask; the scene represents chosen identity and self-authorship without requiring readable prop text. Character appearance follows the Satanica Look Bible v1.0: acid-green skin, blue-black electric-cobalt hair, symmetrical purple horns, magenta eyes, black-plum lips, centered four-point forehead star, curvy soft build, smaller chest, and dense arm/hand tattoos. Do not substitute the **More Than a Name** promotional poster, a generic model, or a regenerated variant.
+A black leather hood with empty eye holes fills the lower right, with an ornate dark mirror frame and one warm bulb above it. The left side is black and grey print static, torn by a magenta smear and a magenta waveform running down beside the hood, with one acid-green scan line. No face, no person, no readable text. The empty hood stands in for a chosen name and self-authorship. Page alt text: “Leather hood dissolving into print static.” Portrait 1152×1712. Use it for the story and its homepage card. Do not substitute the **More Than a Name** promotional poster, a generic model, the retired vanity-and-mask Satanica scene, or a regenerated variant.
+
+> **Retired 2026-09-28, no longer current:** Use this exact 1448×1086 Green Satanica editorial artwork for the story and its homepage card. Satanica is seated at a neon-lit vanity holding an ornate mask; the scene represents chosen identity and self-authorship without requiring readable prop text. Character appearance follows the Satanica Look Bible v1.0: acid-green skin, blue-black electric-cobalt hair, symmetrical purple horns, magenta eyes, black-plum lips, centered four-point forehead star, curvy soft build, smaller chest, and dense arm/hand tattoos. Do not substitute the **More Than a Name** promotional poster, a generic model, or a regenerated variant.
 
 ### History — Who the Fuck Invented the Dungeon?
 
@@ -79,7 +91,13 @@ Use this exact 1448×1086 Green Satanica editorial artwork for the story and its
 
 **Article/homepage artwork — approved / locked:** `assets/dungeon-satanica.png` (the article and its homepage card load `assets/dungeon-satanica-web.webp`)
 
-Use the approved 1448×1086 Green Satanica history scene: Satanica studies an old illustrated archive book in a dense, candlelit room surrounded by period-feeling dungeon objects, restraints, leather, archival prints, books, and workshop/play-space details. The image should read as curious historical investigation rather than generic fetish glamour. Use this exact approved asset for the Dungeon article hero and homepage story card. Do not replace it with the earlier doorway graphic, poster treatment, unrelated dungeon imagery, or an unapproved Satanica variation.
+An empty play space lit deep red. A black padded St. Andrew’s cross hangs from chains under a glowing red light panel, with a tufted black leather bench and chains in the foreground right. The left third is black, cut by a vertical magenta static waveform and one acid-green scan line across the middle. No person. Page alt text: “Empty play-space cross and bench.” Portrait 784×1168. Use this exact asset for the Dungeon article hero and homepage story card. Do not replace it with the earlier doorway graphic, a poster treatment, unrelated dungeon imagery, the retired archive-book Satanica scene, or an unapproved Satanica variation.
+
+> **Retired 2026-09-28, no longer current:** Use the approved 1448×1086 Green Satanica history scene: Satanica studies an old illustrated archive book in a dense, candlelit room surrounded by period-feeling dungeon objects, restraints, leather, archival prints, books, and workshop/play-space details. The image should read as curious historical investigation rather than generic fetish glamour. Use this exact approved asset for the Dungeon article hero and homepage story card. Do not replace it with the earlier doorway graphic, poster treatment, unrelated dungeon imagery, or an unapproved Satanica variation.
+
+### About — About Satanica
+
+**No story art.** The About page shows only the lock-plate masthead (`assets/vcs-lock-banner-web.webp`) in the header and footer. That’s the purple gothic “The Vice City Sinner” lettering with green “by Satanica Lux” script, palms, moon and water. There is no photo or illustration of Satanica on the page. Adding one needs Satanica Lux’s approval.
 
 ## 4. Approval states
 
@@ -90,6 +108,7 @@ Use the approved 1448×1086 Green Satanica history scene: Satanica studies an ol
 ## 5. Rejected / do not use
 
 - Poster-style story substitutions: `assets/story-editorial-illustration.jpeg` and `assets/story-identity-illustration.jpeg`.
+- The retired green-Satanica character scenes as story or hero art (superseded 2026-09-28 by the torn-print / glitch-static direction).
 - The rejected Satanica homepage hero photo.
 - The text-heavy infographic SVGs previously created as replacements for article artwork: `art-foxhole.svg`, `art-hair-metal.svg`, `art-real-name.svg`, and `art-dungeon.svg`.
 - Unapproved photographs of Satanica Lux.
