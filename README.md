@@ -46,7 +46,7 @@ This is a lightweight static publication built for GitHub Pages. No framework or
 - **One stylesheet.** Every page links only `site.css`. Don’t add another CSS file or a “fix” layer; edit `site.css` (see the section list at the top of the file).
 - **Cache version.** The stylesheet link and any versioned image carry `?v=` plus the date and a letter, currently `?v=20260928b`. When you change `site.css` or replace an image under the same filename, bump the letter (`20260928c`, …) on every page so readers don’t get the old copy.
 - **Images.** Large art keeps its full-size original next to a `-web.webp` copy, and the pages load the WebP. Keep both. Details in `STYLE-GUIDE.md` and `ART-ASSET-STATUS.md`.
-- **Newsletter.** The homepage form posts to FormSubmit (`formsubmit.co/satanica.lux@vicecitysinner.com`), which emails each signup to that inbox and sends a one-line autoresponse, then lands on `subscribed.html`. See `newsletter/LIST.md`.
+- **Newsletter.** The homepage form posts to EmailOctopus (`eocampaign1.com/form/<form id>`, list “Audience”) with a few lines of inline JavaScript, then lands on `subscribed.html`. The welcome email is an EmailOctopus automation (Contact added → Send email). See `newsletter/LIST.md`.
 - **One PR per batch.** Every push to `main` starts a Pages build and quick back-to-back pushes cancel each other, so group changes into one branch and one PR.
 - New pages go in `sitemap.xml`.
 

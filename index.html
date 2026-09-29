@@ -97,17 +97,41 @@
   <div class="newsletter-copy">
     <h2>Get New Posts</h2>
     <p>Culture, style, people, history, strange ideas, and whatever else refuses to leave Satanica’s brain alone.</p>
-    <form class="newsletter-form" action="https://formsubmit.co/satanica.lux@vicecitysinner.com" method="POST">
+    <!-- EmailOctopus inline form 101daadc-bbc9-11f1-8902-1b2bd70a4e23 (list "Audience"). Our own markup posts to their form endpoint.
+         Field names match their embed: field_0 = email, hpc4b27b6e-... = honeypot. Keep reCAPTCHA and the consent checkbox OFF
+         in that form's settings. Without JavaScript the browser still posts here and shows EmailOctopus's plain response. -->
+    <form class="newsletter-form" action="https://eocampaign1.com/form/101daadc-bbc9-11f1-8902-1b2bd70a4e23" method="POST" enctype="multipart/form-data">
       <label class="sr-only" for="email">Email</label>
-      <input id="email" name="email" type="email" placeholder="Your email here..." required autocomplete="email">
+      <input id="email" name="field_0" type="email" placeholder="Your email here..." required autocomplete="email" maxlength="200">
       <button type="submit">Subscribe →</button>
-      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-      <input type="hidden" name="_subject" value="New Vice City Sinner subscriber">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://vicecitysinner.com/subscribed.html">
-      <input type="hidden" name="_autoresponse" value="You're on the list. The Vice City Sinner emails when a new post goes up. No spam. No performance required. — Satanica Lux">
+      <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="hpc4b27b6e-eb38-11e9-be00-06b4694bee2a" tabindex="-1" autocomplete="off"></div>
     </form>
-    <div class="form-note">No spam. No performance required.</div>
+    <div class="form-note" aria-live="polite">No spam. No performance required.</div>
+    <div class="form-note">By subscribing you confirm you’re 21+.</div>
+    <script>
+    (function () {
+      var form = document.querySelector('.newsletter-form');
+      if (!form || !window.fetch || !window.FormData) return;
+      var note = form.parentNode.querySelector('.form-note');
+      var button = form.querySelector('[type=submit]');
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        var trap = form.querySelector('input[name^="hp"]');
+        if (trap && trap.value) return;
+        button.disabled = true;
+        fetch(form.action, { method: 'POST', mode: 'cors', cache: 'no-cache', body: new FormData(form) })
+          .then(function (response) { return response.json(); })
+          .then(function (data) {
+            if (!data || !data.success) throw data;
+            window.location.href = 'https://vicecitysinner.com/subscribed.html';
+          })
+          .catch(function () {
+            note.textContent = 'That didn’t take. Try again in a minute.';
+            button.disabled = false;
+          });
+      });
+    })();
+    </script>
   </div>
   <div class="newsletter-sign">Vice City<br>Sinners<br>Never Sleep</div>
 </section>
