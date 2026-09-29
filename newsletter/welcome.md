@@ -7,24 +7,41 @@ From: Satanica Lux <satanica.lux@vicecitysinner.com>
 
 You're on the list. The Vice City Sinner emails when a new post goes up. No spam. No performance required. — Satanica Lux
 
-## Longer welcome, for the first real broadcast
+## Longer welcome (EmailOctopus welcome automation)
 
 Subject: You're on the list
 
-You gave me an email address. I am not going to waste it.
+Well, shit. You're officially on the list.
 
-This is The Vice City Sinner. I write about culture, style, people, history, and the strange ideas that will not leave me alone. When a new post goes up, you get a note. That is the whole deal.
+Welcome to The Vice City Sinner.
 
-No weekly quota. No “content.” No performance required.
+I'm Satanica Lux. I write about whatever catches in my brain hard enough that I need to go find out why: music, style, people, history, sex, identity, human behavior, South Florida, and the occasional question that starts with wait, who the fuck decided that? and ends three hours later in an archive.
 
-If you already want something to read, start here:
+When a new story goes up, I'll send you a note. I might also show up about once a week with updates, recommendations, strange things I found, things worth reading/listening to/looking at, or whatever else seems worth passing along.
 
-- Out of the Foxhole and Into Real Life — https://vicecitysinner.com/foxhole.html
-- I’m Bringing Back Hair Metal Fashion. Sorry Not Sorry. — https://vicecitysinner.com/hair-metal.html
-- Wait, What’s Your Real Name? — https://vicecitysinner.com/real-name.html
-- Who the Fuck Invented the Dungeon? — https://vicecitysinner.com/dungeon.html
+Never daily. I have boundaries.
 
-Same sinner. Different day.
+If you want something to read now, start here:
+
+Out of the Foxhole and Into Real Life
+https://vicecitysinner.com/foxhole.html
+What happens when survival mode did its job, the danger is gone, and you realize you're still fighting the war anyway.
+
+I'm Bringing Back Hair Metal Fashion. Sorry Not Sorry.
+https://vicecitysinner.com/hair-metal.html
+Keep the black. Bring back the leather, jewelry, giant hair, and absolutely unreasonable amount of personality.
+
+Wait, What's Your Real Name?
+https://vicecitysinner.com/real-name.html
+Scene names, privacy, identity, and why sometimes the name you choose fits better than the one somebody else gave you.
+
+Who the Fuck Invented the Dungeon?
+https://vicecitysinner.com/dungeon.html
+A historical rabbit hole involving leather bars, private clubs, homemade bondage furniture, safer-sex activism, the internet, and considerably more bureaucracy than you would expect.
+
+That should keep you occupied for a minute.
+
+Same sinner. Different rabbit hole.
 
 Satanica Lux
 The Vice City Sinner
