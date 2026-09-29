@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Kaushan+Script&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&display=swap");
 
 /* The Vice City Sinner: the one stylesheet.
    Every live page links only this file: <link rel="stylesheet" href="site.css?v=YYYYMMDDx">.
@@ -19,18 +19,19 @@
    1. Base (was site-base.css)
    ========================================================================== */
 :root{
-  --bg:#050505;
-  --panel:#09090b;
-  --ink:#f6f0f6;
-  --muted:#c5b8ca;
-  --pink:#ef35ff;
-  --purple:#982cff;
-  --green:#86ff2d;
+  /* 2026-09-29 Miami Nights board tokens (site-identity SoT) */
+  --bg:#07040C;
+  --panel:#120816;
+  --ink:#EAD9EE;
+  --muted:#c4b4c8;
+  --pink:#E14DFF;
+  --purple:#7b1fa2;
+  --green:#B8FF2D;
   --blue:#16a5ff;
-  --line:rgba(239,53,255,.72);
+  --line:rgba(225,77,255,.42);
   --soft:rgba(255,255,255,.12);
-  --serif:Georgia,'Times New Roman',serif;
-  --sans:'Arial Narrow',Arial,sans-serif;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Archivo Narrow",Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -204,8 +205,8 @@ img{display:block;max-width:100%}
 .article-art--style{content:url('assets/card-style.svg')}
 
 .article-hero,.home-story-card,.newsletter{box-shadow:none!important}
-.article-hero h1,.home-story-copy h3,.section-heading h2{font-family:Georgia,'Times New Roman',serif}
-.kicker,.tag,.section-kicker,.article-meta,.nav-inner a{font-family:'Arial Narrow',Arial,sans-serif;font-weight:900;letter-spacing:.15em}
+.article-hero h1,.home-story-copy h3,.section-heading h2{font-family:var(--serif)}
+.kicker,.tag,.section-kicker,.article-meta,.nav-inner a{font-family:var(--sans);font-weight:900;letter-spacing:.15em}
 
 /* Hair Metal quick guide: exact phone proofs live in the article as article content. */
 .hair-guide{
@@ -351,13 +352,13 @@ img{display:block;max-width:100%}
    5. Homepage (was homepage-base.css)
    ========================================================================== */
 :root{
-  --home-bg:#050505;
-  --home-panel:#0a090b;
-  --home-paper:#f6f0f6;
-  --home-muted:#c7bdca;
-  --home-pink:#ef35ff;
-  --home-green:#86ff2d;
-  --home-purple:#6f2377;
+  --home-bg:#07040C;
+  --home-panel:#120816;
+  --home-paper:#EAD9EE;
+  --home-muted:#c4b4c8;
+  --home-pink:#E14DFF;
+  --home-green:#B8FF2D;
+  --home-purple:#7b1fa2;
 }
 
 .home-hero{
@@ -379,7 +380,7 @@ img{display:block;max-width:100%}
 .home-hero h1{
   margin:12px 0 18px;
   max-width:680px;
-  font:700 clamp(3.15rem,6vw,6rem)/.88 Georgia,'Times New Roman',serif;
+  font:700 clamp(3.15rem,6vw,6rem)/.88 var(--serif);
   letter-spacing:-.045em;
 }
 .home-hero h1 span{color:var(--home-green)}
@@ -481,14 +482,14 @@ img{display:block;max-width:100%}
 .home-story-copy .tag{margin-bottom:10px}
 .home-story-copy h3{
   margin:0 0 12px;
-  font:700 clamp(1.75rem,3vw,3rem)/.98 Georgia,'Times New Roman',serif;
+  font:700 clamp(1.75rem,3vw,3rem)/.98 var(--serif);
   letter-spacing:-.025em;
 }
 .home-story-card:not(.home-story-card--lead) .home-story-copy h3{font-size:clamp(1.6rem,2.35vw,2.25rem)}
 .home-story-copy p{
   margin:0 0 22px;
   color:#d9cfdc;
-  font:400 1rem/1.46 Georgia,'Times New Roman',serif;
+  font:400 1rem/1.46 var(--serif);
 }
 .home-story-copy .readmore{margin-top:auto}
 
@@ -518,12 +519,12 @@ img{display:block;max-width:100%}
 }
 .cover-number{
   color:var(--home-pink);
-  font:700 clamp(3.2rem,6.8vw,6.9rem)/.78 Georgia,'Times New Roman',serif;
+  font:700 clamp(3.2rem,6.8vw,6.9rem)/.78 var(--serif);
   letter-spacing:-.06em;
 }
 .cover-title{
   color:var(--home-paper);
-  font:700 clamp(1.15rem,2.3vw,2.5rem)/.9 Georgia,'Times New Roman',serif;
+  font:700 clamp(1.15rem,2.3vw,2.5rem)/.9 var(--serif);
   letter-spacing:-.025em;
   text-transform:uppercase;
 }
@@ -552,7 +553,7 @@ img{display:block;max-width:100%}
   flex-direction:column;
   justify-content:space-between;
 }
-.combo b{color:var(--home-pink);font:700 1.7rem/.8 Georgia,'Times New Roman',serif}
+.combo b{color:var(--home-pink);font:700 1.7rem/.8 var(--serif)}
 .combo span{font:700 .57rem/1.14 Arial,sans-serif;color:#eee;letter-spacing:.01em}
 .cover-rule{
   position:absolute;
@@ -582,7 +583,7 @@ img{display:block;max-width:100%}
 .name-stack{display:grid;gap:8px}
 .name-ticket{border:1px solid #776c7b;background:#0d0d0e;padding:9px 11px;min-height:56px}
 .name-ticket small{display:block;color:var(--home-green);font-size:.54rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase;margin-bottom:5px}
-.name-ticket strong{display:block;font:700 clamp(.95rem,1.7vw,1.55rem)/1 Georgia,'Times New Roman',serif;color:#f7f2f7;text-transform:uppercase}
+.name-ticket strong{display:block;font:700 clamp(.95rem,1.7vw,1.55rem)/1 var(--serif);color:#f7f2f7;text-transform:uppercase}
 .name-ticket--redact strong{letter-spacing:.08em;color:#ded8df;background:linear-gradient(#ded8df,#ded8df) left center/78% 62% no-repeat;color:transparent;width:88%}
 .identity-portrait{position:relative;min-height:196px;border:1px solid rgba(239,53,255,.58);overflow:hidden;background:#09070b}
 .identity-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
@@ -698,12 +699,12 @@ img{display:block;max-width:100%}
    palms, moon, water. Page chrome sits under that plate. */
 
 :root{
-  --bg:#07040c;
+  --bg:#07040C;
   --panel:#120816;
-  --ink:#f4eef6;
+  --ink:#EAD9EE;
   --muted:#c4b4c8;
-  --pink:#e14dff;
-  --green:#b8ff2d;
+  --pink:#E14DFF;
+  --green:#B8FF2D;
   --purple:#7b1fa2;
   --line:rgba(225,77,255,.42);
   --serif:"Newsreader",Georgia,"Times New Roman",serif;
