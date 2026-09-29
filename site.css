@@ -1079,3 +1079,136 @@ body{background:var(--bg);color:var(--ink)}
     padding:10px 2px 8px!important;
   }
 }
+
+
+/* ==========================================================================
+   About page: portrait chrome + start-here CTAs (Miami Nights)
+   ========================================================================== */
+.about{
+  width:min(920px,calc(100% - 28px));
+}
+.about-head{
+  display:grid;
+  grid-template-columns:minmax(160px,.42fr) minmax(0,1fr);
+  gap:clamp(18px,3.5vw,36px);
+  align-items:end;
+  margin:0 0 28px;
+}
+.about-portrait{
+  margin:0;
+  position:relative;
+  border:1px solid rgba(225,77,255,.62);
+  box-shadow:
+    0 0 0 1px rgba(184,255,45,.12),
+    0 18px 48px rgba(0,0,0,.55),
+    0 0 42px rgba(225,77,255,.18);
+  background:#09070b;
+  overflow:hidden;
+  aspect-ratio:3/4;
+  max-width:320px;
+}
+.about-portrait::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
+  background:linear-gradient(180deg,rgba(225,77,255,.12),transparent 28%,transparent 72%,rgba(7,4,12,.35));
+}
+.about-portrait img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 18%;
+}
+.about-head-copy .kicker{margin-bottom:8px}
+.about-head-copy h1{margin-bottom:14px}
+.about-head-copy .lede{margin:0;max-width:34ch}
+.about .manifesto-line{
+  font-family:var(--serif);
+  font-size:clamp(1.25rem,2.4vw,1.55rem);
+  line-height:1.35;
+}
+.about-start{
+  margin:40px 0 8px;
+  padding:26px 22px 28px;
+  border:1px solid var(--line);
+  background:
+    radial-gradient(circle at 12% 0%,rgba(225,77,255,.14),transparent 42%),
+    radial-gradient(circle at 88% 100%,rgba(184,255,45,.08),transparent 40%),
+    #0b0710;
+}
+.about-start .section-kicker{
+  font-family:var(--sans);
+  font-size:.68rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--pink);
+  margin-bottom:6px;
+}
+.about-start h2{
+  font-family:var(--serif);
+  font-size:clamp(1.7rem,3.6vw,2.35rem);
+  line-height:1.05;
+  margin:0 0 16px;
+  color:#f3e8f6;
+}
+.about-essay-list{
+  list-style:none;
+  margin:0 0 18px;
+  padding:0;
+  display:grid;
+  gap:10px;
+}
+.about-essay-list a{
+  display:block;
+  font-family:var(--serif);
+  font-size:1.08rem;
+  line-height:1.35;
+  color:#ead9ee;
+  padding:12px 14px;
+  border:1px solid rgba(225,77,255,.28);
+  background:rgba(0,0,0,.35);
+  transition:border-color .15s ease, background .15s ease, color .15s ease;
+}
+.about-essay-list a:hover{
+  border-color:var(--pink);
+  background:rgba(225,77,255,.08);
+  color:#fff;
+}
+.about-essay-tag{
+  display:inline-block;
+  font-family:var(--sans);
+  font-size:.62rem;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--green);
+  margin-right:8px;
+  vertical-align:middle;
+}
+.about-cta-note{
+  font-family:var(--serif);
+  font-size:1.05rem !important;
+  color:#c4b4c8 !important;
+  margin:0 0 14px !important;
+}
+.about-start .button{margin-top:2px}
+
+@media (max-width:700px){
+  .about-head{
+    grid-template-columns:1fr;
+    gap:18px;
+    align-items:start;
+  }
+  .about-portrait{
+    max-width:240px;
+    margin:0 auto;
+  }
+  .about-head-copy{text-align:center}
+  .about-head-copy .lede{margin-left:auto;margin-right:auto}
+  .about-start{padding:22px 16px 24px}
+  .about-start .button{width:100%;justify-content:center}
+}
