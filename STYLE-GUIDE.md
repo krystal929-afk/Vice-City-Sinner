@@ -8,11 +8,43 @@ Satanica's character identity is defined in [`SATANICA-MASTER-BIBLE.md`](SATANIC
 
 ![The Vice City Sinner masthead](assets/vcs-lock-banner-web.webp)
 
-The masthead is the lock plate, `assets/vcs-lock-banner.png` (locked 2026-09-25). Pages load its WebP copy, `assets/vcs-lock-banner-web.webp`, in the header and footer. The older `assets/logo.svg` masthead is no longer used on the site.
+**Source of truth (2026-09-29): the Miami Nights brand board.** Site identity colors, type, and the logo suite come from that board. Story and hero art stay on their own track (see §3) and do not redefine the publication.
 
-The overall publication keeps the established Vice City Sinner system: black foundation, purple/magenta neon framing, acid-green highlights, large editorial serif headlines, compact uppercase utility text, and the existing masthead/navigation language.
+### Masthead — keep live lock plate
 
-The original homepage and newsletter mockups supplied by Satanica Lux remain the source of truth for the publication-level look. Do **not** replace that identity with the visual theme of one article.
+The live site masthead remains the lock plate, `assets/vcs-lock-banner.png` (locked 2026-09-25). Pages load its WebP copy, `assets/vcs-lock-banner-web.webp`, in the header and footer. Do **not** replace it with a board crop or a regenerated masthead unless Satanica Lux explicitly says so. The older `assets/logo.svg` masthead is no longer used on the site.
+
+### Brand colors (board Top 4)
+
+| Token | Hex | Role |
+| --- | --- | --- |
+| Deep black | `#07040C` | Foundation / page background |
+| Magenta | `#E14DFF` | Frame, energy, links, glow |
+| Acid green | `#B8FF2D` | Accent, active nav, CTAs |
+| Lavender ink | `#EAD9EE` | Editorial type / body ink |
+
+These are the early `:root` tokens in `site.css` (aligned with the design-lock section). Do not drift back to the older `#050505` / `#ef35ff` / `#86ff2d` / `#f6f0f6` values.
+
+### Typography
+
+- **Newsreader** — headlines, editorial, body (`--serif`)
+- **Archivo Narrow** — UI, navigation, labels (`--sans`)
+
+Fallback stacks keep Georgia / Arial for resilience. Do not hardcode Georgia or Arial Narrow in rules that should follow the board fonts.
+
+### Logo suite
+
+| Mark | File | Use |
+| --- | --- | --- |
+| Primary masthead (live) | `assets/vcs-lock-banner.png` (+ `-web.webp`) | Header and footer on every page |
+| Primary badge | `assets/vcs-badge.png` | Circular VCS emblem (dual neon rings, arc title). Primary badge from Krystal’s 2026-09-29 hi-res set (the fuller mark with “THE VICE CITY SINNER” on the ring; the star-through-VCS variant is archived under `/workspace/emailoctopus/brand/`, not shipped as the site primary). |
+| Star / icon | used for `favicon.ico`, `assets/favicon.png` | Small UI / tab icon (board maps the star to favicon) |
+| Apple touch | `assets/apple-touch-icon.png` | Home-screen icon (badge at 180×180) |
+| Share card | `assets/share-card.jpg` | `og:image` 1200×630 — still the masthead composition (see §8) |
+
+The overall publication keeps black foundation, magenta neon framing, acid-green highlights, large editorial serif headlines, compact uppercase utility text, and the existing masthead/navigation language.
+
+Do **not** replace that identity with the visual theme of one article.
 
 Important: goth and kink are subjects within the publication, not the publication's entire visual or editorial identity. Avoid defaulting every image toward dungeons, fetish hardware, gothic fantasy, or generic "alternative" imagery simply because those elements appear elsewhere in the project.
 
@@ -41,7 +73,7 @@ What the live pages load (2026-09-28). Each page uses the `-web.webp` copy; the 
 
 On the page, article heroes show as a 200px-high band across the column and homepage images as a 210px (feature) or 168px (cards) band, cropped with `object-fit: cover`.
 
-**Current art direction — approved by Satanica Lux, 2026-09-28: torn offset print / glitch static.** Every live hero is a real-feeling photograph of a place or object (South Beach streets, leather, a mask, an empty play space) with no person in it. Each one is broken up by horizontal print-static tears and a magenta smear, plus one thin acid-green scan line, and sits on black or on cracked, distressed paper. Satanica herself does not appear in the story art. The only illustrated Satanica on the site is in the Hair Metal outfit guide pages.
+**Current art direction — approved by Satanica Lux, 2026-09-28: torn offset print / glitch static.** Locked until she commissions replacements. Every live hero is a real-feeling photograph of a place or object (South Beach streets, leather, a mask, an empty play space) with no person in it. Each one is broken up by horizontal print-static tears and a magenta smear, plus one thin acid-green scan line, and sits on black or on cracked, distressed paper. Satanica herself does not appear in the story art. The only illustrated Satanica on the site is in the Hair Metal outfit guide pages. Site-identity board work (colors, type, badge, icons) does not unlock new story/hero art.
 
 **Retired:** the earlier green-Satanica character scenes (the Foxhole throne portrait, Satanica climbing out of the foxhole, the dressing-room, vanity and archive-book scenes). They are superseded and are not current art direction. Their old descriptions are kept below, marked retired, for the record only.
 
@@ -133,8 +165,8 @@ For a browser-rendered version with the live assets, open [`STYLE-GUIDE.html`](S
 ## 8. Files and conventions
 
 - **One stylesheet.** Every page links only `site.css`. It replaced nine stacked files (base, fix, Hair Metal, print, homepage, design layers) on 2026-09-28, merged in the same order so nothing changed on screen. The design-lock section stays last. Add rules to `site.css`; do not add new patch-layer files.
-- **Cache version.** Stylesheet and versioned image links end in `?v=` plus the date and a letter, currently `?v=20260928b`. Change `site.css`, or replace an image under the same name, and you bump it on every page.
+- **Cache version.** Stylesheet and versioned image links end in `?v=` plus the date and a letter, currently `?v=20260929a`. Change `site.css`, or replace an image under the same name, and you bump it on every page.
 - **Originals + WebP.** Each large image has a full-size original (usually PNG) and a `-web.webp` copy next to it, e.g. `identity-satanica.png` + `identity-satanica-web.webp`. Pages load the WebP with a plain `<img>`. Keep both files; the original is the master.
 - **New art.** Export the WebP no wider than about 1600px and name it `<name>-web.webp` beside the original. Give the `<img>` its real `width`/`height`. Keep guide pages and other JPEGs under about 250 KB.
-- **Sharing and icons.** Every page’s `og:image` is `assets/share-card.jpg` (1200×630). Icons are `favicon.ico`, `assets/favicon.png` (48×48) and `assets/apple-touch-icon.png` (180×180).
+- **Sharing and icons.** Every page’s `og:image` is `assets/share-card.jpg` (1200×630) — still the lock-plate masthead composition. A badge-only crop on `#07040C` was tried for Phase 1; the 1:1 badge leaves empty side fields on a 1.91:1 share card and reads sparse in social previews, so the masthead share-card stays. Icons: `favicon.ico` and `assets/favicon.png` (48×48) use the board star/icon; `assets/apple-touch-icon.png` (180×180) uses the primary badge. `assets/vcs-badge.png` is the web-optimized primary circular badge.
 - **Status of every file** lives in [`ART-ASSET-STATUS.md`](ART-ASSET-STATUS.md).
