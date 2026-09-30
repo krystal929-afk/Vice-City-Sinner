@@ -5,7 +5,7 @@ From: Satanica Lux <satanica.lux@vicecitysinner.com>
 
 ## What the site sends automatically
 
-You're on the list. The Vice City Sinner emails when a new post goes up. No spam. No performance required. — Satanica Lux
+You're on the list. The Vice City Sinner emails when a new post goes up. No spam. — Satanica Lux
 
 ## Longer welcome (EmailOctopus welcome automation)
 
