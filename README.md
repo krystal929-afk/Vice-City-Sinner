@@ -31,6 +31,7 @@ Not published. These seven pieces, plus the Issue 001 email edition, live on the
 - `index.html` — homepage: featured Foxhole story, latest stories, “Get New Posts” signup
 - `foxhole.html`, `hair-metal.html`, `real-name.html`, `dungeon.html` — the four live stories
 - `about.html` — About Satanica
+- `links.html` — link-in-bio / Instagram bio landing (home, list, About, live essays)
 - `subscribed.html` — thank-you page after someone signs up
 - `404.html` — “Wrong door.” page GitHub Pages shows for any missing URL (uses `/`-rooted paths so it works at any depth)
 - `site.css` — the one stylesheet for every page
