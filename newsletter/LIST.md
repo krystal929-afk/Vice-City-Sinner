@@ -7,7 +7,7 @@
 - Collector and sender: EmailOctopus (free Starter plan), list “Audience”, sending as satanica.lux@vicecitysinner.com
 - Welcome: EmailOctopus automation, Contact added → Send email (the welcome.html design, footer tags added)
 - Thanks page: subscribed.html
-- Fine print on the form: No spam. No performance required. By subscribing you confirm you’re 21+.
+- Fine print on the form: No spam. By subscribing you confirm you’re 21+.
 
 EmailOctopus is both the collector and the broadcast tool. New posts go out as EmailOctopus campaigns from satanica.lux@vicecitysinner.com. Every email needs {{UnsubscribeURL}} (as a link), {{SenderInfo}} or {{SenderInfoLine}} (the postal address from Account settings > Sender info), and, on the free plan, {{RewardsURL}} (as a link).
 
