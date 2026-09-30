@@ -37,10 +37,21 @@ Fallback stacks keep Georgia / Arial for resilience. Do not hardcode Georgia or 
 | Mark | File | Use |
 | --- | --- | --- |
 | Primary masthead (live) | `assets/vcs-lock-banner.png` (+ `-web.webp`) | Header and footer on every page |
-| Primary badge | `assets/vcs-badge.png` | Circular VCS emblem (dual neon rings, arc title). Primary badge from Krystal’s 2026-09-29 hi-res set (the fuller mark with “THE VICE CITY SINNER” on the ring; the star-through-VCS variant is archived under `/workspace/emailoctopus/brand/`, not shipped as the site primary). |
+| Primary badge | `assets/vcs-badge.png` | Circular VCS emblem (dual neon rings, arc title). **Phase 2 Option C (2026-09-29):** footer stamp on every main page (under `footer-bottom`; lock-banner masthead stays), About brand stamp between manifesto and about-start, 404 badge above “Wrong door,” ~64px stamp in welcome-email footer. Not a masthead/hero/share-card/favicon replacement; no monogram/wordmark in chrome. Source: Krystal’s fuller hi-res badge; star-through-VCS variant stays under `/workspace/emailoctopus/brand/`. |
 | Star / icon | used for `favicon.ico`, `assets/favicon.png` | Small UI / tab icon (board maps the star to favicon) |
 | Apple touch | `assets/apple-touch-icon.png` | Home-screen icon (badge at 180×180) |
 | Share card | `assets/share-card.jpg` | `og:image` 1200×630 — still the masthead composition (see §8) |
+
+
+### Phase 2 — Option C badge placement (2026-09-29)
+
+Krystal’s Option C: ship the circular badge as an **additive stamp**, not a chrome replacement.
+
+- **Footer stamp** on index, about, 404, subscribed, foxhole, hair-metal, real-name, dungeon — under/beside `footer-bottom`. Keep the footer lock-banner.
+- **404** — badge above the “Wrong door” heading.
+- **About** — brand stamp between the manifesto line and `about-start`.
+- **Welcome email** — keep header lock-banner; ~64px badge above unsubscribe/sender. Repo: `newsletter/welcome.html`. EO paste-ready: `newsletter/welcome-emailoctopus.html` (live EmailOctopus automation may need a separate paste).
+- **Do not** replace masthead, heroes, share-card, or favicon suite; do not put monogram/wordmark in site chrome.
 
 The overall publication keeps black foundation, magenta neon framing, acid-green highlights, large editorial serif headlines, compact uppercase utility text, and the existing masthead/navigation language.
 
@@ -165,7 +176,7 @@ For a browser-rendered version with the live assets, open [`STYLE-GUIDE.html`](S
 ## 8. Files and conventions
 
 - **One stylesheet.** Every page links only `site.css`. It replaced nine stacked files (base, fix, Hair Metal, print, homepage, design layers) on 2026-09-28, merged in the same order so nothing changed on screen. The design-lock section stays last. Add rules to `site.css`; do not add new patch-layer files.
-- **Cache version.** Stylesheet and versioned image links end in `?v=` plus the date and a letter, currently `?v=20260929a`. Change `site.css`, or replace an image under the same name, and you bump it on every page.
+- **Cache version.** Stylesheet and versioned image links end in `?v=` plus the date and a letter, currently `?v=20260929c` (Phase 2 Option C badge placement). Change `site.css`, or replace an image under the same name, and you bump it on every page.
 - **Originals + WebP.** Each large image has a full-size original (usually PNG) and a `-web.webp` copy next to it, e.g. `identity-satanica.png` + `identity-satanica-web.webp`. Pages load the WebP with a plain `<img>`. Keep both files; the original is the master.
 - **New art.** Export the WebP no wider than about 1600px and name it `<name>-web.webp` beside the original. Give the `<img>` its real `width`/`height`. Keep guide pages and other JPEGs under about 250 KB.
 - **Sharing and icons.** Every page’s `og:image` is `assets/share-card.jpg` (1200×630) — still the lock-plate masthead composition. A badge-only crop on `#07040C` was tried for Phase 1; the 1:1 badge leaves empty side fields on a 1.91:1 share card and reads sparse in social previews, so the masthead share-card stays. Icons: `favicon.ico` and `assets/favicon.png` (48×48) use the board star/icon; `assets/apple-touch-icon.png` (180×180) uses the primary badge. `assets/vcs-badge.png` is the web-optimized primary circular badge.

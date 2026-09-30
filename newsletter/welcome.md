@@ -46,3 +46,8 @@ Same sinner. Different rabbit hole.
 Satanica Lux
 The Vice City Sinner
 https://vicecitysinner.com
+
+## Phase 2 logo (Option C) — badge in welcome footer
+
+- Repo HTML: `newsletter/welcome.html` keeps the lock-banner header and adds a ~64px circular badge (`assets/vcs-badge.png`) above the closing tagline.
+- EmailOctopus live welcome: paste from `newsletter/welcome-emailoctopus.html` (Code your own). Lock-banner masthead stays; badge sits above the required Unsubscribe / SenderInfo / Rewards footer. Live EO may need a separate manual paste if the automation was edited in the dashboard.
