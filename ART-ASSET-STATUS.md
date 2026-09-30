@@ -1,6 +1,6 @@
 # Vice City Sinner — Art Asset Status
 
-Updated 2026-09-29 for Phase 1 Miami Nights brand board (site identity). Story/hero art direction from 2026-09-28 still stands.
+Updated 2026-09-29 for Phase 1 Miami Nights board + Phase 2 Option C badge placement. Story/hero art direction from 2026-09-28 still stands.
 
 **Site identity SoT:** 2026-09-29 Miami Nights board — colors `#07040C` `#E14DFF` `#B8FF2D` `#EAD9EE`; Newsreader + Archivo Narrow; logo suite (live masthead stays the lock plate). Board work does not replace story/hero art.
 
@@ -33,14 +33,14 @@ The previous guide pages are no longer on the site: `assets/hair-metal-guide-1-3
 ## Site identity — Phase 1 board (2026-09-29)
 
 - Live masthead unchanged: `assets/vcs-lock-banner.png` / `vcs-lock-banner-web.webp` / `vcs-lock-banner-email.jpg`.
-- `assets/vcs-badge.png` — web-optimized primary circular badge (512×512). Source: Krystal’s fuller hi-res badge (dual neon rings + “THE VICE CITY SINNER” arc text). The star-through-VCS circular variant is kept under `/workspace/emailoctopus/brand/` for reference, not used as the site primary.
+- `assets/vcs-badge.png` — web-optimized primary circular badge (512×512). Source: Krystal’s fuller hi-res badge (dual neon rings + “THE VICE CITY SINNER” arc text). Phase 2 Option C places it as footer/About/404/email stamps (see below). The star-through-VCS circular variant is kept under `/workspace/emailoctopus/brand/` for reference, not used as the site primary.
 - `favicon.ico` (site root) and `assets/favicon.png` (48×48) — board star/icon (readable at tab size).
 - `assets/apple-touch-icon.png` (180×180) — primary badge.
 - `assets/share-card.jpg` — 1200×630 `og:image` on every page; **kept** as the masthead composition. Badge-only and badge+frame crops on `#07040C` leave empty side fields on a 1.91:1 card and read sparse in social previews, so they were not shipped.
 
 ## Site files (shared chrome)
 
-- Stylesheet cache bump for this pass: `site.css?v=20260929a`.
+- Stylesheet cache bump: `site.css?v=20260929c` (Phase 2 Option C).
 
 ## In the repo, not on the live site
 
