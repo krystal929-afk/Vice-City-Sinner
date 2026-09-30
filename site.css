@@ -1257,3 +1257,156 @@ body{background:var(--bg);color:var(--ink)}
   .page-badge img{width:80px;height:80px}
   .brand-stamp img{width:96px;height:96px}
 }
+
+
+/* ==========================================================================
+   Links / link-in-bio page (Instagram bio landing)
+   ========================================================================== */
+.links{
+  width:min(480px,calc(100% - 28px));
+  margin:28px auto 56px;
+  text-align:center;
+}
+.links-head{
+  margin:0 0 22px;
+}
+.links-badge{
+  margin:4px auto 18px;
+}
+.links-badge img{
+  margin-inline:auto;
+  filter:drop-shadow(0 0 22px rgba(225,77,255,.34));
+}
+.links-head .kicker{margin-bottom:8px}
+.links-head h1{
+  font-family:var(--serif);
+  font-size:clamp(2.35rem,8vw,3.4rem);
+  line-height:.95;
+  letter-spacing:-.02em;
+  margin:0 0 12px;
+  color:#f3e8f6;
+}
+.links-lede{
+  font-family:var(--serif);
+  font-size:clamp(1.05rem,3.2vw,1.22rem);
+  line-height:1.4;
+  color:#c4b4c8;
+  margin:0 auto;
+  max-width:34ch;
+}
+.links-stack{
+  display:grid;
+  gap:12px;
+  margin:0 0 28px;
+}
+.links-btn{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:4px;
+  text-align:left;
+  padding:16px 18px;
+  border:1px solid rgba(225,77,255,.42);
+  background:
+    linear-gradient(145deg,rgba(18,8,22,.92),rgba(7,4,12,.96));
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.03);
+  transition:border-color .15s ease, background .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+.links-btn:hover{
+  border-color:var(--pink);
+  background:rgba(225,77,255,.1);
+  transform:translateY(-1px);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.05),
+    0 10px 28px rgba(0,0,0,.35);
+}
+.links-btn--primary{
+  border-color:rgba(225,77,255,.62);
+}
+.links-btn--accent{
+  border-color:rgba(184,255,45,.55);
+  box-shadow:
+    inset 0 0 0 1px rgba(184,255,45,.08),
+    0 0 24px rgba(184,255,45,.06);
+}
+.links-btn--accent:hover{
+  border-color:var(--green);
+  background:rgba(184,255,45,.08);
+}
+.links-btn-label{
+  font-family:var(--sans);
+  font-size:.82rem;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--pink);
+}
+.links-btn--accent .links-btn-label{color:var(--green)}
+.links-btn-note{
+  font-family:var(--serif);
+  font-size:1.02rem;
+  line-height:1.3;
+  color:#ead9ee;
+}
+.links-essays{
+  margin:0 0 22px;
+  padding:22px 18px 24px;
+  border:1px solid var(--line);
+  background:
+    radial-gradient(circle at 14% 0%,rgba(225,77,255,.14),transparent 42%),
+    radial-gradient(circle at 88% 100%,rgba(184,255,45,.08),transparent 40%),
+    #0b0710;
+  text-align:left;
+}
+.links-essays .section-kicker{
+  font-family:var(--sans);
+  font-size:.68rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--pink);
+  margin-bottom:6px;
+}
+.links-essays h2{
+  font-family:var(--serif);
+  font-size:clamp(1.55rem,4vw,2rem);
+  line-height:1.05;
+  margin:0 0 14px;
+  color:#f3e8f6;
+}
+.links-essay-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:10px;
+}
+.links-essay-list a{
+  display:block;
+  font-family:var(--serif);
+  font-size:1.05rem;
+  line-height:1.35;
+  color:#ead9ee;
+  padding:12px 14px;
+  border:1px solid rgba(225,77,255,.28);
+  background:rgba(0,0,0,.35);
+  transition:border-color .15s ease, background .15s ease, color .15s ease;
+}
+.links-essay-list a:hover{
+  border-color:var(--pink);
+  background:rgba(225,77,255,.08);
+  color:#fff;
+}
+.links-foot-note{
+  font-family:var(--sans);
+  font-size:.68rem;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#92879a;
+  margin:0;
+}
+@media (max-width:580px){
+  .links{width:min(100% - 20px,480px);margin-top:18px}
+  .links-btn{padding:15px 16px}
+  .links-essays{padding:18px 14px 20px}
+}
