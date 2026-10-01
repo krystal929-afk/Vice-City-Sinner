@@ -1488,3 +1488,19 @@ body{background:var(--bg);color:var(--ink)}
   .home-affiliate-panel{padding:18px 14px 20px}
   .home-affiliate-link{padding:14px 15px}
 }
+
+/* Quiet FTC-style affiliate disclosure — near Vampire Freaks links */
+.affiliate-disclosure{
+  font-family:var(--sans);
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.04em;
+  line-height:1.45;
+  color:#92879a;
+  margin:12px 0 0;
+  max-width:42ch;
+}
+.links-stack > .affiliate-disclosure{
+  margin:2px 2px 0;
+  max-width:none;
+}
