@@ -1,8 +1,8 @@
 # Vice City Sinner — Art Asset Status
 
-Updated 2026-09-29 for Phase 1 Miami Nights board + Phase 2 Option C badge placement. Story/hero art direction from 2026-09-28 still stands.
+Updated 2026-10-01 for redone Miami Nights brand board. Story/hero art direction from 2026-09-28 still stands.
 
-**Site identity SoT:** 2026-09-29 Miami Nights board — colors `#07040C` `#E14DFF` `#B8FF2D` `#EAD9EE`; Newsreader + Archivo Narrow; logo suite (live masthead stays the lock plate). Board work does not replace story/hero art.
+**Site identity SoT:** 2026-10-01 Miami Nights board — Top 5 `#07040C` `#190B25` `#B8FF2D` `#EAD9EE` `#E14DFF` (magenta = limited accent); Newsreader + Archivo Narrow; logo suite from board crops (live masthead IS the new primary masthead). Board work does not replace story/hero art.
 
 Every large image has an original plus a `-web.webp` copy. The pages load the WebP; keep both.
 
@@ -15,10 +15,10 @@ Current story art direction, approved by Satanica Lux 2026-09-28: torn offset pr
 - `assets/hair-metal-header-satanica-hq.png` — studded leather moto jacket tearing through dressing-room static, amber bulbs, magenta pixel tears, green scan line. Hair Metal header and homepage card. Pages load `hair-metal-header-satanica-web.webp`.
 - `assets/identity-satanica.png` — black leather hood with empty eye holes dissolving into print static beside a dark mirror and warm bulb, no poster type. Real Name hero and homepage card. Pages load `identity-satanica-web.webp`.
 - `assets/dungeon-satanica.png` — empty red-lit play space: padded cross on chains, tufted leather bench, magenta static waveform, green scan line. Dungeon hero and homepage card. Pages load `dungeon-satanica-web.webp`.
-- `assets/vcs-lock-banner.png` — VCS masthead (lock plate, locked 2026-09-25). Header and footer of every page load `vcs-lock-banner-web.webp`. `STYLE-GUIDE.html` and the newsletter welcome email use the PNG.
+- `assets/vcs-lock-banner.png` — VCS masthead (**2026-10-01 board primary masthead**; previous 2026-09-25 lock plate retired). Header and footer load `vcs-lock-banner-web.webp`. `STYLE-GUIDE.html` and newsletter welcome email use the PNG / email JPG.
 - `assets/card-style.svg` — compact Hair Metal homepage card only. Not on a live page right now.
 
-About page: no story art, only the lock-plate masthead in the header and footer.
+About page: no story art, only the board primary masthead in the header and footer.
 
 ## Hair Metal outfit guide — live
 
@@ -28,25 +28,27 @@ About page: no story art, only the lock-plate masthead in the header and footer.
 
 1008×1792 JPEG, compressed to about 225–250 KB each on 2026-09-28 (same filenames). There are no WebP copies of these.
 
-The previous guide pages are no longer on the site: `assets/hair-metal-guide-1-3-full.png`, `assets/hair-metal-guide-4-6-full.png`, `assets/hair-metal-guide-7-9-full.png`. These have not been remade from the lock plate yet.
+The previous guide pages are no longer on the site: `assets/hair-metal-guide-1-3-full.png`, `assets/hair-metal-guide-4-6-full.png`, `assets/hair-metal-guide-7-9-full.png`. These have not been remade from the current masthead yet.
 
-## Site identity — Phase 1 board (2026-09-29)
+## Site identity — 2026-10-01 redone board
 
-- Live masthead unchanged: `assets/vcs-lock-banner.png` / `vcs-lock-banner-web.webp` / `vcs-lock-banner-email.jpg`.
-- `assets/vcs-badge.png` — web-optimized primary circular badge (512×512). Source: Krystal’s fuller hi-res badge (dual neon rings + “THE VICE CITY SINNER” arc text). Phase 2 Option C places it as footer/About/404/email stamps (see below). The star-through-VCS circular variant is kept under `/workspace/emailoctopus/brand/` for reference, not used as the site primary.
-- `favicon.ico` (site root) and `assets/favicon.png` (48×48) — board star/icon (readable at tab size).
+- Live masthead replaced from board primary masthead: `assets/vcs-lock-banner.png` / `vcs-lock-banner-web.webp` / `vcs-lock-banner-email.jpg`.
+- `assets/vcs-badge.png` — primary circular badge (512×512) cropped from the 2026-10-01 board. Footer/About/404/email stamps (Option C placement unchanged).
+- `favicon.ico` (site root) and `assets/favicon.png` (48×48) — board star/compass icon; also `assets/vcs-star-icon.png` (200×200 reference).
 - `assets/apple-touch-icon.png` (180×180) — primary badge.
-- `assets/share-card.jpg` — 1200×630 `og:image` on every page; **kept** as the masthead composition. Badge-only and badge+frame crops on `#07040C` leave empty side fields on a 1.91:1 card and read sparse in social previews, so they were not shipped.
+- `assets/share-card.jpg` — 1200×630 `og:image` remade from the new masthead composition (not badge-only).
+- Optional (not in chrome): `assets/vcs-monogram.png`, `assets/vcs-wordmark.png`.
+- Working board + exports: `/workspace/emailoctopus/brand/vcs-brand-board-2026-10-01.png` and `.../exports/`.
 
 ## Site files (shared chrome)
 
-- Stylesheet cache bump: `site.css?v=20260929c` (Phase 2 Option C).
+- Stylesheet cache bump: `site.css?v=20261001a` (2026-10-01 brand board).
 
 ## In the repo, not on the live site
 
 Kept because the style guide names them. Do not put them back on a page without approval.
 
-- `assets/logo.svg` — old masthead, replaced by the lock plate.
+- `assets/logo.svg` — old masthead, replaced by board primary masthead.
 - `assets/editorial-satanica.avif` — tiny old Foxhole art. Named in `STYLE-GUIDE.md` as do-not-substitute.
 - `assets/hair-metal-header-satanica.avif` — old 511×341 Hair Metal header.
 - `assets/hair-metal-guide-*-full.png` — previous guide pages (above).

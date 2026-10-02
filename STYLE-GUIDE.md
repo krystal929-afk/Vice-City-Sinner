@@ -8,22 +8,23 @@ Satanica's character identity is defined in [`SATANICA-MASTER-BIBLE.md`](SATANIC
 
 ![The Vice City Sinner masthead](assets/vcs-lock-banner-web.webp)
 
-**Source of truth (2026-09-29): the Miami Nights brand board.** Site identity colors, type, and the logo suite come from that board. Story and hero art stay on their own track (see §3) and do not redefine the publication.
+**Source of truth (2026-10-01): the redone Miami Nights brand board.** Site identity colors, type, and the logo suite come from that board. Story and hero art stay on their own track (see §3) and do not redefine the publication. Board file (working copy): `/workspace/emailoctopus/brand/vcs-brand-board-2026-10-01.png`.
 
-### Masthead — keep live lock plate
+### Masthead — live assets ARE the board primary masthead
 
-The live site masthead remains the lock plate, `assets/vcs-lock-banner.png` (locked 2026-09-25). Pages load its WebP copy, `assets/vcs-lock-banner-web.webp`, in the header and footer. Do **not** replace it with a board crop or a regenerated masthead unless Satanica Lux explicitly says so. The older `assets/logo.svg` masthead is no longer used on the site.
+Live masthead files (`assets/vcs-lock-banner.png`, `-web.webp`, `-email.jpg`) are crops of the **2026-10-01 board primary masthead**. Satanica Lux redid the board and directed a site update; the previous 2026-09-25 lock plate is **retired**. Pages load the WebP in header/footer. The older `assets/logo.svg` masthead is unused.
 
-### Brand colors (board Top 4)
+### Brand colors (board Top 5)
 
 | Token | Hex | Role |
 | --- | --- | --- |
-| Deep black | `#07040C` | Foundation / page background |
-| Magenta | `#E14DFF` | Frame, energy, links, glow |
-| Acid green | `#B8FF2D` | Accent, active nav, CTAs |
-| Lavender ink | `#EAD9EE` | Editorial type / body ink |
+| Near-Black | `#07040C` | Primary Field (~70%) — page background |
+| Deep Aubergine | `#190B25` | Atmospheric (~15%) — panels / depth (`--panel`, `--aubergine`) |
+| Acid Lime | `#B8FF2D` | Signature Accent (~8%) — active nav, CTAs, highlights |
+| Lavender-Bone | `#EAD9EE` | Type & UI (~5%) — editorial/body ink |
+| Electric Magenta | `#E14DFF` | Limited Accent (~2%) — links, sparse glow (was primary frame/energy) |
 
-These are the early `:root` tokens in `site.css` (aligned with the design-lock section). Do not drift back to the older `#050505` / `#ef35ff` / `#86ff2d` / `#f6f0f6` values.
+These are the `:root` tokens in `site.css` (design-lock aligned). Magenta frames/borders should stay quiet; lime carries active/CTA weight. Do not drift back to `#050505` / `#ef35ff` / `#86ff2d` / `#f6f0f6` / old panel `#120816`.
 
 ### Typography
 
@@ -36,24 +37,26 @@ Fallback stacks keep Georgia / Arial for resilience. Do not hardcode Georgia or 
 
 | Mark | File | Use |
 | --- | --- | --- |
-| Primary masthead (live) | `assets/vcs-lock-banner.png` (+ `-web.webp`) | Header and footer on every page |
-| Primary badge | `assets/vcs-badge.png` | Circular VCS emblem (dual neon rings, arc title). **Phase 2 Option C (2026-09-29):** footer stamp on every main page (under `footer-bottom`; lock-banner masthead stays), About brand stamp between manifesto and about-start, 404 badge above “Wrong door,” ~64px stamp in welcome-email footer. Not a masthead/hero/share-card/favicon replacement; no monogram/wordmark in chrome. Source: Krystal’s fuller hi-res badge; star-through-VCS variant stays under `/workspace/emailoctopus/brand/`. |
-| Star / icon | used for `favicon.ico`, `assets/favicon.png` | Small UI / tab icon (board maps the star to favicon) |
+| Primary masthead (live) | `assets/vcs-lock-banner.png` (+ `-web.webp`, `-email.jpg`) | Header and footer on every page — **2026-10-01 board primary masthead** |
+| Primary badge | `assets/vcs-badge.png` | Circular VCS emblem from board. Footer stamp (under `footer-bottom`), About brand stamp, 404 above “Wrong door,” ~64px welcome-email footer. Not a masthead/hero/share-card/favicon replacement; no monogram/wordmark in chrome. |
+| Star / icon | `favicon.ico`, `assets/favicon.png`, `assets/vcs-star-icon.png` | Tab icon / stamp (board maps star/compass to favicon) |
 | Apple touch | `assets/apple-touch-icon.png` | Home-screen icon (badge at 180×180) |
-| Share card | `assets/share-card.jpg` | `og:image` 1200×630 — still the masthead composition (see §8) |
+| Share card | `assets/share-card.jpg` | `og:image` 1200×630 — masthead composition (not sparse badge-only) |
+| Monogram (optional) | `assets/vcs-monogram.png` | Future use — not in site chrome |
+| Horizontal wordmark (optional) | `assets/vcs-wordmark.png` | Future use — not in site chrome |
 
 
-### Phase 2 — Option C badge placement (2026-09-29)
+### Badge placement (Option C, still current)
 
-Krystal’s Option C: ship the circular badge as an **additive stamp**, not a chrome replacement.
+Circular badge remains an **additive stamp**, not a chrome replacement for the masthead.
 
-- **Footer stamp** on index, about, 404, subscribed, foxhole, hair-metal, real-name, dungeon — under/beside `footer-bottom`. Keep the footer lock-banner.
+- **Footer stamp** on index, about, 404, subscribed, foxhole, hair-metal, real-name, dungeon — under/beside `footer-bottom`. Keep the footer masthead.
 - **404** — badge above the “Wrong door” heading.
 - **About** — brand stamp between the manifesto line and `about-start`.
-- **Welcome email** — keep header lock-banner; ~64px badge above unsubscribe/sender. Repo: `newsletter/welcome.html`. EO paste-ready: `newsletter/welcome-emailoctopus.html` (live EmailOctopus automation may need a separate paste).
-- **Do not** replace masthead, heroes, share-card, or favicon suite; do not put monogram/wordmark in site chrome.
+- **Welcome email** — header masthead + ~64px badge above unsubscribe/sender. Repo: `newsletter/welcome.html`. EO paste-ready: `newsletter/welcome-emailoctopus.html`.
+- **Do not** put monogram/wordmark in site chrome. Story/hero art stays on its own track. Masthead / badge / favicon / share-card were refreshed from the **2026-10-01** board; do not regenerate them ad hoc.
 
-The overall publication keeps black foundation, magenta neon framing, acid-green highlights, large editorial serif headlines, compact uppercase utility text, and the existing masthead/navigation language.
+The overall publication keeps Near-Black foundation, Deep Aubergine atmosphere, Acid Lime signature accents, limited Electric Magenta glow, Newsreader editorial type, Archivo Narrow UI, and the board masthead/navigation language.
 
 Do **not** replace that identity with the visual theme of one article.
 
@@ -140,7 +143,7 @@ An empty play space lit deep red. A black padded St. Andrew’s cross hangs from
 
 ### About — About Satanica
 
-**No story art.** The About page shows only the lock-plate masthead (`assets/vcs-lock-banner-web.webp`) in the header and footer. That’s the purple gothic “The Vice City Sinner” lettering with green “by Satanica Lux” script, palms, moon and water. There is no photo or illustration of Satanica on the page. Adding one needs Satanica Lux’s approval.
+**No story art.** The About page shows only the board primary masthead (`assets/vcs-lock-banner-web.webp`) in the header and footer — “The Vice City Sinner” lettering with Acid Lime “by Satanica Lux” script, palms, moon and water from the 2026-10-01 board. There is no photo or illustration of Satanica on the page. Adding one needs Satanica Lux’s approval.
 
 ## 4. Approval states
 
@@ -179,5 +182,5 @@ For a browser-rendered version with the live assets, open [`STYLE-GUIDE.html`](S
 - **Cache version.** Stylesheet and versioned image links end in `?v=` plus the date and a letter, currently `?v=20260929c` (Phase 2 Option C badge placement). Change `site.css`, or replace an image under the same name, and you bump it on every page.
 - **Originals + WebP.** Each large image has a full-size original (usually PNG) and a `-web.webp` copy next to it, e.g. `identity-satanica.png` + `identity-satanica-web.webp`. Pages load the WebP with a plain `<img>`. Keep both files; the original is the master.
 - **New art.** Export the WebP no wider than about 1600px and name it `<name>-web.webp` beside the original. Give the `<img>` its real `width`/`height`. Keep guide pages and other JPEGs under about 250 KB.
-- **Sharing and icons.** Every page’s `og:image` is `assets/share-card.jpg` (1200×630) — still the lock-plate masthead composition. A badge-only crop on `#07040C` was tried for Phase 1; the 1:1 badge leaves empty side fields on a 1.91:1 share card and reads sparse in social previews, so the masthead share-card stays. Icons: `favicon.ico` and `assets/favicon.png` (48×48) use the board star/icon; `assets/apple-touch-icon.png` (180×180) uses the primary badge. `assets/vcs-badge.png` is the web-optimized primary circular badge.
+- **Sharing and icons.** Every page’s `og:image` is `assets/share-card.jpg` (1200×630) — the **2026-10-01** masthead composition (not a sparse badge-only crop). Icons: `favicon.ico` and `assets/favicon.png` (48×48) use the board star/compass; `assets/apple-touch-icon.png` (180×180) uses the primary badge. `assets/vcs-badge.png` is the web-optimized primary circular badge from the same board.
 - **Status of every file** lives in [`ART-ASSET-STATUS.md`](ART-ASSET-STATUS.md).
