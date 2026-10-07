@@ -1510,3 +1510,9 @@ body{background:var(--bg);color:var(--ink)}
   margin:2px 2px 0;
   max-width:none;
 }
+
+/* Links page sections */
+.links-section{margin:0 0 30px;text-align:left}
+.links-section .links-stack{margin:0 0 16px}
+.links-section .links-stack:last-child,.links-section .links-essays{margin-bottom:0}
+.links-section-label{font-size:.78rem;line-height:1.2;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line);font-family:'Archivo Narrow',var(--sans)}
