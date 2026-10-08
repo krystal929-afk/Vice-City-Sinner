@@ -74,20 +74,21 @@ This includes poster-style treatments such as **More Than a Name**, **Same Bitch
 
 Story art must be intentional, crisp, and relevant to the article. These assignments are locked until Satanica Lux changes them.
 
-What the live pages load (2026-09-28). Each page uses the `-web.webp` copy; the original sits next to it in `assets/`.
+What the live pages load (updated 2026-10-08). Each page uses the `-web.webp` copy; the original sits next to it in `assets/`.
 
 | Role | Original | Page loads | Size |
 | --- | --- | --- | --- |
-| Homepage feature (Foxhole) | `homepage-hero-satanica.png` | `homepage-hero-satanica-web.webp` | 1152×1712 |
-| Foxhole article hero | `foxhole-satanica.png` | `foxhole-satanica-web.webp` | 784×1168 |
+| Foxhole article hero + homepage feature | `foxhole-satanica.png` | `foxhole-satanica-web.webp` | 1152×1712 |
 | Hair Metal header + homepage card | `hair-metal-header-satanica-hq.png` | `hair-metal-header-satanica-web.webp` | 1152×1712 |
 | Hair Metal outfit guide | — | `guide-page-1.jpg`, `guide-page-2.jpg`, `guide-page-3.jpg` | 1008×1792 |
 | Real Name hero + homepage card | `identity-satanica.png` | `identity-satanica-web.webp` | 1152×1712 |
-| Dungeon hero + homepage card | `dungeon-satanica.png` | `dungeon-satanica-web.webp` | 784×1168 |
+| Dungeon hero + homepage card | `dungeon-satanica.png` | `dungeon-satanica-web.webp` | 1152×1712 |
 
 On the page, article heroes show as a 200px-high band across the column and homepage images as a 210px (feature) or 168px (cards) band, cropped with `object-fit: cover`.
 
-**Current art direction — approved by Satanica Lux, 2026-09-28: torn offset print / glitch static.** Locked until she commissions replacements. Every live hero is a real-feeling photograph of a place or object (South Beach streets, leather, a mask, an empty play space) with no person in it. Each one is broken up by horizontal print-static tears and a magenta smear, plus one thin acid-green scan line, and sits on black or on cracked, distressed paper. Satanica herself does not appear in the story art. The only illustrated Satanica on the site is in the Hair Metal outfit guide pages. Site-identity board work (colors, type, badge, icons) does not unlock new story/hero art.
+> **Updated 2026-10-08 — Satanica hero redesign (approved by Krystal).** The four Issue 001 heroes (Foxhole, Hair Metal, Real Name, Dungeon) now show illustrated Satanica Lux as the model: blue curly hair, tattoos, black leather, fishnets, platform boots, Miami-night neon, 2:3 at 1152×1712. Files were replaced in place under the same names; the homepage feature now uses the Foxhole hero, and `homepage-hero-satanica` was removed. Each page sets `object-position` so her face stays inside the cropped band. The glitch-art direction and descriptions below are kept for the record but no longer describe what is live for those four essays. See `ART-ASSET-STATUS.md` for the current list.
+
+**Previous art direction (superseded 2026-10-08) — approved by Satanica Lux, 2026-09-28: torn offset print / glitch static.** Locked until she commissions replacements. Every live hero is a real-feeling photograph of a place or object (South Beach streets, leather, a mask, an empty play space) with no person in it. Each one is broken up by horizontal print-static tears and a magenta smear, plus one thin acid-green scan line, and sits on black or on cracked, distressed paper. Satanica herself does not appear in the story art. The only illustrated Satanica on the site is in the Hair Metal outfit guide pages. Site-identity board work (colors, type, badge, icons) does not unlock new story/hero art.
 
 **Retired:** the earlier green-Satanica character scenes (the Foxhole throne portrait, Satanica climbing out of the foxhole, the dressing-room, vanity and archive-book scenes). They are superseded and are not current art direction. Their old descriptions are kept below, marked retired, for the record only.
 
@@ -101,7 +102,7 @@ A tall black doorway-shaped block torn through a cracked, cream-grey concrete wa
 
 > **Retired 2026-09-28, no longer current:** Use the approved Image Lab portrait for the Foxhole article hero: Satanica standing confidently beside a gothic throne in a purple-lit chamber, with the locked Look Bible appearance and approved acid-lime skin tone. Use this exact uploaded PNG for the article hero and display the full portrait without cropping. Do not substitute the earlier doorway image, the tiny `editorial-satanica.avif`, or a regenerated Satanica variation.
 
-**Homepage hero — approved / locked:** `assets/homepage-hero-satanica.png` (the page loads `assets/homepage-hero-satanica-web.webp`)
+**Homepage hero — retired 2026-10-08 (file removed; homepage now uses the Foxhole hero):** `assets/homepage-hero-satanica.png` (the page loads `assets/homepage-hero-satanica-web.webp`)
 
 Ocean Drive at night in torn offset print. A weathered “OCEAN DRIVE / MIAMI BEACH” street sign on the left, palm trees, an Art Deco hotel striped with pink neon on the right, and an empty rain-wet street reflecting magenta down the middle. The whole scene is framed by jagged shards of torn black paper, with a single acid-green strip on the left edge. Mostly black-and-white with magenta neon. No person. Page alt text: “Ocean Drive at night in torn offset print.” Portrait 1152×1712, cropped on the homepage to a 210px band. Do not replace it with an unapproved portrait, generic goth imagery, a poster treatment, the retired green-Satanica scene, or a stretched low-resolution source.
 
