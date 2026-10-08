@@ -1,6 +1,6 @@
 # VCS email list — locked 2026-09-25
 
-- Promise: a note when a new post goes up. Not a calendar. Not a drip.
+- Promise: a note when a new post goes up, plus Satanica showing up about once a week. Not a drip.
 - From: Satanica Lux
 - List inbox: satanica.lux@vicecitysinner.com
 - Live form: homepage “Get New Posts”
@@ -17,6 +17,6 @@ The vicecitysinner.com domain is verified as a sender in EmailOctopus. Before th
 
 ## What not to do
 
-- Do not promise a weekly letter.
+- Do not promise more than about once a week, and never daily.
 - Do not add a second list for Kink Korps or creator mail.
 - Do not put illustrated Satanica on the email as a mascot. Voice only, same as the site decision 2026-09-23. The lock banner is fine as a header if a later tool supports an image.
