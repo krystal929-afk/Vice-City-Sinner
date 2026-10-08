@@ -1,20 +1,23 @@
 # Vice City Sinner — Art Asset Status
 
-Updated 2026-10-01 for redone Miami Nights brand board. Story/hero art direction from 2026-09-28 still stands.
+Updated 2026-10-08: Satanica hero redesign on the four Issue 001 essays (approved by Krystal). Site identity is still the 2026-10-01 Miami Nights board.
 
 **Site identity SoT:** 2026-10-01 Miami Nights board — Top 5 `#07040C` `#190B25` `#B8FF2D` `#EAD9EE` `#E14DFF` (magenta = limited accent); Newsreader + Archivo Narrow; logo suite from board crops (live masthead IS the new primary masthead). Board work does not replace story/hero art.
 
 Every large image has an original plus a `-web.webp` copy. The pages load the WebP; keep both.
 
-Current story art direction, approved by Satanica Lux 2026-09-28: torn offset print / glitch static — locked until she commissions replacements. These are photographs of places and objects with no person in them, torn by horizontal print static and magenta smears, with one acid-green scan line, on black or cracked paper. Satanica does not appear in the hero art.
+Current story art direction, approved 2026-10-08: illustrated Satanica Lux as the model in each essay hero (blue curly hair, tattoos, black leather, fishnets, platform boots, Miami-night neon), 2:3 portrait at 1152×1712. This replaces the 2026-09-28 torn offset print / glitch static heroes (no person) on Foxhole, Hair Metal, Real Name and Dungeon. Hoochie Daddy keeps its own approved art. Hero bands and homepage cards crop to a strip; each page sets an `object-position` (page-local `<style>` on essays, inline on homepage images) so her face stays in frame.
 
-## Approved / Live — heroes (installed 2026-09-23, direction approved 2026-09-28)
+## Approved / Live — heroes (Satanica redesign, 2026-10-08)
 
-- `assets/homepage-hero-satanica.png` — Ocean Drive at night in torn offset print: “OCEAN DRIVE / MIAMI BEACH” sign, palms, pink-neon Deco hotel, wet magenta street, torn black paper frame, green strip at left. Homepage feature only. Page loads `homepage-hero-satanica-web.webp`.
-- `assets/foxhole-satanica.png` — black doorway torn through a cracked concrete wall onto a rain-slick neon street with palms at night, glitch streaks and one green scan line. Foxhole article hero. Page loads `foxhole-satanica-web.webp`.
-- `assets/hair-metal-header-satanica-hq.png` — studded leather moto jacket tearing through dressing-room static, amber bulbs, magenta pixel tears, green scan line. Hair Metal header and homepage card. Pages load `hair-metal-header-satanica-web.webp`.
-- `assets/identity-satanica.png` — black leather hood with empty eye holes dissolving into print static beside a dark mirror and warm bulb, no poster type. Real Name hero and homepage card. Pages load `identity-satanica-web.webp`.
-- `assets/dungeon-satanica.png` — empty red-lit play space: padded cross on chains, tufted leather bench, magenta static waveform, green scan line. Dungeon hero and homepage card. Pages load `dungeon-satanica-web.webp`.
+Same filenames as before, files replaced in place. The old glitch versions are in git history.
+
+- `assets/foxhole-satanica.png` — Satanica sitting on a rooftop ledge, peace sign, pink-sky city skyline at dusk. Foxhole article hero **and** the homepage featured story. Pages load `foxhole-satanica-web.webp`.
+- `assets/hair-metal-header-satanica-hq.png` — Satanica in studded leather, chains, ripped mini and fishnets against a graffiti wall under neon pink palms. Hair Metal header and homepage card. Pages load `hair-metal-header-satanica-web.webp`.
+- `assets/identity-satanica.png` — Satanica in red devil horns and a black lace mask with a pentagram harness, in a club with green smoke (the approved "real-name-alt" art). Real Name hero and homepage card. Pages load `identity-satanica-web.webp`.
+- `assets/dungeon-satanica.png` — Satanica holding a power drill, leaning on a wooden X-cross in a dungeon workshop. Dungeon hero and homepage card. Pages load `dungeon-satanica-web.webp`.
+- `assets/hoochie-daddy-satanica.png` / `hoochie-daddy-club-satanica.png` — Hoochie Daddy hero (Miami) and in-article club image, approved 2026-10-08. Pages load the `-web.webp` copies.
+- Removed 2026-10-08: `assets/homepage-hero-satanica.png` and `-web.webp` (Ocean Drive glitch art). The homepage feature now uses the Foxhole hero.
 - `assets/vcs-lock-banner.png` — VCS masthead (**2026-10-01 board primary masthead**; previous 2026-09-25 lock plate retired). Header and footer load `vcs-lock-banner-web.webp`. `STYLE-GUIDE.html` and newsletter welcome email use the PNG / email JPG.
 - `assets/card-style.svg` — compact Hair Metal homepage card only. Not on a live page right now.
 
