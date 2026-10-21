@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07040C">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Mr. Satan · The Rivethead Interview · The Vice City Sinner</title>
+<meta name="description" content="A private Sinner of the Month interview for Mr. Satan, presented by The Vice City Sinner.">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="../../assets/favicon.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../../site.css?v=20261007a">
+<link rel="stylesheet" href="interview.css?v=20261021a">
+<link rel="stylesheet" href="interview-photo.css?v=20261021a">
+<script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script defer src="interview.js?v=20261021a"></script>
+</head>
+<body>
+<div class="interview-page">
+  <header class="interview-top">
+    <a class="interview-brand" href="https://vicecitysinner.com/" aria-label="The Vice City Sinner home">
+      <img src="../../assets/vcs-lock-banner-web.webp" alt="The Vice City Sinner by Satanica Lux">
+    </a>
+  </header>
+
+  <main class="interview-main">
+    <section class="screen intro" id="intro">
+      <div>
+        <div class="eyebrow">Sinner of the Month · The Rivethead Interview</div>
+        <h1>Mr. <span>Satan</span></h1>
+      </div>
+
+      <figure class="intro-portrait">
+        <img src="../../assets/hoochie-daddy-satanica-web.webp" alt="Mr. Satan in Vice City Sinner editorial artwork" fetchpriority="high">
+        <figcaption class="intro-caption"><span>Sinner of the Month</span> · Mr. Satan</figcaption>
+      </figure>
+
+      <div class="intro-rule"></div>
+      <p class="intro-dek"><strong>14 questions.</strong> Type, talk, or do both. Tell the story properly. Skip nothing useful.</p>
+      <div class="intro-meta">
+        <div class="meta-card"><b>Voice answers</b><span>Record, play back, delete, and re-record before moving on.</span></div>
+        <div class="meta-card"><b>Autosave</b><span>Written answers and recordings stay on this device while you work.</span></div>
+      </div>
+      <button class="primary" id="begin">Enter the interview →</button>
+      <p class="privacy-note">Private by design. Nothing leaves this device until you choose to share the finished interview package.</p>
+    </section>
+
+    <section class="screen" id="quiz" hidden>
+      <div class="progress-wrap">
+        <div class="progress-row"><div class="progress-copy">Sinner of the Month / <strong>Mr. Satan</strong></div><div class="progress-copy" id="count">01 / 14</div></div>
+        <div class="progress" aria-hidden="true"><i id="fill"></i></div>
+      </div>
+      <div class="question-number" id="number">01</div>
+      <h1 class="question" id="question"></h1>
+
+      <label class="answer-label" for="answer">Write your answer</label>
+      <textarea id="answer" placeholder="Type here…" autocomplete="off"></textarea>
+      <div class="autosave" id="autosave">Autosaved on this device.</div>
+
+      <section class="voice-card" aria-labelledby="voiceHeading">
+        <div class="voice-head">
+          <div><h3 id="voiceHeading">Or tell it out loud</h3><p>Microphone permission is requested only when you press record.</p></div>
+          <button class="record-button" id="record"><span class="record-dot"></span><span id="recordLabel">Record voice</span></button>
+        </div>
+        <div class="rec-meta" id="recordMeta">No recording yet.</div>
+        <div class="audio-wrap" id="audioWrap" hidden>
+          <audio id="audio" controls preload="metadata"></audio>
+          <button class="ghost" id="deleteAudio">Delete recording</button>
+        </div>
+      </section>
+
+      <div class="question-nav">
+        <button class="secondary" id="prev">← Previous</button>
+        <button class="primary" id="next">Save &amp; next →</button>
+      </div>
+    </section>
+
+    <section class="screen review" id="review" hidden>
+      <div class="eyebrow">Final review</div>
+      <h2>One last look.</h2>
+      <p>Nothing is locked yet. Tap any question to go back and change the written answer or recording.</p>
+      <div class="review-rule"></div>
+      <div class="review-list" id="reviewList"></div>
+      <div class="review-actions">
+        <button class="secondary" id="backToLast">← Back to question 14</button>
+        <button class="primary" id="submit">Submit your sins →</button>
+      </div>
+      <p class="submit-note">On supported phones, this opens your share sheet with one ZIP containing the written interview and any voice recordings. If sharing is unavailable, the ZIP downloads instead.</p>
+    </section>
+
+    <section class="screen success" id="success" hidden>
+      <div class="success-mark"><img src="../../assets/vcs-star-icon.png" alt=""></div>
+      <div class="eyebrow">Sinner of the Month</div>
+      <h2>Your sins are packaged.</h2>
+      <p>Thank you, Mr. Satan. Your interview is ready to send back to The Vice City Sinner.</p>
+      <button class="primary" id="shareAgain">Share / download again →</button>
+      <button class="ghost" id="editAgain">Return to interview</button>
+      <p class="microcopy">Keep this page open until you have successfully sent or saved the ZIP. Your working copy remains on this device unless you clear site data.</p>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
