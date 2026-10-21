@@ -1,8 +1,18 @@
 @import url("../goddess-loretta/interview.css");
 
-/* Mr. Satan keeps the locked VCS identity. The differences are structural, not a new brand. */
 body{background:radial-gradient(circle at 50% -15%,rgba(25,11,37,.84),transparent 44%),linear-gradient(180deg,#07040C 0%,#09050E 100%)}
 .intro h1 span{color:var(--ink)}
-.question-number{color:var(--pink)}
-.voice-card{background:linear-gradient(135deg,rgba(25,11,37,.38),rgba(7,4,12,.72))}
 .meta-card{background:linear-gradient(145deg,rgba(25,11,37,.50),rgba(7,4,12,.44))}
+.interview-intro{margin-bottom:48px}
+.interview-form{display:grid;gap:22px}
+.question-block{border-top:1px solid rgba(225,77,255,.22);padding-top:24px;scroll-margin-top:24px}
+.question-block:first-child{border-top:1px solid rgba(184,255,45,.45)}
+.question-block .question-number{font:700 clamp(2.35rem,8vw,4.2rem)/.85 var(--serif);letter-spacing:-.05em;color:var(--pink);margin:0 0 14px}
+.question-block .question{display:block;font:600 clamp(1.45rem,4.8vw,2.2rem)/1.12 var(--serif);letter-spacing:-.02em;color:var(--ink);margin:0 0 18px;text-wrap:balance}
+.question-block textarea{min-height:150px}
+.question-block .autosave{margin-top:7px}
+.submit-panel{margin-top:18px;padding:26px 0 8px;border-top:2px solid var(--green)}
+.submit-panel h2{font:700 clamp(2.7rem,10vw,4.7rem)/.92 var(--serif);letter-spacing:-.04em;margin:0 0 14px}
+.submit-panel p{color:#D3C6D7;font-size:1.08rem;line-height:1.5;margin:0 0 22px}
+.submission-status{font:700 .66rem/1.4 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:12px;min-height:1.4em}
+@media(max-width:560px){.interview-intro{margin-bottom:36px}.interview-form{gap:20px}.question-block{padding-top:20px}.question-block textarea{min-height:140px}.submit-panel{padding-top:22px}}
