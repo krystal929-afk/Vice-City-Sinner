@@ -1,0 +1,8 @@
+@import url("../goddess-loretta/interview.css");
+
+/* Mr. Satan keeps the locked VCS identity. The differences are structural, not a new brand. */
+body{background:radial-gradient(circle at 50% -15%,rgba(25,11,37,.84),transparent 44%),linear-gradient(180deg,#07040C 0%,#09050E 100%)}
+.intro h1 span{color:var(--ink)}
+.question-number{color:var(--pink)}
+.voice-card{background:linear-gradient(135deg,rgba(25,11,37,.38),rgba(7,4,12,.72))}
+.meta-card{background:linear-gradient(145deg,rgba(25,11,37,.50),rgba(7,4,12,.44))}
