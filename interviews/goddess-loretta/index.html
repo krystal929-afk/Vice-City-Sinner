@@ -12,6 +12,7 @@
 <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
 <link rel="stylesheet" href="../../site.css?v=20261007a">
 <link rel="stylesheet" href="interview.css?v=20261021a">
+<link rel="stylesheet" href="interview-photo.css?v=20261021a">
 <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script defer src="interview.js?v=20261021a"></script>
 </head>
@@ -29,6 +30,12 @@
         <div class="eyebrow">Sinner of the Month · Private Interview</div>
         <h1>Goddess <span>Loretta</span></h1>
       </div>
+
+      <figure class="intro-portrait">
+        <img src="assets/loretta-hero.webp" alt="Goddess Loretta in a red pin-up look" width="320" height="400" fetchpriority="high">
+        <figcaption class="intro-caption"><span>Sinner of the Month</span> · Goddess Loretta</figcaption>
+      </figure>
+
       <div class="intro-rule"></div>
       <p class="intro-dek"><strong>16 questions.</strong> Type, talk, or do both. Take your time. Be honest. Be dangerous.</p>
       <div class="intro-meta">
@@ -46,7 +53,15 @@
       </div>
       <div class="question-number" id="number">01</div>
       <h1 class="question" id="question"></h1>
-      <div class="evolution-note" id="evolutionNote" hidden>Think of this as a visual timeline, not a before-and-after. The point is the becoming.</div>
+
+      <div class="evolution-note" id="evolutionNote" hidden>
+        <div class="evolution-copy">Not a before-and-after. A little visual timeline of becoming.</div>
+        <div class="evolution-strip" aria-label="A visual timeline of Goddess Loretta's evolving look">
+          <figure class="evolution-frame"><img src="assets/evolution-01.webp" alt="Goddess Loretta in an earlier blonde look" loading="lazy"><figcaption>Earlier era</figcaption></figure>
+          <figure class="evolution-frame"><img src="assets/evolution-02.webp" alt="Goddess Loretta with red hair and black glasses" loading="lazy"><figcaption>Finding the red</figcaption></figure>
+          <figure class="evolution-frame"><img src="assets/evolution-03.webp" alt="Goddess Loretta with her bright red-orange bob and bangs" loading="lazy"><figcaption>Goddess Loretta</figcaption></figure>
+        </div>
+      </div>
 
       <label class="answer-label" for="answer">Write your answer</label>
       <textarea id="answer" placeholder="Type here…" autocomplete="off"></textarea>
