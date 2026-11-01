@@ -1516,3 +1516,12 @@ body{background:var(--bg);color:var(--ink)}
 .links-section .links-stack{margin:0 0 16px}
 .links-section .links-stack:last-child,.links-section .links-essays{margin-bottom:0}
 .links-section-label{font-size:.78rem;line-height:1.2;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line);font-family:'Archivo Narrow',var(--sans)}
+
+/* Article date + Read next (2026-11-01) */
+.article-meta time{color:inherit}
+.read-next{margin-top:40px;padding-top:18px;border-top:1px solid rgba(225,77,255,.16)}
+.read-next-label{font-family:var(--sans);font-size:.72rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.read-next .home-story-grid,.read-next .home-story-grid--art{flex-direction:row!important}
+.read-next .home-story-card,.read-next .home-story-card--lead{flex:1 1 0!important;min-width:0}
+.read-next .home-story-copy h3,.read-next .home-story-copy h3 a{font-size:clamp(1.15rem,3.6vw,1.45rem)!important}
+@media (max-width:560px){.read-next .home-story-grid,.read-next .home-story-grid--art{flex-direction:column!important}.read-next .home-story-card,.read-next .home-story-card--lead{flex:none!important}}
