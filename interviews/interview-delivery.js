@@ -1,11 +1,22 @@
-/* Shared VCS interview delivery for static GitHub Pages.
-   Submissions are sent through FormSubmit. The first submission to a
-   recipient requires that recipient to confirm the activation email.
-   The browser saves a local copy before handing the file to FormSubmit. */
+/* Vice City Sinner interview delivery. GitHub Pages has no server-side email.
+   Basin is the delivery provider once an owner-created endpoint is configured.
+   Until then a local download is provided, without claiming the email was sent.
+   Endpoint URLs are intended for inclusion in public form HTML; no secret keys. */
 (function(){
   'use strict';
-  const ENDPOINT='https://formsubmit.co/satanica.lux@vicecitysinner.com';
-  const MAX_FILE_BYTES=10*1024*1024;
+
+  // Paste the exact Basin form endpoint here after owner setup and successful test.
+  const BASIN_ENDPOINT='';
+  const TO='satanica.lux@vicecitysinner.com';
+  const MAX_BYTES=100*1024*1024;
+
+  function validEndpoint(value){
+    if(typeof value!=='string')return false;
+    try{
+      const u=new URL(value);
+      return u.protocol==='https:'&&u.hostname==='usebasin.com'&&/^\\/f\\/[a-zA-Z0-9_-]+\\/?$/.test(u.pathname)&&!u.search&&!u.hash;
+    }catch(e){return false;}
+  }
 
   function download(file){
     const url=URL.createObjectURL(file);
@@ -15,55 +26,49 @@
     document.body.appendChild(link);
     link.click();
     link.remove();
-    setTimeout(()=>URL.revokeObjectURL(url),15000);
+    setTimeout(()=>URL.revokeObjectURL(url),30000);
   }
 
-  function hidden(form,name,value){
-    const input=document.createElement('input');
-    input.type='hidden';input.name=name;input.value=value;
-    form.appendChild(input);
-  }
+  function ready(){return validEndpoint(BASIN_ENDPOINT);}
 
-  function submit(file,subject,interviewText){
-    if(!(file instanceof File))throw new Error('Interview file could not be created.');
-    if(file.size>MAX_FILE_BYTES){
-      download(file);
-      throw new Error('This interview is over the 10 MB email attachment limit. A backup was downloaded. Please email it manually to satanica.lux@vicecitysinner.com.');
+  async function submit(file,subject,description,options){
+    options=options||{};
+    if(!(file instanceof File))throw new Error('Could not prepare the interview file.');
+    const endpoint=options.endpoint||BASIN_ENDPOINT;
+    const backup=options.backup!==false;
+    if(!validEndpoint(endpoint)){
+      if(backup)download(file);
+      return {accepted:false,reason:'not-configured',backup};
     }
-    // FormSubmit documents multipart file uploads via ordinary HTML POST.
-    let transfer;
+    if(file.size>MAX_BYTES){
+      if(backup)download(file);
+      throw new Error('The file is too large for this form service. A backup was downloaded; email it to '+TO+'.');
+    }
+
+    const body=new FormData();
+    body.append('name','Vice City Sinner interview');
+    body.append('subject',subject);
+    body.append('message',description||'Completed interview attached.');
+    body.append('source_page',location.href);
+    body.append('attachment',file,file.name);
+
+    const controller=new AbortController();
+    const timeout=setTimeout(()=>controller.abort(),90000);
     try{
-      transfer=new DataTransfer();
-      transfer.items.add(file);
-    }catch(e){
-      download(file);
-      throw new Error('This browser cannot attach files automatically. A copy was downloaded; please email it manually.');
+      const response=await fetch(endpoint,{method:'POST',body,headers:{Accept:'application/json'},signal:controller.signal});
+      const data=await response.json().catch(()=>null);
+      if(!response.ok||data&&data.success===false){
+        throw new Error(data&&data.message?data.message:'The form service did not accept this submission.');
+      }
+      return {accepted:true};
+    }catch(error){
+      if(backup)download(file);
+      throw new Error('Delivery could not be confirmed. '+(backup?'A backup was downloaded. ':'')+
+        'Keep your answers and contact '+TO+' before retrying. '+(error.name==='AbortError'?'The request timed out.':''));
+    }finally{
+      clearTimeout(timeout);
     }
-    const form=document.createElement('form');
-    form.method='POST';
-    form.action=ENDPOINT;
-    form.enctype='multipart/form-data';
-    form.acceptCharset='UTF-8';
-    form.style.display='none';
-    hidden(form,'_subject',subject);
-    hidden(form,'_captcha','false');
-    hidden(form,'_template','table');
-    hidden(form,'_url',location.href);
-    hidden(form,'interview',subject);
-    hidden(form,'message',interviewText);
-    const attachment=document.createElement('input');
-    attachment.type='file';
-    attachment.name='attachment';
-    attachment.files=transfer.files;
-    if(attachment.files.length!==1||attachment.files[0].size!==file.size){
-      throw new Error('This browser could not attach the interview. Please download your copy instead.');
-    }
-    form.appendChild(attachment);
-    document.body.appendChild(form);
-    // Keep a local backup in case mail is blocked or activation is incomplete.
-    download(file);
-    form.submit();
   }
 
-  window.VCSInterviewDelivery={submit,download};
+  window.VCSInterviewDelivery={submit,download,ready,validEndpoint,destination:TO};
 })();
