@@ -31,8 +31,14 @@
       throw new Error('This interview is over the 10 MB email attachment limit. A backup was downloaded. Please email it manually to satanica.lux@vicecitysinner.com.');
     }
     // FormSubmit documents multipart file uploads via ordinary HTML POST.
-    const transfer=new DataTransfer();
-    transfer.items.add(file);
+    let transfer;
+    try{
+      transfer=new DataTransfer();
+      transfer.items.add(file);
+    }catch(e){
+      download(file);
+      throw new Error('This browser cannot attach files automatically. A copy was downloaded; please email it manually.');
+    }
     const form=document.createElement('form');
     form.method='POST';
     form.action=ENDPOINT;
