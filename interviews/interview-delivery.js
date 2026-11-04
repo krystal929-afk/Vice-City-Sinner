@@ -14,7 +14,8 @@
     if(typeof value!=='string')return false;
     try{
       const u=new URL(value);
-      return u.protocol==='https:'&&u.hostname==='usebasin.com'&&/^\\/f\\/[a-zA-Z0-9_-]+\\/?$/.test(u.pathname)&&!u.search&&!u.hash;
+      const parts=u.pathname.split('/').filter(Boolean);
+      return u.protocol==='https:'&&u.hostname==='usebasin.com'&&parts.length===2&&parts[0]==='f'&&/^[A-Za-z0-9_-]+$/.test(parts[1])&&!u.search&&!u.hash;
     }catch(e){return false;}
   }
 
