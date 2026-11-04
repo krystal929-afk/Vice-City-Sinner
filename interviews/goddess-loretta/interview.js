@@ -120,30 +120,36 @@ async function createPackage(){
 }
 
 async function submitPackage(){
-  // The interview is emailed to VCS on submit; a ZIP backup is downloaded too.
-  const btn=$('submit'),again=$('shareAgain');
-  const status=$('deliveryStatus');
+  const btn=$('submit'),status=$('deliveryStatus');
   if(btn)btn.disabled=true;
-  if(again)again.disabled=true;
   try{
     const blob=await createPackage();
     const file=new File([blob],'Goddess-Loretta-Sinner-of-the-Month.zip',{type:'application/zip'});
-    if(!window.VCSInterviewDelivery)throw new Error('Email delivery is unavailable on this page.');
-    if(status)status.textContent='Preparing your interview for secure form submission…';
-    window.VCSInterviewDelivery.submit(file,
-      'VCS Sinner of the Month: Goddess Loretta',
-      'Completed Goddess Loretta interview. Answers and audio recordings are in the attached ZIP.');
-  }catch(e){
-    console.error(e);
-    if(status)status.textContent=e.message||'Email submission failed. Your answers are still saved on this device.';
-    toast('Could not email the interview. Your answers are still saved.');
+    if(!window.VCSInterviewDelivery)throw new Error('Email delivery code is unavailable. Please save your answers.');
+    if(status)status.textContent='Preparing your interview…';
+    const result=await window.VCSInterviewDelivery.submit(file,'VCS Sinner of the Month: Goddess Loretta','Goddess Loretta interview with written answers and voice recordings.');
+    if(result.accepted){
+      show('success');
+      toast('Form submission accepted.');
+    }else if(status){
+      status.textContent='Automatic delivery is not connected yet. A ZIP backup was downloaded. Please email it to satanica.lux@vicecitysinner.com.';
+    }
+  }catch(error){
+    console.error(error);
+    if(status)status.textContent=error.message||'Delivery failed. Your answers remain on this device.';
+    toast('Email delivery was not confirmed.');
   }finally{
     if(btn)btn.disabled=false;
-    if(again)again.disabled=false;
   }
 }
 
 $('submit').addEventListener('click',submitPackage);
-$('shareAgain').addEventListener('click',submitPackage);
+$('shareAgain').addEventListener('click',async()=>{
+  try{
+    const blob=await createPackage();
+    window.VCSInterviewDelivery.download(new File([blob],'Goddess-Loretta-Sinner-of-the-Month.zip',{type:'application/zip'}));
+    toast('ZIP backup downloaded.');
+  }catch(e){toast('Could not download backup.');}
+});
 window.addEventListener('beforeunload',()=>{if(mediaRecorder&&mediaRecorder.state==='recording')stopRecording();if(audioUrl)URL.revokeObjectURL(audioUrl);cleanupStream();});
 })();

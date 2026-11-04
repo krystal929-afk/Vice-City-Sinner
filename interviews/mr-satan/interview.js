@@ -89,18 +89,19 @@ function toast(message){
 async function submitInterview(){
   textareas.forEach(textarea=>{answers[Number(textarea.dataset.index)]=textarea.value;});
   saveAll();
-  const content=buildText();
-  const file=new File([content],'Mr-Satan-Rivethead-Interview.txt',{type:'text/plain'});
+  const file=new File([buildText()],'Mr-Satan-Rivethead-Interview.txt',{type:'text/plain'});
   const button=$('submit'),status=$('submissionStatus');
   button.disabled=true;
-  status.textContent='Preparing your interview for delivery…';
+  status.textContent='Preparing your interview…';
   try{
-    if(!window.VCSInterviewDelivery)throw new Error('Email delivery is not available.');
-    window.VCSInterviewDelivery.submit(file,'VCS Sinner of the Month: Mr. Satan',content);
+    if(!window.VCSInterviewDelivery)throw new Error('Email delivery is unavailable. Your answers remain saved on this device.');
+    const result=await window.VCSInterviewDelivery.submit(file,'VCS Sinner of the Month: Mr. Satan','Mr. Satan completed written interview.');
+    status.textContent=result.accepted?'Form service accepted the interview.':'Automatic email delivery is not connected yet. Your interview was downloaded. Please email it to satanica.lux@vicecitysinner.com.';
+    toast(result.accepted?'Submission accepted.':'Interview downloaded. Email it manually.');
   }catch(e){
     console.error(e);
-    status.textContent=(e.message||'Email delivery failed.')+' Your answers remain saved on this device.';
-    toast('Could not email the interview.');
+    status.textContent=(e.message||'Delivery was not confirmed.')+' Your answers are still saved on this device.';
+    toast('Email delivery was not confirmed.');
   }finally{button.disabled=false;}
 }
 

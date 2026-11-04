@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="interview.css?v=20261022a">
 <link rel="stylesheet" href="interview-photo.css?v=20261022a">
 <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-<script defer src="../interview-delivery.js?v=20261103a"></script>
-<script defer src="interview.js?v=20261103a"></script>
+<script defer src="../interview-delivery.js?v=20261103c"></script>
+<script defer src="interview.js?v=20261103c"></script>
 </head>
 <body>
 <div class="interview-page">
@@ -44,7 +44,7 @@
         <div class="meta-card"><b>Autosave</b><span>Written answers and recordings stay on this device while you work.</span></div>
       </div>
       <button class="primary" id="begin">Enter the interview →</button>
-      <p class="privacy-note">Your answers stay on this device while you work. Pressing Submit sends the finished interview to The Vice City Sinner through a third-party email service.</p>
+      <p class="privacy-note">Your answers stay on this device while you work. Automatic email delivery is being connected. Until then, Submit downloads a ZIP backup for you to email to satanica.lux@vicecitysinner.com.</p>
     </section>
 
     <section class="screen" id="quiz" hidden>
@@ -94,19 +94,19 @@
       <div class="review-list" id="reviewList"></div>
       <div class="review-actions">
         <button class="secondary" id="backToLast">← Back to question 16</button>
-        <button class="primary" id="submit">Email your sins →</button>
+        <button class="primary" id="submit">Save your sins →</button>
       </div>
-      <p class="submit-note" id="deliveryStatus" role="status" aria-live="polite">Submit emails your completed ZIP, including voice recordings, to The Vice City Sinner through FormSubmit, a third-party delivery service. A ZIP backup also downloads to your device. Email delivery must first be activated by the publication.</p>
+      <p class="submit-note" id="deliveryStatus" role="status" aria-live="polite">Automatic email delivery is temporarily unavailable. Submit downloads your ZIP, including any voice recordings, so you can email it to satanica.lux@vicecitysinner.com. Your answers stay saved on this device.</p>
     </section>
 
     <section class="screen success" id="success" hidden>
       <div class="success-mark"><img src="../../assets/vcs-star-icon.png" alt=""></div>
       <div class="eyebrow">Sinner of the Month</div>
-      <h2>Your sins are packaged.</h2>
-      <p>Thank you, Goddess Loretta. Your interview is ready to send back to The Vice City Sinner.</p>
-      <button class="primary" id="shareAgain">Share / download again →</button>
+      <h2>Interview submitted to the form service.</h2>
+      <p>Thank you, Goddess Loretta. The form service accepted your submission. The Vice City Sinner will receive the notification when email delivery is active.</p>
+      <button class="primary" id="shareAgain">Download your ZIP backup →</button>
       <button class="ghost" id="editAgain">Return to interview</button>
-      <p class="microcopy">Keep this page open until you have successfully sent or saved the ZIP. Your working copy remains on this device unless you clear site data.</p>
+      <p class="microcopy">Your working copy remains on this device unless you clear site data. If you need a copy, download the ZIP backup.</p>
     </section>
   </main>
 </div>
