@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07040C">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>VCS Interview Email Test · The Vice City Sinner</title>
+<link rel="stylesheet" href="../site.css?v=20261101a">
+<script defer src="interview-delivery.js?v=20261103a"></script>
+<style>
+.test-shell{width:min(700px,calc(100% - 30px));margin:25px auto 70px}
+.test-shell img{display:block;width:min(500px,100%);margin:0 auto 36px}
+.test-shell h1{font:700 clamp(2.5rem,9vw,4.5rem)/1 var(--serif);letter-spacing:-.03em}
+.test-shell p{font:400 1.18rem/1.52 var(--serif)}
+.test-shell button{border:2px solid var(--green);background:var(--bg);color:var(--green);padding:15px 24px;font:800 .85rem var(--sans);letter-spacing:.12em;text-transform:uppercase}
+.test-shell .micro{font:700 .72rem/1.6 var(--sans);letter-spacing:.07em;color:var(--muted)}
+</style>
+</head>
+<body>
+<main class="test-shell">
+<img src="../assets/vcs-lock-banner-web.webp" alt="The Vice City Sinner">
+<h1>Interview email test</h1>
+<p>This page sends a harmless test attachment to <strong>satanica.lux@vicecitysinner.com</strong> through FormSubmit. No real interview answers are included.</p>
+<p>First, click the test button. Then check the inbox for a FormSubmit activation email and approve it. After activation, use the button again and confirm the test message arrives with its attachment.</p>
+<button id="test" type="button">Send a test interview</button>
+<p class="micro" id="status" role="status" aria-live="polite">A local text backup will download too. This unlisted test page is not part of the public site navigation.</p>
+</main>
+<script>
+window.addEventListener('DOMContentLoaded',()=>{
+ const button=document.getElementById('test'),status=document.getElementById('status');
+ button.addEventListener('click',()=>{
+   if(!window.VCSInterviewDelivery){status.textContent='Delivery script is unavailable.';return;}
+   button.disabled=true;
+   const stamp=new Date().toISOString();
+   const body='VCS interview email routing test. No participant answers. Created: '+stamp;
+   const file=new File([body+'\n'],'VCS-email-test.txt',{type:'text/plain'});
+   try{status.textContent='Sending through the email service…';window.VCSInterviewDelivery.submit(file,'VCS INTERVIEW EMAIL TEST',body);}
+   catch(e){status.textContent=e.message||'Unable to send the test.';button.disabled=false;}
+ });
+});
+</script>
+</body>
+</html>

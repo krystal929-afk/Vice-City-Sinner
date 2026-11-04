@@ -91,29 +91,16 @@ async function submitInterview(){
   saveAll();
   const content=buildText();
   const file=new File([content],'Mr-Satan-Rivethead-Interview.txt',{type:'text/plain'});
-  const button=$('submit');
-  const status=$('submissionStatus');
+  const button=$('submit'),status=$('submissionStatus');
   button.disabled=true;
-  status.textContent='Preparing interview file…';
+  status.textContent='Preparing your interview for delivery…';
   try{
-    if(navigator.share&&(!navigator.canShare||navigator.canShare({files:[file]}))){
-      await navigator.share({title:'Mr. Satan — The Rivethead Interview',text:'Completed Vice City Sinner interview.',files:[file]});
-      status.textContent='Shared. Your working copy is still saved on this device.';
-    }else{
-      const url=URL.createObjectURL(file);
-      const a=document.createElement('a');
-      a.href=url;
-      a.download=file.name;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      setTimeout(()=>URL.revokeObjectURL(url),4000);
-      status.textContent='Interview file downloaded.';
-      toast('Interview downloaded.');
-    }
+    if(!window.VCSInterviewDelivery)throw new Error('Email delivery is not available.');
+    window.VCSInterviewDelivery.submit(file,'VCS Sinner of the Month: Mr. Satan',content);
   }catch(e){
-    if(e&&e.name==='AbortError')status.textContent='Share canceled. Nothing was lost.';
-    else{status.textContent='Could not create the interview file. Try again.';console.error(e);}
+    console.error(e);
+    status.textContent=(e.message||'Email delivery failed.')+' Your answers remain saved on this device.';
+    toast('Could not email the interview.');
   }finally{button.disabled=false;}
 }
 
