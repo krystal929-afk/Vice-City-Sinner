@@ -5,38 +5,60 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#07040C">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>VCS Interview Email Test · The Vice City Sinner</title>
+<title>VCS Interview Delivery Setup · The Vice City Sinner</title>
 <link rel="stylesheet" href="../../site.css?v=20261101a">
-<script defer src="../interview-delivery.js?v=20261103b"></script>
+<script defer src="../interview-delivery.js?v=20261103c"></script>
 <style>
-.test-shell{width:min(700px,calc(100% - 30px));margin:25px auto 70px}
-.test-shell img{display:block;width:min(500px,100%);margin:0 auto 36px}
-.test-shell h1{font:700 clamp(2.5rem,9vw,4.5rem)/1 var(--serif);letter-spacing:-.03em}
-.test-shell p{font:400 1.18rem/1.52 var(--serif)}
+.test-shell{width:min(700px,calc(100% - 32px));margin:24px auto 70px}
+.test-shell .logo{display:block;width:min(500px,100%);margin:0 auto 30px}
+.test-shell h1{font:700 clamp(2.4rem,9vw,4rem)/.99 var(--serif);letter-spacing:-.03em}
+.test-shell p,.test-shell li{font:400 1.12rem/1.5 var(--serif)}
+.test-shell label{font:800 .76rem/1.5 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:8px}
+.test-shell input{display:block;background:var(--bg);color:var(--ink);border:1px solid var(--line);padding:13px;width:100%;font:400 1rem var(--sans);margin:0 0 15px}
+.test-shell input:focus{outline:1px solid var(--green)}
 .test-shell button{border:2px solid var(--green);background:var(--bg);color:var(--green);padding:15px 24px;font:800 .85rem var(--sans);letter-spacing:.12em;text-transform:uppercase}
-.test-shell .micro{font:700 .72rem/1.6 var(--sans);letter-spacing:.07em;color:var(--muted)}
+.test-shell button:disabled{opacity:.5}
+.test-shell .status{border-top:1px solid var(--line);padding-top:16px;margin-top:24px;color:var(--ink)}
+.test-shell .micro{font:700 .7rem/1.5 var(--sans);letter-spacing:.07em;color:var(--muted)}
 </style>
 </head>
 <body>
 <main class="test-shell">
-<img src="../../assets/vcs-lock-banner-web.webp" alt="The Vice City Sinner">
-<h1>Interview email test</h1>
-<p>This page sends a harmless test attachment to <strong>satanica.lux@vicecitysinner.com</strong> through FormSubmit. No real interview answers are included.</p>
-<p>First, click the test button. Then check the inbox for a FormSubmit activation email and approve it. After activation, use the button again and confirm the test message arrives with its attachment.</p>
-<button id="test" type="button">Send a test interview</button>
-<p class="micro" id="status" role="status" aria-live="polite">A local text backup will download too. This unlisted test page is not part of the public site navigation.</p>
+<img class="logo" src="../../assets/vcs-lock-banner-web.webp" alt="The Vice City Sinner">
+<div class="section-kicker">Private editor setup</div>
+<h1>Interview delivery test</h1>
+<p>FormSubmit is unavailable, so VCS is moving interview email delivery to <a href="https://usebasin.com/" target="_blank" rel="noopener noreferrer"><u>Basin</u></a>. This is a setup test only. No interview responses are included.</p>
+<ol>
+<li>Create one free Basin form for VCS Interviews.</li>
+<li>In that form's <strong>Emails</strong> settings, set the recipient to <strong>satanica.lux@vicecitysinner.com</strong>, then verify the email link you receive.</li>
+<li>Copy your Basin form endpoint (it looks like <code>https://usebasin.com/f/abc123</code>) and paste it below.</li>
+</ol>
+<form id="testForm">
+<label for="endpoint">Basin form endpoint</label>
+<input id="endpoint" type="url" required spellcheck="false" autocapitalize="off" autocomplete="off" placeholder="https://usebasin.com/f/your-form-id">
+<button id="test" type="submit">Send harmless test</button>
+</form>
+<p class="status" id="status" role="status" aria-live="polite">The test sends a small text attachment. It will not download a file or navigate to another site.</p>
+<p class="micro">A successful test means Basin accepted the request. Confirm the test appears in your Basin dashboard and your email inbox. Then send the endpoint to Corvus so the live interview pages can be connected for every guest.</p>
 </main>
 <script>
-window.addEventListener('DOMContentLoaded',()=>{
- const button=document.getElementById('test'),status=document.getElementById('status');
- button.addEventListener('click',()=>{
-   if(!window.VCSInterviewDelivery){status.textContent='Delivery script is unavailable.';return;}
-   button.disabled=true;
-   const stamp=new Date().toISOString();
-   const body='VCS interview email routing test. No participant answers. Created: '+stamp;
-   const file=new File([body+'\n'],'VCS-email-test.txt',{type:'text/plain'});
-   try{status.textContent='Sending through the email service…';window.VCSInterviewDelivery.submit(file,'VCS INTERVIEW EMAIL TEST',body);}
-   catch(e){status.textContent=e.message||'Unable to send the test.';button.disabled=false;}
+document.addEventListener('DOMContentLoaded',()=>{
+ const form=document.getElementById('testForm');
+ const button=document.getElementById('test');
+ const status=document.getElementById('status');
+ form.addEventListener('submit',async e=>{
+   e.preventDefault();
+   const url=document.getElementById('endpoint').value.trim();
+   if(!window.VCSInterviewDelivery){status.textContent='Delivery helper unavailable. Try opening the site in Chrome.';return;}
+   if(!window.VCSInterviewDelivery.validEndpoint(url)){status.textContent='Please paste a Basin endpoint beginning with https://usebasin.com/f/';return;}
+   const text='VCS delivery test from '+new Date().toISOString()+'. No personal responses included.';
+   const file=new File([text+'\n'],'vcs-email-delivery-test.txt',{type:'text/plain'});
+   button.disabled=true;status.textContent='Contacting Basin and checking its response…';
+   try{
+     const result=await window.VCSInterviewDelivery.submit(file,'VCS interview delivery TEST',text,{endpoint:url,backup:false});
+     status.textContent=result.accepted?'Basin accepted the test. Now check the Basin dashboard and your email inbox. Once received, share your endpoint with Corvus.':'No confirmed submission.';
+   }catch(err){status.textContent=(err.message||'The test failed.')+' Verify the endpoint and check your Basin dashboard.';}
+   finally{button.disabled=false;}
  });
 });
 </script>
