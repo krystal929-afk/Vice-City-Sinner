@@ -14,7 +14,8 @@
 <link rel="stylesheet" href="interview.css?v=20261022a">
 <link rel="stylesheet" href="interview-photo.css?v=20261022a">
 <script defer src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
-<script defer src="interview.js?v=20261021a"></script>
+<script defer src="../interview-delivery.js?v=20261103a"></script>
+<script defer src="interview.js?v=20261103a"></script>
 </head>
 <body>
 <div class="interview-page">
@@ -43,7 +44,7 @@
         <div class="meta-card"><b>Autosave</b><span>Written answers and recordings stay on this device while you work.</span></div>
       </div>
       <button class="primary" id="begin">Enter the interview →</button>
-      <p class="privacy-note">Private by design. Nothing leaves this device until you choose to share the finished interview package.</p>
+      <p class="privacy-note">Your answers stay on this device while you work. Pressing Submit sends the finished interview to The Vice City Sinner through a third-party email service.</p>
     </section>
 
     <section class="screen" id="quiz" hidden>
@@ -93,9 +94,9 @@
       <div class="review-list" id="reviewList"></div>
       <div class="review-actions">
         <button class="secondary" id="backToLast">← Back to question 16</button>
-        <button class="primary" id="submit">Submit your sins →</button>
+        <button class="primary" id="submit">Email your sins →</button>
       </div>
-      <p class="submit-note">On supported phones, this opens your share sheet with one ZIP containing the written interview and any voice recordings. If sharing is unavailable, the ZIP downloads instead.</p>
+      <p class="submit-note" id="deliveryStatus" role="status" aria-live="polite">Submit emails your completed ZIP, including voice recordings, to The Vice City Sinner through FormSubmit, a third-party delivery service. A ZIP backup also downloads to your device. Email delivery must first be activated by the publication.</p>
     </section>
 
     <section class="screen success" id="success" hidden>
