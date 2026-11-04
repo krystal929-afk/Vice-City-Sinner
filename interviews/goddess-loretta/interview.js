@@ -120,15 +120,29 @@ async function createPackage(){
 }
 
 async function submitPackage(){
-  const btn=$('submit'),again=$('shareAgain');if(btn)btn.disabled=true;if(again)again.disabled=true;
+  // The interview is emailed to VCS on submit; a ZIP backup is downloaded too.
+  const btn=$('submit'),again=$('shareAgain');
+  const status=$('deliveryStatus');
+  if(btn)btn.disabled=true;
+  if(again)again.disabled=true;
   try{
-    toast('Preparing interview package…');
-    const blob=await createPackage();const file=new File([blob],'Goddess-Loretta-Sinner-of-the-Month.zip',{type:'application/zip'});
-    if(navigator.share&&(!navigator.canShare||navigator.canShare({files:[file]}))){await navigator.share({title:'Goddess Loretta — Sinner of the Month',text:'Completed Vice City Sinner interview package.',files:[file]});show('success');}
-    else{const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=file.name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),4000);show('success');toast('Interview ZIP downloaded.');}
-  }catch(e){if(e&&e.name==='AbortError')toast('Share canceled. Nothing was lost.');else{toast('Could not prepare the package. Try again.');console.error(e);}}
-  finally{if(btn)btn.disabled=false;if(again)again.disabled=false;}
+    const blob=await createPackage();
+    const file=new File([blob],'Goddess-Loretta-Sinner-of-the-Month.zip',{type:'application/zip'});
+    if(!window.VCSInterviewDelivery)throw new Error('Email delivery is unavailable on this page.');
+    if(status)status.textContent='Preparing your interview for secure form submission…';
+    window.VCSInterviewDelivery.submit(file,
+      'VCS Sinner of the Month: Goddess Loretta',
+      'Completed Goddess Loretta interview. Answers and audio recordings are in the attached ZIP.');
+  }catch(e){
+    console.error(e);
+    if(status)status.textContent=e.message||'Email submission failed. Your answers are still saved on this device.';
+    toast('Could not email the interview. Your answers are still saved.');
+  }finally{
+    if(btn)btn.disabled=false;
+    if(again)again.disabled=false;
+  }
 }
+
 $('submit').addEventListener('click',submitPackage);
 $('shareAgain').addEventListener('click',submitPackage);
 window.addEventListener('beforeunload',()=>{if(mediaRecorder&&mediaRecorder.state==='recording')stopRecording();if(audioUrl)URL.revokeObjectURL(audioUrl);cleanupStream();});
